@@ -225,10 +225,11 @@ nav>ul>li>ul#lista_movil {
 	background: linear-gradient(to up, rgba(226, 226, 226, 1) 0%,
 		rgba(209, 209, 209, 1) 0%, rgba(219, 219, 219, 1) 14%,
 		rgba(244, 244, 244, 1) 58%, rgba(254, 254, 254, 1) 76% );
-	filter: progid :         DXImageTransform.Microsoft.gradient (       
-		   startColorstr =    
-		    '#e2e2e2', endColorstr =         '#fefefe', GradientType =        
-		1 );
+	filter: progid :           DXImageTransform.Microsoft.gradient (        
+		    startColorstr =     
+		     '#e2e2e2', endColorstr =           '#fefefe', GradientType =
+		        
+		 1 );
 }
 
 nav>ul>li>ul#lista_movil a {
@@ -1535,6 +1536,9 @@ footer h3 {
 	nav>ul>li#menu_moviles {
 		display: none;
 	}
+	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos {
+		display: block;
+	}
 	.contenedor_circulos {
 		max-width: 1000px;
 	}
@@ -1599,10 +1603,6 @@ footer h3 {
 		display: none;
 	}
 	.informacion ul,.informacion h3 {
-		display: block;
-	}
-	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos
-		{
 		display: block;
 	}
 	nav>#lista_principal_index {
