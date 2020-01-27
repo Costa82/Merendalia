@@ -207,8 +207,18 @@ class Productos extends BBDDController {
 						}
 
 						// Imagen
-						if ($key == "titulo_imagen") {
+						if ($key == "imagen") {
 							$imagen = $value;
+						}
+						
+						// Title
+						if ($key == "title") {
+							$title = $value;
+						}
+						
+						// Alt
+						if ($key == "alt") {
+							$alt = $value;
 						}
 
 						// Listado
@@ -231,18 +241,16 @@ class Productos extends BBDDController {
 									<p><strong>" . $precio . "</strong></p>
 							</div>";
 
-						if ($imagen != null) {
-
-							$titulo_imagen = substr($imagen, 0, strlen($imagen)-4);
+						if ($imagen != null && $title != null && $alt != null) {
 
 							echo "<div class='icono_imagen'>
 										<a class='fancybox' rel='group'
 												href='./views/default/img/" . $imagen . "'
-												title='" . $titulo_imagen . "'> <i
+												title='" . $title . "'> <i
 												class='fa fa-eye' title='imagen del producto'></i> </a> <img
 												src='./views/default/img/" . $imagen . "' class='foto img_catering'
-												title='" . $titulo_imagen . "'
-												alt='" . $titulo_imagen . "' />
+												title='" . $title . "'
+												alt='" . $alt . "' />
 								</div>";
 						} else {
 
@@ -260,19 +268,16 @@ class Productos extends BBDDController {
 
 						echo "<p><strong>" . $precio . "</strong></p>";
 
-						if ($imagen != null) {
-
-							// Sacamos el title y el alt del nombre de la imagen, quitando la extensión
-							$titulo_imagen = substr($imagen, 0, strlen($imagen)-4);
+						if ($imagen != null && $title != null && $alt != null) {
 
 							echo "<div class='icono_imagen bandeja'>
 										<a class='fancybox' rel='group'
 												href='./views/default/img/" . $imagen . "'
-												title='" . $titulo_imagen . "'> <i
+												title='" . $title . "'> <i
 												class='fa fa-eye' title='imagen del producto'></i> </a> <img
 												src='./views/default/img/" . $imagen . "' class='foto img_catering'
-												title='" . $titulo_imagen . "'
-												alt='" . $titulo_imagen . "' />
+												title='" . $title . "'
+												alt='" . $alt . "' />
 								</div>";
 						} else {
 

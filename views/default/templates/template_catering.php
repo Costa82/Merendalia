@@ -1,5 +1,3 @@
-<?php $productos = new Productos(); ?>
-
 <!DOCTYPE html>
 <html>
 <head>

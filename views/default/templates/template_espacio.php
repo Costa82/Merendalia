@@ -1,5 +1,3 @@
-<?php $tabla = new Tabla_tarifas(); ?>
-
 <!DOCTYPE html>
 <html>
 <head>
