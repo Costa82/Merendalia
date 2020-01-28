@@ -1,9 +1,9 @@
 <?php
 class Connection {
-	// 	private $host = "bbdd.devoralibros.es";
-	// 	private $username = "ddb95409";
-	// 	private $password = "MiguelCosta82";
-	//  private $base = "ddb95409";
+	// 	private $host = "qach704.merendalia";
+	// 	private $username = "qach704";
+	// 	private $password = "Sandia82";
+	//  private $base = "qach704";
 
 	private $host = "localhost";
 	private $username = "root";
