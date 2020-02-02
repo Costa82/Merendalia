@@ -22,9 +22,9 @@ class Productos extends BBDDController {
 		$this->tabla = "productos";
 	}
 
-	public function getById($titulo_producto) {
+	public function getById($id) {
 			
-		$sql = "SELECT * FROM " . $this->tabla . " WHERE titulo_producto = " . $titulo_producto . "";
+		$sql = "SELECT * FROM " . $this->tabla . " WHERE titulo_producto = " . $id . "";
 
 		if ($this->c->real_query($sql)) {
 			if ($resul = $this->c->store_result()) {
@@ -33,12 +33,6 @@ class Productos extends BBDDController {
 				}
 			}
 		}
-	}
-
-	public function getAll()
-	{
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV'";
-		return Productos::ejecutarQuery($this->c, $consulta);
 	}
 
 	/**

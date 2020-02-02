@@ -36,27 +36,6 @@ class Tabla_tarifas extends BBDDController {
 		}
 	}
 
-	public function getAll()
-	{
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY orden ASC";
-		$resultado = $this->c->query($consulta);
-
-		if ($resultado->num_rows != 0) {
-			while ($row = $resultado->fetch_assoc()) {
-				$rows[] = $row;
-			}
-			$datos = array(
-                'numero' => $resultado->num_rows,
-                'filas_consulta' => $rows
-			);
-			return $datos;
-		} else {
-			return $datos = array(
-                'numero' => 0
-			);
-		}
-	}
-
 	/**
 	 * Recupera todos los títulos de la tabla
 	 */

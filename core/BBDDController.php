@@ -7,8 +7,6 @@ abstract class BBDDController {
 	
 	abstract protected function getById($id);
 	
-	abstract protected function getAll();
-	
     /************ MÉTODOS COMUNES ************/
     
     public function ejecutarQuery($conexion, $consulta) {
@@ -30,5 +28,11 @@ abstract class BBDDController {
     		);
     	}
     }
+    
+	public function getAll()
+	{
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV'";
+		return BBDDController::ejecutarQuery($this->c, $consulta);
+	}
 
 }

@@ -3,7 +3,6 @@ require_once './config/validaciones.php';
 require_once './config/Correo.php';
 
 $correo = new Correo();
-$validaciones = new Validaciones();
 
 /**
  * Controlador de gestión de formularios
@@ -86,17 +85,17 @@ class ControladorFormularios
 
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
-					$_SESSION['error'] = 201;
+					$_SESSION['error'] = 501;
 				}
 
 			// El nombre y el mail tienen que ser obligatorios
 			} else {
-				$_SESSION['error'] = 202;
+				$_SESSION['error'] = 502;
 			}
 
 		// El recaptcha ha ido mal
 		} else {
-			$_SESSION['error'] = 203;
+			$_SESSION['error'] = 503;
 		}
 
 		if (!headers_sent()) {
@@ -174,17 +173,17 @@ class ControladorFormularios
 					
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
-					$_SESSION['error'] = 201;
+					$_SESSION['error'] = 501;
 				}
 
 			// El nombre y el mail tienen que ser obligatorios
 			} else {
-				$_SESSION['error'] = 202;
+				$_SESSION['error'] = 502;
 			}
 
 		// El recaptcha ha ido mal
 		} else {
-			$_SESSION['error'] = 203;
+			$_SESSION['error'] = 503;
 		}
 
 		if (!headers_sent()) {

@@ -45,39 +45,40 @@
       	</nav>
 	</header>
 
-	<div class="contenedor_contacto">
+	<div class='contenedor_contacto'>
 	
-		<?php 
-		
+	<?php
+	
 		// Plantillas de la respuesta del envío del formulario
 		if(isset($params['error']) && $params['error'] != 0) {
 			
 			switch ($params['error']) {
 				// Error en el envío del formulario
 				case 201:
-					include_once("template_envio_fallido.php");
+					include_once('template_envio_fallido.php');
 				break;
 				
 				// El nombre y el mail tienen que ser obligatorios
 				case 202:
-					include_once("template_envio_fallido.php");
+					include_once('template_envio_fallido.php');
 				break;
 				
 				// Error en la validación del Recaptcha de google
 				case 203:
-					include_once("template_envio_fallido_recaptcha.php");
+					include_once('template_envio_fallido_recaptcha.php');
 				break;
 				
 				// Envío fallido por defecto
 				default:
-					include_once("template_envio_fallido.php");
+					include_once('template_envio_fallido.php');
 				break;
 			}
 			
 		// Envío correcto	
 		} else {
-			include_once("template_envio_correcto.php");
+			include_once('template_envio_correcto.php');
 		}
+		
 		?>
 
 	</div>

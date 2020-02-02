@@ -334,6 +334,35 @@ nav>ul>li>ul#lista_movil li {
 	margin-bottom: 10px;
 }
 
+/* LOGUEO
+   ========================================================================= */
+.formulario_logueo {
+	width: 300px;
+	margin: 0 auto;	
+}
+
+.formulario_logueo input {
+	width: 50%;
+	margin-bottom: 5px;
+}
+
+.formulario_logueo input.nick {
+	margin-left: 76px;
+}
+
+.formulario_logueo input.contrasena {
+	margin-left: 10px;
+}
+
+.formulario_logueo .botones {
+	width: 120px;
+	margin: 0 auto;
+}
+
+#errores {
+	color: red;
+}
+
 /* RESERVAS Y TARIFAS
    ========================================================================= */
 h3.titulo_reservas {

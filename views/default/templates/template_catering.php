@@ -68,36 +68,14 @@
 <body>
 	<header>
 
-		<div class="titulo_movil">
-			<a href='inicio' title='Inicio'><img
-				src='./views/default/img/merendalia_logotipo_RGB-01.png'
-				alt='Merendalia' /> </a>
-		</div>
-
 		<nav>
 		<?php include_once("template_menuNav.php");?>
 		</nav>
+		
 	</header>
 
-	<div class="explicacion productos">
-
-		<p>Si no tienes tiempo para preparar las cosas, puedes solicitar
-			productos de nuestro cátering y ¡ser el anfitrión que quieres ser sin
-			necesidad de mover un dedo!</p>
-
-	</div>
-
-	<div class="contenedor_productos">
-
-		<!-- SELECT PRODUCTOS -->
-
-		<?php $productos->mostrarMenuProductos(); ?>
-
-		<!-- PRODUCTOS -->
-		
-		<?php $productos->mostrarProductos(); ?>
-
-	</div>
+	<!-- Contenido -->
+    <?php echo $contenido; ?>
 
 	<footer>
 	<?php include_once("template_footer.php");?>

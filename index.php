@@ -9,7 +9,7 @@ function __autoload($class)
 }
 
 // Comprobamos la sesion
-if (! isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario'])) {
     
     // Compruebo si existe la cookie y si coincide con algun usuario
     if (isset($_COOKIE['usuario'])) {
@@ -34,6 +34,19 @@ if (! isset($_SESSION['usuario'])) {
 
 // Enrutamiento. Selecciona el controlador y la accion a ejecutar
 $map = array(
+	'administrador' => array(
+        'controller' => 'ControladorUsuarios',
+        'action' => 'administrador',
+        'privada' => false
+    ),'logueo' => array(
+        'controller' => 'ControladorUsuarios',
+        'action' => 'logueo',
+        'privada' => false
+    ),'pagina_administrador' => array(
+        'controller' => 'ControladorUsuarios',
+        'action' => 'pagina_administrador',
+        'privada' => true
+    ),
     'inicio' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'inicio',
