@@ -334,16 +334,39 @@ nav>ul>li>ul#lista_movil li {
 	margin-bottom: 10px;
 }
 
-/* LOGUEO
+/* FORMULARIOS
    ========================================================================= */
 .formulario_logueo {
-	width: 300px;
+	padding: 5px;
+	max-width: 300px;
 	margin: 0 auto;	
 }
 
-.formulario_logueo input {
-	width: 50%;
+.formulario_productos {
+	padding: 5px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.formulario_logueo input, .formulario_productos input, .formulario_productos textarea,
+	.formulario_productos select {
 	margin-bottom: 5px;
+}
+
+.formulario_productos input.titulo_producto {
+		margin-left: 18px;
+}
+
+.formulario_productos input.alt {
+		margin-left: 21px;
+}
+
+.formulario_productos input.title {
+		margin-left: 7px;
+}
+
+.formulario_productos input.precio {
+		margin-left: 107px;
 }
 
 .formulario_logueo input.nick {
@@ -354,7 +377,7 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 10px;
 }
 
-.formulario_logueo .botones {
+.formulario_logueo .botones, .formulario_productos .botones {
 	width: 120px;
 	margin: 0 auto;
 }
@@ -362,6 +385,8 @@ nav>ul>li>ul#lista_movil li {
 #errores {
 	color: red;
 }
+
+
 
 /* RESERVAS Y TARIFAS
    ========================================================================= */

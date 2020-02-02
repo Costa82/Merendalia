@@ -19,7 +19,7 @@ echo '
 
 echo '				</div>
 					<p>
-						<span>*</span> Campos obligatorios.
+						<span>(*)</span> <i>Campos obligatorios.</i>
 					</p>
                     
 				</div>

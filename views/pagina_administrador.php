@@ -4,66 +4,85 @@ ob_start();
 echo "<h1>PÁGINA DEL ADMINISTRADOR</h1>";
 
 echo '
-    <div class="container">
+    <div class="container formulario_productos">
 		<div class="form-box">
 			<div class="form-top">
 				<div class="form-top-left">
-					<h3>Subir texto</h3>
-					<p>
-						<span>*</span> Campos obligatorios.
-					</p>
+					<h3>Subir Producto</h3>
+					
 					<div id="errores">';
 
-if ($params['error'] != 0) {
-    $num = $params['error'];
-    $mensaje = validacion($num);
-    echo $mensaje;
-}
+					if ($params['error'] != 0) {
+					    $num = $params['error'];
+					    $mensaje = validacion($num);
+					    echo $mensaje;
+					}
 
 echo '
                     </div>
+					<p>
+						<span>(*)</span> <i>Campos obligatorios.</i>
+					</p>
+					
 				</div>
 			</div>
 			<div class="form-bottom">
-				<form role="form" action="subir_texto" enctype="multipart/form-data" method="post"
+				<form role="form" action="./subir_producto" enctype="multipart/form-data" method="post"
 					class="login-form">
 					
 					<div class="form-group">
-						<label><span>* </span>Título</label> <input type="text"
-							name="titulo" size="25" required="required" />
+						<label><span>* </span>Título producto</label> <input type="text"
+							name="titulo_producto" class="titulo_producto" required="required" />
 					</div>
 					
 					<div class="form-group">
-						<label><span>* </span>Título en inglés</label> <input type="text"
-							name="titulo_ingles" size="25" required="required" />
+						<label><span>* </span>Precio</label> <input type="number"
+							name="precio" class="precio" required="required" />
 					</div>
-
+					
 					<div class="form-group">
-						<p>
-							<label>Tipo de texto</label>
-						</p>
-						<select name="tipo">
-							<option value="OTRO" selected></option>
-							<option value="BLOG">Blog</option>
-							<option value="INFO">Información</option>
-							<option value="PRES">Presentación</option>
+						<span>* </span><label>Tipo de producto</label>
+						<select name="tipo_producto" class="tipo_producto">
+							<option value="Entrantes" selected>Entrantes</option>
+							<option value="Raciones">Raciones</option>
+							<option value="Canapes">Canapés</option>
+							<option value="Ensaladas">Ensaladas</option>
+							<option value="Postres">Postres</option>
+							<option value="Merienda">Merienda infantil</option>
+							<option value="Bebidas">Bebidas</option>
+							<option value="Refrescos">Refrescos</option>
+							<option value="Aguas">Aguas</option>
+							<option value="Cervezas">Cervezas</option>
+							<option value="Vinos">Vinos</option>
+							<option value="Licores">Licores</option>
+							<option value="Hielos">Hielos</option>
 						</select>
 					</div>
-
+					
 					<div class="form-group">
-						<label><span>* </span>Texto</label>
-						<textarea name="texto" rows="10" cols="40" required="required"></textarea>
+						<p>
+						<label>Descripción</label>
+						</p>
+						<textarea name="descripcion" rows="5" cols="48" ></textarea>
 					</div>
-
+					
 					<div class="form-group">
-						<label><span>* </span>Texto en inglés</label>
-						<textarea name="texto_ingles" rows="10" cols="40"
-							required="required"></textarea>
-					</div>
-
-					<div class="form-group">
-						<label>Añade imagen</label> <input type="file" name="img" /><input
+						<label>Añade imagen</label> <input type="file" name="imagen" /><input
 							type="hidden" name="lim_tamano" value="1000000" />
+					</div>
+					
+					<div class="form-group">
+						<label>Title de la imagen</label> <input type="text"
+							name="title" class="title" />
+					</div>
+					
+					<div class="form-group">
+						<label>Alt de la imagen</label> <input type="text"
+							name="alt" class="alt" />
+					</div>
+					
+					<div class="form-group">
+						<label>Listado</label> <input type="checkbox" name="listado" value="listado">
 					</div>
 
 					<div class="botones">
