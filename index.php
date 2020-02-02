@@ -8,41 +8,19 @@ function __autoload($class)
     require_once ("models/$class.php");
 }
 
-// Comprobamos la sesion
-if (!isset($_SESSION['usuario'])) {
-    
-    // Compruebo si existe la cookie y si coincide con algun usuario
-    if (isset($_COOKIE['usuario'])) {
-        
-        require_once 'models/Usuarios.php';
-        $usuario = new Usuarios();
-        $nombre_usuario = $usuario->comprobar_cookie($_COOKIE['usuario']);
-        
-        if ($nombre_usuario) {
-            
-            // Creamos la variable de sesion
-            $_SESSION['usuario'] = $nombre_usuario;
-            // Si estamos en inicio redirigimos a ver contactos
-            if ($_GET['action'] == 'inicio') {
-                header('location:inicio');
-            }
-        } else {
-            header('location:inicio');
-        }
-    }
-}
-
 // Enrutamiento. Selecciona el controlador y la accion a ejecutar
 $map = array(
 	'administrador' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'administrador',
         'privada' => false
-    ),'logueo' => array(
+    ),
+    'logueo' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'logueo',
         'privada' => false
-    ),'pagina_administrador' => array(
+    ),
+    'pagina_administrador' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'pagina_administrador',
         'privada' => true
@@ -137,8 +115,8 @@ $controlador = $map[$action];
 $clase_controlador = $controlador['controller'];
 $metodo = $controlador['action'];
 
-// Si la pagina es privada comprobamos si el usuario esta correctamente logueado, sino redirigimos a inicio
-if ($controlador['privada'] && ! isset($_SESSION['usuario'])) {
+// Si la pagina es privada comprobamos si el usuario es administrador, sino redirigimos a inicio
+if ($controlador['privada'] && (!isset($_SESSION['administrador']) || !$_SESSION['administrador'])) {
     header('location:/Merendalia/inicio'); // Si lo ponemos en el servidor poner /Foro/inicio
     die();
 }

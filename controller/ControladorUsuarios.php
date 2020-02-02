@@ -53,6 +53,7 @@ class ControladorUsuarios
 					if ($usuario->esRegistrado($nick, $pass)) { // para loguearse, se comprueba que sea ususario registrado
 
 						$_SESSION['usuario'] = $nick;
+						$_SESSION['administrador'] = true;
 
 						// Anulamos el error
 						$_SESSION['error'] = 0;

@@ -30,6 +30,6 @@
 
     <!-- Contenido -->
     <?php echo $contenido; ?>
-
+    
 </body>
 </html>

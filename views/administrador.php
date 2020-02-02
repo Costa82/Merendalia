@@ -44,5 +44,6 @@ echo '				</div>
 	</div>';
 
 $contenido = ob_get_clean();
+
 include './views/default/templates/template_administrador.php';
 ?>
