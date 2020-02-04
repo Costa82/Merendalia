@@ -63,7 +63,7 @@ echo '
 						<p>
 						<label>Descripción</label>
 						</p>
-						<textarea name="descripcion" rows="5" cols="48" ></textarea>
+						<textarea name="descripcion" rows="5" cols="43" ></textarea>
 					</div>
 					
 					<div class="form-group">
