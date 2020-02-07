@@ -86,7 +86,7 @@ echo '
 					</div>
 
 					<div class="botones">
-						<button type="submit" name="addTexto" class="btn">Subir texto</button>
+						<button type="submit" name="addProducto" class="btn">Subir texto</button>
 					</div>
 					
 				</form>

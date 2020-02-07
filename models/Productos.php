@@ -5,12 +5,19 @@ require_once './config/utils.php';
 class Productos extends BBDDController {
 
 	// Propiedades de la tabla de la BBDD
-	public $titulo_producto;
-	public $descripcion;
-	public $precio;
-	public $tipo_producto;
-	public $titulo_imagen;
-	public $estado;
+
+	// id incremental
+	private $id_producto;
+
+	private $titulo_producto;
+	private $descripcion;
+	private $precio;
+	private $tipo_producto;
+	private $imagen;
+	private $title;
+	private $alt;
+	private $listado;
+	private $estado;
 
 	private $c;
 	private $tabla;
@@ -22,9 +29,90 @@ class Productos extends BBDDController {
 		$this->tabla = "productos";
 	}
 
-	public function getById($id) {
+	// Getters y Setters
+	public function getId_producto() {
+		return $this->id_producto;
+	}
+
+	public function setId_producto($id_producto) {
+		$this->id_producto = $id_producto;
+	}
+
+	public function getTitulo_producto() {
+		return $this->titulo_producto;
+	}
+
+	public function setTitulo_producto($titulo_producto) {
+		$this->titulo_producto = $titulo_producto;
+	}
+
+	public function getDescripcion() {
+		return $this->descripcion;
+	}
+
+	public function setDescripcion($descripcion) {
+		$this->descripcion = $descripcion;
+	}
+
+	public function getPrecio() {
+		return $this->precio;
+	}
+
+	public function setPrecio($precio) {
+		$this->precio = $precio;
+	}
+	
+	public function getTipo_producto() {
+		return $this->tipo_producto;
+	}
+
+	public function setTipo_producto($tipo_producto) {
+		$this->tipo_producto = $tipo_producto;
+	}
+	
+	public function getImagen() {
+		return $this->imagen;
+	}
+
+	public function setImagen($imagen) {
+		$this->imagen = $imagen;
+	}
+	
+	public function getTitle() {
+		return $this->title;
+	}
+
+	public function setTitle($title) {
+		$this->title = $title;
+	}
+	
+	public function getAlt() {
+		return $this->alt;
+	}
+
+	public function setAlt($alt) {
+		$this->alt = $alt;
+	}
+	
+	public function getListado() {
+		return $this->listado;
+	}
+
+	public function setListado($listado) {
+		$this->listado = $listado;
+	}
+	
+	public function getEstado() {
+		return $this->estado;
+	}
+
+	public function setEstado($estado) {
+		$this->estado = $estado;
+	}
+
+	public function getById($id_producto) {
 			
-		$sql = "SELECT * FROM " . $this->tabla . " WHERE titulo_producto = " . $id . "";
+		$sql = "SELECT * FROM " . $this->tabla . " WHERE id_producto = " . $id_producto . "";
 
 		if ($this->c->real_query($sql)) {
 			if ($resul = $this->c->store_result()) {
@@ -33,6 +121,28 @@ class Productos extends BBDDController {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Insertamos un producto en BBDD
+	 */
+	public function saveProducto() {
+
+		$query = "INSERT INTO " . $this->tabla . " (titulo_producto, descripcion, precio, tipo_producto,
+		imagen, title, alt, listado, estado)
+                VALUES('".$this->titulo_producto."',
+                       '".$this->descripcion."',
+                       '".$this->precio."',
+                       '".$this->tipo_producto."',
+                       '".$this->imagen."',
+                       '".$this->title."',
+                       '".$this->alt."',
+                       '".$this->listado."',
+                       '".$this->estado."');";
+		
+		$save = $this->c->query($query);
+
+		return $save;
 	}
 
 	/**
@@ -204,12 +314,12 @@ class Productos extends BBDDController {
 						if ($key == "imagen") {
 							$imagen = $value;
 						}
-						
+
 						// Title
 						if ($key == "title") {
 							$title = $value;
 						}
-						
+
 						// Alt
 						if ($key == "alt") {
 							$alt = $value;

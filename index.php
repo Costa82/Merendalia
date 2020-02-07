@@ -10,6 +10,11 @@ function __autoload($class)
 
 // Enrutamiento. Selecciona el controlador y la accion a ejecutar
 $map = array(
+	'subir_producto' => array(
+        'controller' => 'ControladorProductos',
+        'action' => 'subir_producto',
+        'privada' => true
+    ),
 	'administrador' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'administrador',
