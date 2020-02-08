@@ -1,5 +1,5 @@
 <?php
-require_once 'defines.php';
+require_once 'Defines.php';
 
 /**
  * La esContrasena debe tener al entre 4 y 8 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
@@ -66,7 +66,7 @@ function validarContrasena($passNueva, $passRep)
  */
 function validacion($num)
 {
-    global $mensaje; // importante la variable global para que reconozca $mensaje de 'defines.inc.php'
+    global $mensaje; // importante la variable global para que reconozca $mensaje de 'DSefines.inc.php'
     if ($num == 201) {
         return $mensaje[USER_NOEXIS];
     } elseif ($num == 202) {
@@ -127,6 +127,12 @@ function validacion($num)
         return $mensaje[PRODUCTO_SUBIDO_KO];
     } elseif ($num == 603) {
         return $mensaje[PRODUCTO_SUBIDO_KO_TITLE_ALT];
+    } elseif ($num == 604) {
+        return $mensaje[ERROR_SUBIDA_IMAGEN_MOVER_ARCHIVO];
+    } elseif ($num == 605) {
+        return $mensaje[ERROR_SUBIDA_IMAGEN_CREACION_CARPETA];
+    } elseif ($num == 606) {
+        return $mensaje[ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO];
     }
 }
 

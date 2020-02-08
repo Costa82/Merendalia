@@ -1,6 +1,6 @@
 <?php
 require_once './core/BBDDController.php';
-require_once './config/utils.php';
+require_once './config/Utils.php';
 
 class Tabla_tarifas extends BBDDController {
 

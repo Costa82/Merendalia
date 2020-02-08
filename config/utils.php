@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Clase Utils para normalizar cadenas
+ */
 class Utils
 {
 

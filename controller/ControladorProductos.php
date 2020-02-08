@@ -1,5 +1,6 @@
 <?php
-require_once './config/validaciones.php';
+require_once './config/Validaciones.php';
+require_once './config/UtilsProductos.php';
 
 /**
  * Controlador de gestión de modificaciones e inserciones en BBDD
@@ -14,6 +15,7 @@ class ControladorProductos
 	{
 		// Reiniciamos los errores
 		$_SESSION['error'] = 0;
+		$guardado = false;
 		
 		if (isset($_REQUEST['addProducto'])) {
 
@@ -35,9 +37,9 @@ class ControladorProductos
 			}
 			
 			// imagen
-			$imagen = $_FILES['imagen']['name'];
+			$archivo = $_FILES['imagen'];
 			
-			if (isset($imagen) && 
+			if (isset($archivo['name']) && 
 			(empty($_REQUEST["title"]) || empty($_REQUEST["alt"]))) {
 				
 				$_SESSION['error'] = 603;
@@ -45,8 +47,8 @@ class ControladorProductos
 				
 			} else {
 				
-				if (isset($imagen)) {
-					$producto->setImagen($imagen);
+				if (isset($archivo)) {
+					$producto->setImagen($archivo['name']);
 				}
 	
 				// title
@@ -58,6 +60,9 @@ class ControladorProductos
 				if (!empty($_REQUEST["alt"])) {
 					$producto->setAlt($_REQUEST["alt"]);
 				}
+				
+				$carpetaDestino = './views/default/img/';
+				$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 			}
 
 			// listado
@@ -70,7 +75,7 @@ class ControladorProductos
 			// estado
 			$producto->setEstado('ACTV');
 
-			if ($_SESSION['error'] == 0) {
+			if ($_SESSION['error'] == 0 && $guardado) {
 				
 				// Guardamos el producto
 				$save = $producto->saveProducto();

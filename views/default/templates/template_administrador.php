@@ -5,8 +5,8 @@
 -->
 
 <?php
-require_once './config/defines.php';
-require_once './config/validaciones.php';
+require_once './config/Defines.php';
+require_once './config/Validaciones.php';
 ?>
 
 <!DOCTYPE html>

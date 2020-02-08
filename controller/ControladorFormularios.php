@@ -1,5 +1,5 @@
 <?php
-require_once './config/validaciones.php';
+require_once './config/Validaciones.php';
 require_once './config/Correo.php';
 
 $correo = new Correo();

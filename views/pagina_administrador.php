@@ -43,7 +43,6 @@ echo '
 					<div class="form-group">
 						<span>* </span><label>Tipo de producto</label>
 						<select name="tipo_producto" class="tipo_producto">
-							<option value="Entrantes" selected>Entrantes</option>
 							<option value="Raciones">Raciones</option>
 							<option value="Canapes">Canapés</option>
 							<option value="Ensaladas">Ensaladas</option>
