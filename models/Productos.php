@@ -9,15 +9,15 @@ class Productos extends BBDDController {
 	// id incremental
 	private $id_producto;
 
-	private $titulo_producto;
-	private $descripcion;
-	private $precio;
-	private $tipo_producto;
-	private $imagen;
-	private $title;
-	private $alt;
-	private $listado;
-	private $estado;
+	private $titulo_producto = null;
+	private $descripcion = null;
+	private $precio = null;
+	private $tipo_producto = null;
+	private $imagen = null;
+	private $title = null;
+	private $alt = null;
+	private $listado = null;
+	private $estado = null;
 
 	private $c;
 	private $tabla;

@@ -19,10 +19,8 @@
 <script>
     var rutacss1 = "./views/default/css/font-awesome.css?" + Math.random();
     var rutacss2 = "./views/default/css/main.css?" + Math.random();
-    var rutacss3 = "./views/default/css/form-elements.css?" + Math.random();
     document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />'); 
     document.write('<link rel="stylesheet" href="' + rutacss2 + '" type="text/css" media="screen" />'); 
-    document.write('<link rel="stylesheet" href="' + rutacss3 + '" type="text/css" media="screen" />'); 
 </script>
 
 </head>

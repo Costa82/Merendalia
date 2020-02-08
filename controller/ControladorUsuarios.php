@@ -42,7 +42,7 @@ class ControladorUsuarios
 	{
 		if (isset($_REQUEST['loguear'])) {
 
-			if (! empty($_REQUEST['nick']) and ! empty($_REQUEST['contrasena'])) {
+			if (!empty($_REQUEST['nick']) and !empty($_REQUEST['contrasena'])) {
 
 				$nick = trim($_REQUEST['nick']);
 				$pass = trim($_REQUEST['contrasena']);

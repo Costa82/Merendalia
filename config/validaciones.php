@@ -67,18 +67,10 @@ function validarContrasena($passNueva, $passRep)
 function validacion($num)
 {
     global $mensaje; // importante la variable global para que reconozca $mensaje de 'defines.inc.php'
-    if ($num == 300) {
-        return $mensaje[USER_EXISTE];
-    } elseif ($num == 303) {
-        return $mensaje[USER_INCORRECTO];
-    } elseif ($num == 301) {
-        return $mensaje[USER_CORRECTO];
-    } elseif ($num == 201) {
+    if ($num == 201) {
         return $mensaje[USER_NOEXIS];
     } elseif ($num == 202) {
         return $mensaje[CLAVE_NOEXIS];
-    } elseif ($num == 305) {
-        return $mensaje[PASS_INCORRECTO];
     } elseif ($num == 204) {
         return $mensaje[EMAIL_REPE];
     } elseif ($num == 205) {
@@ -93,8 +85,6 @@ function validacion($num)
         return $mensaje[EMAIL_INCORRECTO];
     } elseif ($num == 210) {
         return $mensaje[PASS_DIFERENTES];
-    } elseif ($num == 305) {
-        return $mensaje[PASS_INCORRECTO];
     } elseif ($num == 211) {
         return $mensaje[NICK_INCORRECTO];
     } elseif ($num == 212) {
@@ -109,6 +99,14 @@ function validacion($num)
         return $mensaje[CODIGO_INCORRECTO];
     } elseif ($num == 217) {
         return $mensaje[CARACTERES_ESPECIALES];
+    } elseif ($num == 300) {
+        return $mensaje[USER_EXISTE];
+    } elseif ($num == 301) {
+        return $mensaje[USER_CORRECTO];
+    } elseif ($num == 303) {
+        return $mensaje[USER_INCORRECTO];
+    } elseif ($num == 305) {
+        return $mensaje[PASS_INCORRECTO];
     } elseif ($num == 306) {
         return $mensaje[CONF_REGISTRO];
     } elseif ($num == 307) {
@@ -123,6 +121,12 @@ function validacion($num)
         return $mensaje[FORMULARIO_KO_NOMBRE_MAIL_OBLIGATORIO];
     } elseif ($num == 503) {
         return $mensaje[FORMULARIO_KO_RECAPTCHA];
+    } elseif ($num == 601) {
+        return $mensaje[PRODUCTO_SUBIDO_OK];
+    } elseif ($num == 602) {
+        return $mensaje[PRODUCTO_SUBIDO_KO];
+    } elseif ($num == 603) {
+        return $mensaje[PRODUCTO_SUBIDO_KO_TITLE_ALT];
     }
 }
 

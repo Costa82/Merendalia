@@ -5,6 +5,7 @@ define("NIF_INCORR", 102);   // NIF no es válido
 define("CLAVE_INCORR", 103);  // Clave no válida
 define("CLAVE_NOREPE", 104);   // Las claves no coinciden
 define("FOTO_SUPLIM", 105);   // El tamaño de la foto supera el límite
+
 define("USER_NOEXIS", 201);   // El usuario no está registrado
 define("CLAVE_NOEXIS", 202);  // La contraseña es incorrecta
 define("USER_EXIS", 203);  // El DNI del usuario ya está registrado
@@ -21,6 +22,7 @@ define("TITULO_EXISTE", 213);//El título del texto ya existe
 define("AUTOR_INCORRECTO", 214);//El autor no es correcto (No puede empezar por números,sí puede contener espacios en blanco y no puede contener caracteres especiales)
 define("CODIGO_INCORRECTO", 216);//El codigo no es correcto
 define("CARACTERES_ESPECIALES", 217);//Los títulos de los libros no pueden contener caracteres especiales
+
 define("USER_CORRECTO", 301); //usuario registrado correcto
 define("MODIF_USER_CORRECTO", 304);//usuario modificado correcto
 define("USER_INCORRECTO", 303); //usuario registrado incorrecto.Faltan datos
@@ -29,11 +31,18 @@ define("PASS_INCORRECTO", 305);  // Contraseña incorrecta, debe tener entre 4 y
 define("CONF_REGISTRO", 306);  // Confirmar Registro
 define("USER_EXISTE", 300); //usuario que ya estaba registrado
 define("ENVIO_MENSAJE_OK", 307); //Mensaje enviado
+
 define("TEXTO_SUBIDO_OK", 401); //Texto subido correctamente.
 define("TEXTO_SUBIDO_KO", 402); //El texto no se pudo subir.
+
 define("FORMULARIO_OK", 501); //Formulario correcto.
 define("FORMULARIO_KO_NOMBRE_MAIL_OBLIGATORIO", 502); //El nombre y el mail son obligatorios.
 define("FORMULARIO_KO_RECAPTCHA", 503); //Error de seguridad en la validación del Recaptcha.
+
+define("PRODUCTO_SUBIDO_OK", 601); //Producto subido correctamente.
+define("PRODUCTO_SUBIDO_KO", 602); //Error al subir el producto.
+define("PRODUCTO_SUBIDO_KO_TITLE_ALT", 603); //No se puede subir imagen sin title o alt.
+
 define("ERROR_CONEXION", 666); //Error de conexion
 define("ERROR_ENVIO_MAIL", 667); //Error al enviar el email
 define("ERROR_ENVIO_MENSAJE", 668); //Error al enviar el mensaje
@@ -80,4 +89,8 @@ $mensaje[ERROR_GENERAL] = "Error General.";
 $mensaje[TITULO_EXISTE] = "El título del texto ya existe.";
 $mensaje[TEXTO_SUBIDO_OK] = "Texto subido correctamente.";
 $mensaje[TEXTO_SUBIDO_KO] = "El texto no se pudo subir.";
+
+$mensaje[PRODUCTO_SUBIDO_OK] = "Producto subido correctamente.";
+$mensaje[PRODUCTO_SUBIDO_KO] = "Error al subir el producto.";
+$mensaje[PRODUCTO_SUBIDO_KO_TITLE_ALT] = "No se puede subir imagen sin title o alt.";
 ?>
