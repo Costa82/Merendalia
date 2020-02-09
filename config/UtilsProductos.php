@@ -15,7 +15,8 @@ class UtilsProductos {
 		$guardado = false;
 		
 		# si es un formato de imagen
-		if($archivo["type"]=="image/jpeg" || $archivo["type"]=="image/pjpeg" || $archivo["type"]=="image/gif" || $archivo["type"]=="image/png")
+		if($archivo["type"]=="image/jpeg" || $archivo["type"]=="image/pjpeg" || 
+		$archivo["type"]=="image/png")
 		{
 			# si exsite la carpeta o se ha creado
 			if(file_exists($carpetaDestino) || @mkdir($carpetaDestino))

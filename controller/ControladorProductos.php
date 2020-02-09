@@ -15,7 +15,7 @@ class ControladorProductos
 	{
 		// Reiniciamos los errores
 		$_SESSION['error'] = 0;
-		$guardado = false;
+		$guardado = true;
 		
 		if (isset($_REQUEST['addProducto'])) {
 
@@ -39,30 +39,32 @@ class ControladorProductos
 			// imagen
 			$archivo = $_FILES['imagen'];
 			
-			if (isset($archivo['name']) && 
-			(empty($_REQUEST["title"]) || empty($_REQUEST["alt"]))) {
+			if (isset($archivo['name']) && !empty($archivo['name'])) {
 				
-				$_SESSION['error'] = 603;
-				$destino = "pagina_administrador";
-				
-			} else {
-				
-				if (isset($archivo)) {
-					$producto->setImagen($archivo['name']);
+				if (empty($_REQUEST["title"]) || empty($_REQUEST["alt"])) {
+					
+					$_SESSION['error'] = 603;
+					$destino = "pagina_administrador";
+					
+				} else {
+					
+					if (isset($archivo)) {
+						$producto->setImagen($archivo['name']);
+					}
+		
+					// title
+					if (!empty($_REQUEST["title"])) {
+						$producto->setTitle($_REQUEST["title"]);
+					}
+		
+					// alt
+					if (!empty($_REQUEST["alt"])) {
+						$producto->setAlt($_REQUEST["alt"]);
+					}
+					
+					$carpetaDestino = './views/default/img/';
+					$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 				}
-	
-				// title
-				if (!empty($_REQUEST["title"])) {
-					$producto->setTitle($_REQUEST["title"]);
-				}
-	
-				// alt
-				if (!empty($_REQUEST["alt"])) {
-					$producto->setAlt($_REQUEST["alt"]);
-				}
-				
-				$carpetaDestino = './views/default/img/';
-				$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 			}
 
 			// listado
