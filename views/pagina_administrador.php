@@ -36,7 +36,7 @@ echo '
 					</div>
 					
 					<div class="form-group">
-						<label><span>* </span>Precio</label> <input type="number"
+						<label><span>* </span>Precio</label> <input type="number" step="any"
 							name="precio" class="precio" required="required" />
 					</div>
 					
@@ -81,7 +81,17 @@ echo '
 					</div>
 					
 					<div class="form-group">
-						<label>Listado</label> <input type="checkbox" name="listado" value="listado">
+						<label>Listado</label> <input type="checkbox" name="listado" id="check" value="listado"
+						onchange="javascript:showContent()">
+					</div>
+					
+					<div id="listado">
+					
+						<div class="form-group">
+							<label><span>* </span>Título listado</label> <input type="text"
+								name="titulo_producto" class="titulo_listado" required="required" />
+						</div>
+					
 					</div>
 
 					<div class="botones">

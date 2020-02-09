@@ -381,6 +381,10 @@ nav>ul>li>ul#lista_movil li {
 	margin: 0 auto;
 }
 
+#listado {
+	display: none;	
+}
+
 #errores {
 	color: red;
 }

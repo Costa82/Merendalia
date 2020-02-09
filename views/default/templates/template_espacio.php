@@ -41,15 +41,15 @@
 <script>
 
     var rutacss1 = "./views/default/css/main.css?" + Math.random();
-    var rutacss2 = "./views/default/jquery/jquery_menuMoviles_desplegable.js?" + Math.random();
-    var rutacss3 = "./views/default/jquery/ocultar_productos.js?" + Math.random();
-    var rutacss4 = "./views/default/jquery/jquery_anclas.js?" + Math.random();
+    var rutajs1 = "./views/default/jquery/jquery_menuMoviles_desplegable.js?" + Math.random();
+    var rutajs2 = "./views/default/jquery/ocultar_productos.js?" + Math.random();
+    var rutajs3 = "./views/default/jquery/jquery_anclas.js?" + Math.random();
     var script = "script";
     
     document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />');
-    document.write('<script src="' + rutacss2 + '"></' + script + '>');
-    document.write('<script src="' + rutacss3 + '"></' + script + '>');
-    document.write('<script src="' + rutacss4 + '"></' + script + '>');
+    document.write('<script src="' + rutajs1 + '"></' + script + '>');
+    document.write('<script src="' + rutajs2 + '"></' + script + '>');
+    document.write('<script src="' + rutajs3 + '"></' + script + '>');
 	
 </script>
 
