@@ -93,6 +93,9 @@ function validacion($num)
 		case 606:
 			return $mensaje[ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO];
 			break;
+		case 607:
+			return $mensaje[LISTADO_PRODUCTO_SUBIDO_KO];
+			break;
 		default:
 			return $mensaje[ERROR_GENERAL];
 			break;

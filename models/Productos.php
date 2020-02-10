@@ -61,7 +61,7 @@ class Productos extends BBDDController {
 	public function setPrecio($precio) {
 		$this->precio = $precio;
 	}
-	
+
 	public function getTipo_producto() {
 		return $this->tipo_producto;
 	}
@@ -69,7 +69,7 @@ class Productos extends BBDDController {
 	public function setTipo_producto($tipo_producto) {
 		$this->tipo_producto = $tipo_producto;
 	}
-	
+
 	public function getImagen() {
 		return $this->imagen;
 	}
@@ -77,7 +77,7 @@ class Productos extends BBDDController {
 	public function setImagen($imagen) {
 		$this->imagen = $imagen;
 	}
-	
+
 	public function getTitle() {
 		return $this->title;
 	}
@@ -85,7 +85,7 @@ class Productos extends BBDDController {
 	public function setTitle($title) {
 		$this->title = $title;
 	}
-	
+
 	public function getAlt() {
 		return $this->alt;
 	}
@@ -93,7 +93,7 @@ class Productos extends BBDDController {
 	public function setAlt($alt) {
 		$this->alt = $alt;
 	}
-	
+
 	public function getListado() {
 		return $this->listado;
 	}
@@ -101,7 +101,7 @@ class Productos extends BBDDController {
 	public function setListado($listado) {
 		$this->listado = $listado;
 	}
-	
+
 	public function getEstado() {
 		return $this->estado;
 	}
@@ -139,7 +139,32 @@ class Productos extends BBDDController {
                        '".$this->alt."',
                        '".$this->listado."',
                        '".$this->estado."');";
-		
+
+		$save = $this->c->query($query);
+
+		return $save;
+	}
+
+	/**
+	 *
+	 * Insertamos un listado en BBDD
+	 *
+	 * @param unknown_type $titulo_producto
+	 * @param unknown_type $linea
+	 * @param unknown_type $es_titulo
+	 * @param unknown_type $orden
+	 */
+	public function saveListado($titulo_producto, $linea, $es_titulo, $orden) {
+
+		$id_producto = Productos::getCampoBy($this->tabla, $this->c, "id_producto", "titulo_producto", $this->titulo_producto);
+
+		$query = "INSERT INTO listado_producto (id_producto, linea, es_titulo, orden, estado)
+                VALUES('".$id_producto."',
+                       '".$linea."',
+                       '".$es_titulo."',
+                       '".$orden."',
+                       'ACTV');";
+
 		$save = $this->c->query($query);
 
 		return $save;
@@ -147,6 +172,7 @@ class Productos extends BBDDController {
 
 	/**
 	 * Obtenemos todos los productos de un mismo tipo
+	 * 
 	 * @param String $tipo_producto
 	 */
 	public function getPorTipoProducto($tipo_producto)
@@ -295,41 +321,32 @@ class Productos extends BBDDController {
 
 					foreach ($resultados['filas_consulta'][$j] as $key => $value) {
 
-						// Id_producto
-						if ($key == "id_producto") {
-							$id_producto = $value;
+						switch ($key) {
+							
+							case "id_producto":
+								$id_producto = $value;
+								break;
+							case "titulo_producto":
+								$titulo_producto = $value;
+								break;
+							case "precio":
+								$precio = $value;
+								break;
+							case "imagen":
+								$imagen = $value;
+								break;
+							case "title":
+								$title = $value;
+								break;
+							case "alt":
+								$alt = $value;
+								break;
+							case "listado":
+								$listado = $value;
+								break;
+							default:
+								break;
 						}
-
-						// Título
-						if ($key == "titulo_producto") {
-							$titulo_producto = $value;
-						}
-
-						// Precio
-						if ($key == "precio") {
-							$precio = $value;
-						}
-
-						// Imagen
-						if ($key == "imagen") {
-							$imagen = $value;
-						}
-
-						// Title
-						if ($key == "title") {
-							$title = $value;
-						}
-
-						// Alt
-						if ($key == "alt") {
-							$alt = $value;
-						}
-
-						// Listado
-						if ($key == "listado") {
-							$listado = $value;
-						}
-
 					}
 
 					echo "<li class='" . $tipo_producto_normalizado . "'>";

@@ -11,6 +11,7 @@ define("PRODUCTO_SUBIDO_KO_TITLE_ALT", 603); //No se puede subir imagen sin titl
 define("ERROR_SUBIDA_IMAGEN_MOVER_ARCHIVO", 604); //Error al mover el archivo.
 define("ERROR_SUBIDA_IMAGEN_CREACION_CARPETA", 605); //Error al crear la carpeta.
 define("ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO", 606); //Imagen con formato incorrecto.
+define("LISTADO_PRODUCTO_SUBIDO_KO", 607); //Error al subir el listado del producto.
 
 // Error general
 define("ERROR_GENERAL", 1000); //Error General
@@ -25,6 +26,7 @@ $mensaje[PRODUCTO_SUBIDO_KO_TITLE_ALT] = "No se puede subir imagen sin title o a
 $mensaje[ERROR_SUBIDA_IMAGEN_MOVER_ARCHIVO] = "Error al mover el archivo.";
 $mensaje[ERROR_SUBIDA_IMAGEN_CREACION_CARPETA] = "Error al crear la carpeta.";
 $mensaje[ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO] = "Imagen con formato incorrecto.";
+$mensaje[LISTADO_PRODUCTO_SUBIDO_KO] = "Error al subir el listado del producto.";
 
 $mensaje[ERROR_GENERAL] = "Error General.";
 ?>

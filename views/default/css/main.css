@@ -225,11 +225,12 @@ nav>ul>li>ul#lista_movil {
 	background: linear-gradient(to up, rgba(226, 226, 226, 1) 0%,
 		rgba(209, 209, 209, 1) 0%, rgba(219, 219, 219, 1) 14%,
 		rgba(244, 244, 244, 1) 58%, rgba(254, 254, 254, 1) 76% );
-	filter: progid :           DXImageTransform.Microsoft.gradient (        
-		    startColorstr =     
-		     '#e2e2e2', endColorstr =           '#fefefe', GradientType =
+	filter: progid :             DXImageTransform.Microsoft.gradient (
 		        
-		 1 );
+		     startColorstr =      
+		      '#e2e2e2', endColorstr =             '#fefefe', GradientType = 
+		        
+		  1 );
 }
 
 nav>ul>li>ul#lista_movil a {
@@ -339,7 +340,7 @@ nav>ul>li>ul#lista_movil li {
 .formulario_logueo {
 	padding: 5px;
 	max-width: 400px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	font-size: 15px;
 }
 
@@ -348,24 +349,32 @@ nav>ul>li>ul#lista_movil li {
 	font-size: 15px;
 }
 
-.formulario_logueo input, .formulario_productos input, .formulario_productos textarea, .formulario_productos select {
+.formulario_logueo input,.formulario_productos input,.formulario_productos textarea,.formulario_productos select
+	{
 	margin-bottom: 5px;
 }
 
+.formulario_productos .linea {
+	margin: 10px 0;
+	padding: 5px;
+	border: solid 1px;
+	max-width: 400px;
+}
+
 .formulario_productos input.titulo_producto {
-	margin-left: 14px;
+	margin-left: 12px;
 }
 
 .formulario_productos input.precio {
-	margin-left: 80px;
+	margin-left: 78px;
 }
 
 .formulario_productos input.title {
-	margin-left: 6px;
+	margin-left: 2px;
 }
 
 .formulario_productos input.alt {
-	margin-left: 16px;
+	margin-left: 12px;
 }
 
 .formulario_logueo input.nick {
@@ -376,20 +385,18 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 10px;
 }
 
-.formulario_logueo .botones, .formulario_productos .botones {
+.formulario_logueo .botones,.formulario_productos .botones {
 	width: 120px;
 	margin: 0 auto;
 }
 
 #listado {
-	display: none;	
+	display: none;
 }
 
 #errores {
 	color: red;
 }
-
-
 
 /* RESERVAS Y TARIFAS
    ========================================================================= */
@@ -1283,10 +1290,10 @@ footer h3 {
 	.condiciones,.whatsapp {
 		margin-left: 75px;
 	}
-	.formulario_logueo, .formulario_productos {
+	.formulario_logueo,.formulario_productos {
 		padding: 5px;
 		max-width: 400px;
-		margin: 0 auto;	
+		margin: 0 auto;
 		font-size: 20px;
 	}
 	.formulario_productos label {
@@ -1295,24 +1302,23 @@ footer h3 {
 	.formulario_logueo input.nick {
 		margin-left: 76px;
 	}
-	
 	.formulario_logueo input.contrasena {
 		margin-left: 10px;
 	}
 	.formulario_productos input.titulo_producto {
-		margin-left: 18px;
+		margin-left: 19px;
 	}
-	
 	.formulario_productos input.precio {
-		margin-left: 107px;
+		margin-left: 108px;
 	}
-	
 	.formulario_productos input.title {
-		margin-left: 4px;
+		margin-left: 6px;
 	}
-	
 	.formulario_productos input.alt {
-		margin-left: 18px;
+		margin-left: 20px;
+	}
+	.formulario_productos .linea {
+		max-width: 300px;
 	}
 }
 
@@ -1624,7 +1630,8 @@ footer h3 {
 	nav>ul>li#menu_moviles {
 		display: none;
 	}
-	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos {
+	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos
+		{
 		display: block;
 	}
 	.contenedor_circulos {
