@@ -54,17 +54,17 @@
 			
 			switch ($params['error']) {
 				// Error en el envío del formulario
-				case 201:
+				case 501:
 					include_once('template_envio_fallido.php');
 				break;
 				
 				// El nombre y el mail tienen que ser obligatorios
-				case 202:
+				case 502:
 					include_once('template_envio_fallido.php');
 				break;
 				
 				// Error en la validación del Recaptcha de google
-				case 203:
+				case 503:
 					include_once('template_envio_fallido_recaptcha.php');
 				break;
 				

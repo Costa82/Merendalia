@@ -10,7 +10,7 @@ class ControladorUsuarios
 	/**
 	 * Método que llama al logueo del administrador
 	 */
-	public function administrador()
+	public function merendalios()
 	{
 		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
 			$params['error'] = $_SESSION['error'];
@@ -18,13 +18,13 @@ class ControladorUsuarios
 		} else {
 			$params['error'] = 0;
 		}
-		require './views/administrador.php';
+		require './views/merendalios.php';
 	}
 
 	/**
 	 * Método que lleva a la página del administrador
 	 */
-	public function pagina_administrador()
+	public function pagina_administrador_merendalios()
 	{
 		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
 			$params['error'] = $_SESSION['error'];
@@ -32,7 +32,7 @@ class ControladorUsuarios
 		} else {
 			$params['error'] = 0;
 		}
-		require './views/pagina_administrador.php';
+		require './views/pagina_administrador_merendalios.php';
 	}
 
 	/**
@@ -58,17 +58,17 @@ class ControladorUsuarios
 						// Anulamos el error
 						$_SESSION['error'] = 0;
 
-						$destino = "pagina_administrador";
+						$destino = "pagina_administrador_merendalios";
 
 					} else {
 
 						$_SESSION['error'] = 202;
-						$destino = "administrador";
+						$destino = "merendalios";
 					}
 				} else {
 
 					$_SESSION['error'] = 201;
-					$destino = "administrador";
+					$destino = "merendalios";
 				}
 			}
 		}

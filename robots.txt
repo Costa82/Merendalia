@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /*.css$
+Allow: /*.js$
+Disallow: /merendalios
+Disallow: /pagina_administrador_merendalios
+Sitemap: https://www.merendalia.es/sitemap.xml
+Crawl-delay: 60

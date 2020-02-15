@@ -230,5 +230,5 @@ echo '
 
 $contenido = ob_get_clean();
 
-include './views/default/templates/template_pagina_administrador.php';
+include './views/default/templates/template_pagina_administrador_merendalios.php';
 ?>

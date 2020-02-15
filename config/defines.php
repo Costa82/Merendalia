@@ -1,8 +1,13 @@
 <?php
 
-// Validaciones usuario
-define("USER_NOEXIS", 201);   // El usuario no está registrado
-define("CLAVE_NOEXIS", 202);  // La contraseña es incorrecta
+// Validaciones Usuario
+define("USER_NOEXIS", 201); //El usuario no está registrado
+define("CLAVE_NOEXIS", 202); //La contraseña es incorrecta
+
+// Validaciones Correo
+define("ERROR_ENVIO", 501); //Error al enviar el correo.
+define("ERROR_ENVIO_NOMBRE_MAIL", 502); //Error al enviar el correo, falta el nombre o el mail.
+define("ERROR_ENVIO_CAPTCHA", 503); //Error al enviar el correo, error en el Recaptcha.
 
 // Validaciones Productos
 define("PRODUCTO_SUBIDO_OK", 601); //Producto subido correctamente.
@@ -19,6 +24,10 @@ define("ERROR_GENERAL", 1000); //Error General
 // Definiciones
 $mensaje[USER_NOEXIS] = "El usuario no está registrado.";
 $mensaje[CLAVE_NOEXIS] = "La contraseña es incorrecta";
+
+$mensaje[ERROR_ENVIO] = "Error al enviar el correo.";
+$mensaje[ERROR_ENVIO_NOMBRE_MAIL] = "Error al enviar el correo, falta el nombre o el mail.";
+$mensaje[ERROR_ENVIO_CAPTCHA] = "Error al enviar el correo, error en el Recaptcha.";
 
 $mensaje[PRODUCTO_SUBIDO_OK] = "Producto subido correctamente.";
 $mensaje[PRODUCTO_SUBIDO_KO] = "Error al subir el producto.";

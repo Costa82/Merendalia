@@ -45,5 +45,5 @@ echo '				</div>
 
 $contenido = ob_get_clean();
 
-include './views/default/templates/template_administrador.php';
+include './views/default/templates/template_merendalios.php';
 ?>

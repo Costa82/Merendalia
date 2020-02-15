@@ -75,6 +75,15 @@ function validacion($num)
 		case 202:
 			return $mensaje[CLAVE_NOEXIS];
 			break;
+		case 501:
+			return $mensaje[ERROR_ENVIO];
+			break;
+		case 502:
+			return $mensaje[ERROR_ENVIO_NOMBRE_MAIL];
+			break;
+		case 503:
+			return $mensaje[ERROR_ENVIO_CAPTCHA];
+			break;
 		case 601:
 			return $mensaje[PRODUCTO_SUBIDO_OK];
 			break;

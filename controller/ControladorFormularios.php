@@ -33,10 +33,21 @@ class ControladorFormularios
 		if($respuesta_google->score > 0.2){
 
 			if(isset($_REQUEST['nombre']) AND isset($_REQUEST['mail']) AND isset($_REQUEST['dia']) AND isset($_REQUEST['hora_entrada']) AND isset($_REQUEST['hora_salida'])) {
+					
+				// Creamos un usuario
+				$usuario = new Usuarios();
 
+				$usuario->setTipo_usuario("USU");
+				$usuario->setEstado("ACTV");
+				
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
+				$usuario->setNombre($nombre);
+				$usuario->setNick($nombre);
+				
 				$mail = $_REQUEST['mail'];
+				$usuario->setEmail($mail);
+				
 				$dia = $_REQUEST['dia'];
 				$hora_entrada = $_REQUEST['hora_entrada'];
 				$hora_salida = $_REQUEST['hora_salida'];
@@ -46,6 +57,7 @@ class ControladorFormularios
 				if ( isset($_REQUEST['telefono']) ) {
 
 					$telefono = $_REQUEST['telefono'];
+					$usuario->setTelefono($telefono);
 
 					if ($telefono != "" && $telefono != null) {
 
@@ -69,6 +81,7 @@ class ControladorFormularios
 				if (isset($_POST['whatsapp']) && $_POST['whatsapp'] == '1')
 				{
 					$whatsapp = "OK";
+					$usuario->setNewsletter(1);
 				}
 				else
 				{
@@ -86,14 +99,16 @@ class ControladorFormularios
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
 					$_SESSION['error'] = 501;
+				} else {
+					$usuario->saveUsuario();
 				}
 
-			// El nombre y el mail tienen que ser obligatorios
+				// El nombre y el mail tienen que ser obligatorios
 			} else {
 				$_SESSION['error'] = 502;
 			}
 
-		// El recaptcha ha ido mal
+			// El recaptcha ha ido mal
 		} else {
 			$_SESSION['error'] = 503;
 		}
@@ -127,16 +142,27 @@ class ControladorFormularios
 		if($respuesta_google->score > 0.2){
 
 			if(isset($_REQUEST['nombre']) AND isset($_REQUEST['mail'])){
+				
+				// Creamos un usuario
+				$usuario = new Usuarios();
+
+				$usuario->setTipo_usuario("USU");
+				$usuario->setEstado("ACTV");
 					
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
+				$usuario->setNombre($nombre);
+				$usuario->setNick($nombre);
+				
 				$mail = $_REQUEST['mail'];
+				$usuario->setEmail($mail);
 				$telefonoValido = true;
 					
 				// Campos opcionales
 				if ( isset($_REQUEST['telefono']) ) {
 
 					$telefono = $_REQUEST['telefono'];
+					$usuario->setTelefono($telefono);
 
 					if ($telefono != "" && $telefono != null) {
 							
@@ -159,6 +185,7 @@ class ControladorFormularios
 					
 				if (isset($_POST['whatsapp']) && $_POST['whatsapp'] == '1') {
 					$whatsapp = "OK";
+					$usuario->setNewsletter(1);
 				} else {
 					$whatsapp = "KO";
 				}
@@ -174,14 +201,16 @@ class ControladorFormularios
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
 					$_SESSION['error'] = 501;
+				} else {
+					$usuario->saveUsuario();
 				}
 
-			// El nombre y el mail tienen que ser obligatorios
+				// El nombre y el mail tienen que ser obligatorios
 			} else {
 				$_SESSION['error'] = 502;
 			}
 
-		// El recaptcha ha ido mal
+			// El recaptcha ha ido mal
 		} else {
 			$_SESSION['error'] = 503;
 		}

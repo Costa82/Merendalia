@@ -15,9 +15,9 @@ $map = array(
         'action' => 'subir_producto',
         'privada' => true
     ),
-	'administrador' => array(
+	'merendalios' => array(
         'controller' => 'ControladorUsuarios',
-        'action' => 'administrador',
+        'action' => 'merendalios',
         'privada' => false
     ),
     'logueo' => array(
@@ -25,9 +25,9 @@ $map = array(
         'action' => 'logueo',
         'privada' => false
     ),
-    'pagina_administrador' => array(
+    'pagina_administrador_merendalios' => array(
         'controller' => 'ControladorUsuarios',
-        'action' => 'pagina_administrador',
+        'action' => 'pagina_administrador_merendalios',
         'privada' => true
     ),
     'inicio' => array(

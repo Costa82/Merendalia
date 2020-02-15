@@ -27,6 +27,95 @@ class Usuarios extends BBDDController {
 		$this->tabla = "usuarios";
 	}
 
+	// Getters y Setters
+	public function getNick() {
+		return $this->nick;
+	}
+
+	public function setNick($nick) {
+		$this->nick = $nick;
+	}
+
+	public function getNombre() {
+		return $this->nombre;
+	}
+
+	public function setNombre($nombre) {
+		$this->nombre = $nombre;
+	}
+
+	public function getApellidos() {
+		return $this->apellidos;
+	}
+
+	public function setApellidos($apellidos) {
+		$this->apellidos = $apellidos;
+	}
+
+	public function getTelefono() {
+		return $this->telefono;
+	}
+
+	public function setTelefono($telefono) {
+		$this->telefono = $telefono;
+	}
+
+	public function getEmail() {
+		return $this->email;
+	}
+
+	public function setEmail($email) {
+		$this->email = $email;
+	}
+
+	public function getPassword() {
+		return $this->password;
+	}
+
+	public function setPassword($password) {
+		$this->password = $password;
+	}
+
+	public function getFecha_registro() {
+		return $this->fecha_registro;
+	}
+
+	public function setFecha_registro($fecha_registro) {
+		$this->fecha_registro = $fecha_registro;
+	}
+
+	public function getFecha_ultima_actualizacion() {
+		return $this->fecha_ultima_actualizacion;
+	}
+
+	public function setFecha_ultima_actualizacion($fecha_ultima_actualizacion) {
+		$this->fecha_ultima_actualizacion = $fecha_ultima_actualizacion;
+	}
+
+	public function getTipo_usuario() {
+		return $this->tipo_usuario;
+	}
+
+	public function setTipo_usuario($tipo_usuario) {
+		$this->tipo_usuario = $tipo_usuario;
+	}
+
+	public function getNewsletter() {
+		return $this->newsletter;
+	}
+
+	public function setNewsletter($newsletter) {
+		$this->newsletter = $newsletter;
+	}
+
+	public function getEstado() {
+		return $this->estado;
+	}
+
+	public function setEstado($estado) {
+		$this->estado = $estado;
+	}
+
 	public function getById($id) {
 			
 		$sql = "SELECT * FROM " . $this->tabla . " WHERE nick = " . $id . "";
@@ -41,23 +130,43 @@ class Usuarios extends BBDDController {
 	}
 
 	/**
-	 * Inserta un usuario con los datos pasador como parámetro
-	 * @param $array_datos array asociativo con todos los datos a insertar
-	 *
+	 * Insertamos un usuario en BBDD
 	 */
-	public function set($array_datos = array()) {
-		//Creamos variables desde los datos del array
-		foreach ( $array_datos as $campo => $valor ){
-			$$campo = $valor;
+	public function saveUsuario() {
+		
+		$save = false;
+		$fecha_actual = date('d-m-Y');
+		
+		$registrado = Usuarios::esRegistradoNickMail($this->nick, $this->email);
+		
+		// Si ya está registrado actualizamos su fecha_ultima_actualizacion
+		if ($registrado) {
+			
+			$query = "UPDATE " . $this->tabla . " 
+						SET fecha_ultima_actualizacion = '" . $fecha_actual . "'
+						WHERE nick = '" . $this->nick . "' AND email = '" . $this->email . "';";
+			
+		} else {
+			
+			$query = "INSERT INTO " . $this->tabla . " (nick, nombre, apellidos, telefono,
+						email, password, fecha_registro, fecha_ultima_actualizacion, tipo_usuario, newsletter, estado)
+	                	VALUES('" . $this->nick . "',
+	                       '" . $this->nombre . "',
+	                       '" . $this->apellidos . "',
+	                       '" . $this->telefono . "',
+	                       '" . $this->email . "',
+	                       '" . $this->password . "',
+	                       '" . $fecha_actual . "',
+	                       '" . $fecha_actual . "',
+	                       '" . $this->tipo_usuario . "',
+	                       '" . $this->newsletter . "',
+	                       '" . $this->estado . "');";
+	
 		}
 
-		//Indicamos la query INSERT a ejecutar
-		$clave = md5($clave);
-		$sql= $this->query = " INSERT INTO " . $this->tabla . " VALUES('default',
-		'$nombre', '$apellidos', '$email', '$clave','$avatar','$codigoActivacion','default')";
+		$save = $this->c->query($query);
 
-		//Ejecutamos la query
-		$this->execute_single_query ();
+		return $save;
 	}
 
 	/**
@@ -99,8 +208,34 @@ class Usuarios extends BBDDController {
 	public function esRegistradoNick($nick)
 	{
 		$resultado = false;
-		
+
 		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND estado = 'ACTV'";
+		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
+
+		if ($resultados == 0 || $resultados['numero'] == 0) {
+			// No hay datos para mostrar
+		} else {
+			$resultado = true;
+		}
+
+		return $resultado;
+	}
+
+	/**
+	 * esRegistradoNickMail
+	 * Método que se utiliza para comprobar si un usuario está registrado.
+	 *
+	 * @param
+	 *            $nick
+	 * @param
+	 *            $mail
+	 * @return boolean
+	 */
+	public function esRegistradoNickMail($nick, $mail)
+	{
+		$resultado = false;
+
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND email = '" . $mail . "' AND estado = 'ACTV'";
 		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {
