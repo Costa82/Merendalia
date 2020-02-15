@@ -61,7 +61,7 @@ class ControladorFormularios
 
 					if ($telefono != "" && $telefono != null) {
 
-						if (!$validaciones->validarTelefono($telefono)) {
+						if (!validarTelefono($telefono)) {
 							$telefonoValido = false;
 						}
 					} else {
@@ -166,7 +166,7 @@ class ControladorFormularios
 
 					if ($telefono != "" && $telefono != null) {
 							
-						if (!$validaciones->validarTelefono($telefono)) {
+						if (!validarTelefono($telefono)) {
 							$telefonoValido = false;
 						}
 					} else {
