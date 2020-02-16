@@ -30,10 +30,16 @@ class Connection {
 
 	private function __clone() { }
 
+	/**
+	 * Abre la conexión a BBDD 
+	 */
 	public function dameConexion() {
 		return $this->conex;
 	}
 
+	/**
+	 * Cierra la conexión a BBDD 
+	 */
 	public function cierraConexion() {
 		$this->conex->close();
 	}

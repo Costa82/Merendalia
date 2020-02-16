@@ -19,8 +19,8 @@ class Productos extends BBDDController {
 	private $listado = null;
 	private $estado = null;
 
-	private $c;
-	private $tabla;
+	protected $c;
+	protected $tabla;
 
 	public function __construct()
 	{
@@ -149,14 +149,14 @@ class Productos extends BBDDController {
 	 *
 	 * Insertamos un listado en BBDD
 	 *
-	 * @param unknown_type $titulo_producto
-	 * @param unknown_type $linea
-	 * @param unknown_type $es_titulo
-	 * @param unknown_type $orden
+	 * @param String $titulo_producto
+	 * @param String $linea
+	 * @param String $es_titulo
+	 * @param String $orden
 	 */
 	public function saveListado($titulo_producto, $linea, $es_titulo, $orden) {
 
-		$id_producto = Productos::getCampoBy($this->tabla, $this->c, "id_producto", "titulo_producto", $this->titulo_producto);
+		$id_producto = Productos::getCampoBy("id_producto", "titulo_producto", $this->titulo_producto);
 
 		$query = "INSERT INTO listado_producto (id_producto, linea, es_titulo, orden, estado)
                 VALUES('".$id_producto."',
@@ -178,7 +178,7 @@ class Productos extends BBDDController {
 	public function getPorTipoProducto($tipo_producto)
 	{
 		$consulta = "SELECT * FROM " . $this->tabla . " WHERE tipo_producto = '" . $tipo_producto . "' AND estado = 'ACTV' ORDER BY titulo_producto ASC";
-		return Productos::ejecutarQuery($this->c, $consulta);
+		return Productos::ejecutarQuery($consulta);
 	}
 
 	/**
@@ -187,19 +187,19 @@ class Productos extends BBDDController {
 	public function getTiposProductos()
 	{
 		$consulta = "SELECT * FROM tipo_producto WHERE estado = 'ACTV' ORDER BY orden ASC";
-		return Productos::ejecutarQuery($this->c, $consulta);
+		return Productos::ejecutarQuery($consulta);
 	}
 
 	/**
 	 * Obtenemos el listado del producto pasado por id
 	 *
-	 * @param unknown_type $id_producto
+	 * @param String $id_producto
 	 */
 	public function getListadoProducto($id_producto)
 	{
 		$consulta = "SELECT * FROM listado_producto WHERE id_producto = " . $id_producto . "
 		AND estado = 'ACTV' ORDER BY orden ASC";
-		return Productos::ejecutarQuery($this->c, $consulta);
+		return Productos::ejecutarQuery($consulta);
 	}
 
 	/**

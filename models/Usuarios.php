@@ -18,8 +18,8 @@ class Usuarios extends BBDDController {
 	public $newsletter;
 	public $estado;
 
-	private $c;
-	private $tabla;
+	protected $c;
+	protected $tabla;
 
 	public function __construct()
 	{
@@ -179,13 +179,10 @@ class Usuarios extends BBDDController {
 	}
 
 	/**
-	 * esRegistrado
 	 * Método que se utiliza para comprobar si un usuario está registrado y poder loguearse.
 	 *
-	 * @param
-	 *            $nick
-	 * @param
-	 *            $pass
+	 * @param String $nick
+	 * @param String $pass
 	 * @return boolean
 	 */
 	public function esRegistrado($nick, $pass)
@@ -195,7 +192,7 @@ class Usuarios extends BBDDController {
 		$passMD5 = md5($pass);
 		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND password = '$passMD5' AND estado = 'ACTV'";
 
-		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
+		$resultados = Usuarios::ejecutarQuery($consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {
 			// No hay datos para mostrar
@@ -207,11 +204,9 @@ class Usuarios extends BBDDController {
 	}
 
 	/**
-	 * esRegistradoNick
 	 * Método que se utiliza para comprobar si un usuario está registrado y poder loguearse.
 	 *
-	 * @param
-	 *            $nick
+	 * @param String $nick
 	 * @return boolean
 	 */
 	public function esRegistradoNick($nick)
@@ -219,7 +214,7 @@ class Usuarios extends BBDDController {
 		$resultado = false;
 
 		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND estado = 'ACTV'";
-		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
+		$resultados = Usuarios::ejecutarQuery($consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {
 			// No hay datos para mostrar
@@ -231,11 +226,9 @@ class Usuarios extends BBDDController {
 	}
 
 	/**
-	 * esRegistradoMail
 	 * Método que se utiliza para comprobar si un usuario está registrado por su mail.
 	 *
-	 * @param
-	 *            $mail
+	 * @param String $mail
 	 * @return boolean
 	 */
 	public function esRegistradoMail($mail)
@@ -243,7 +236,7 @@ class Usuarios extends BBDDController {
 		$resultado = false;
 
 		$consulta = "SELECT * FROM " . $this->tabla . " WHERE email = '" . $mail . "' AND estado = 'ACTV'";
-		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
+		$resultados = Usuarios::ejecutarQuery($consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {
 			// No hay datos para mostrar

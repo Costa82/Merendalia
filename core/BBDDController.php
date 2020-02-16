@@ -5,17 +5,23 @@ abstract class BBDDController {
 
 	abstract protected function __construct();
 
+	/**
+	 * Consultamos por id
+	 * 
+	 * @param String $id Identificativo de la tabla
+	 */
 	abstract protected function getById($id);
 
 	/************ MÉTODOS COMUNES ************/
 
 	/**
-	 * Ejecutamos la query
+	 * Ejecutamos la query de consulta
 	 * 
-	 * @param unknown_type $conexion
-	 * @param unknown_type $consulta
+	 * @param String $consulta Consulta a realizar.
 	 */
-	public function ejecutarQuery($conexion, $consulta) {
+	public function ejecutarQuery($consulta) {
+		
+		$conexion = $this->c;
 			
 		$resultado = $conexion->query($consulta);
 
@@ -37,28 +43,25 @@ abstract class BBDDController {
 
 	/**
 	 * Sacamos todos los valores de la tabla
-	 * 
-	 * @param unknown_type $tabla
-	 * @param unknown_type $conexion
 	 */
-	public function getAll($tabla, $conexion)
+	public function getAll()
 	{
-		$consulta = "SELECT * FROM " . $tabla . " WHERE estado = 'ACTV'";
-		return BBDDController::ejecutarQuery($conexion, $consulta);
+		$consulta = "SELECT * FROM " . $this->tabla . "";
+		return BBDDController::ejecutarQuery($consulta);
 	}
 
 	/**
 	 * Buscamos todos los resultados por columna y valor
 	 * 
-	 * @param unknown_type $tabla
-	 * @param unknown_type $conexion
-	 * @param unknown_type $column
-	 * @param unknown_type $value
+	 * @param String $column Columna a filtrar.
+	 * @param String $value Valor de la columna a filtrar.
 	 */
-	public function getBy($tabla, $conexion, $column, $value)
+	public function getBy($column, $value)
 	{
-		$sql = "SELECT * FROM " . $tabla . " WHERE " . $column . " = '" . $value . "'";
+		$sql = "SELECT * FROM " . $this->tabla . " WHERE " . $column . " = '" . $value . "'";
 
+		$conexion = $this->c;
+		
 		if ($conexion->real_query($sql)) {
 			if ($resul = $conexion->store_result()) {
 				if ($resul->num_rows > 0) {
@@ -71,15 +74,15 @@ abstract class BBDDController {
     /**
      * Buscamos un campo específico de la tabla por columna y valor
      * 
-     * @param unknown_type $tabla
-     * @param unknown_type $conexion
-     * @param unknown_type $campo
-     * @param unknown_type $column
-     * @param unknown_type $value
+     * @param String $campo Campo buscado en la consulta
+     * @param String $column Columna a filtrar
+     * @param String $value Valor de la columna a filtrar
      */
-    public function getCampoBy($tabla, $conexion, $campo, $column, $value)
+    public function getCampoBy($campo, $column, $value)
     {
-        $sql = "SELECT " . $campo . " FROM " . $tabla . " WHERE " . $column . " = '" . $value . "'";
+        $sql = "SELECT " . $campo . " FROM " . $this->tabla . " WHERE " . $column . " = '" . $value . "'";
+        
+        $conexion = $this->c;
         
         if ($conexion->real_query($sql)) {
             if ($resul = $conexion->store_result()) {

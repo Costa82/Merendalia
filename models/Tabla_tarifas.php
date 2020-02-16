@@ -13,8 +13,8 @@ class Tabla_tarifas extends BBDDController {
 	public $orden;
 	public $estado;
 
-	private $c;
-	private $tabla;
+	protected $c;
+	protected $tabla;
 
 	public function __construct()
 	{
@@ -42,22 +42,7 @@ class Tabla_tarifas extends BBDDController {
 	public function getTitulosTabla()
 	{
 		$consulta = "SELECT * FROM titulo_tabla_tarifas WHERE estado = 'ACTV' ORDER BY orden ASC";
-		$resultado = $this->c->query($consulta);
-
-		if ($resultado->num_rows != 0) {
-			while ($row = $resultado->fetch_assoc()) {
-				$rows[] = $row;
-			}
-			$datos = array(
-                'numero' => $resultado->num_rows,
-                'filas_consulta' => $rows
-			);
-			return $datos;
-		} else {
-			return $datos = array(
-                'numero' => 0
-			);
-		}
+		return Tabla_tarifas::ejecutarQuery($consulta);
 	}
 
 	/**
@@ -65,7 +50,7 @@ class Tabla_tarifas extends BBDDController {
 	 */
 	public function mostrarTablaTarifas() {
 			
-		$resultados = Tabla_tarifas::getAll($this->tabla, $this->c);
+		$resultados = Tabla_tarifas::getAll();
 		$resultados1 = Tabla_tarifas::getTitulosTabla();
 			
 		echo '<h3>Tarifas</h3>
