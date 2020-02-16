@@ -1,8 +1,8 @@
 <?php
-require_once './core/BBDDController.php';
+require_once 'abstract/AbstractBBDD.php';
 require_once './config/Utils.php';
 
-class Tabla_tarifas extends BBDDController {
+class Tabla_tarifas extends AbstractBBDD {
 
 	// Propiedades de la tabla de la BBDD
 	public $dia;

@@ -1,7 +1,7 @@
 <?php
-require_once 'Connection.php';
+require_once './core/Connection.php';
 
-abstract class BBDDController {
+abstract class AbstractBBDD {
 
 	abstract protected function __construct();
 
@@ -47,7 +47,7 @@ abstract class BBDDController {
 	public function getAll()
 	{
 		$consulta = "SELECT * FROM " . $this->tabla . "";
-		return BBDDController::ejecutarQuery($consulta);
+		return AbstractBBDD::ejecutarQuery($consulta);
 	}
 
 	/**

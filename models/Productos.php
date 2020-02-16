@@ -1,8 +1,8 @@
 <?php
-require_once './core/BBDDController.php';
+require_once 'abstract/AbstractBBDD.php';
 require_once './config/Utils.php';
 
-class Productos extends BBDDController {
+class Productos extends AbstractBBDD {
 
 	// Propiedades de la tabla de la BBDD
 
