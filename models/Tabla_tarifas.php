@@ -65,7 +65,7 @@ class Tabla_tarifas extends BBDDController {
 	 */
 	public function mostrarTablaTarifas() {
 			
-		$resultados = Tabla_tarifas::getAll();
+		$resultados = Tabla_tarifas::getAll($this->tabla, $this->c);
 		$resultados1 = Tabla_tarifas::getTitulosTabla();
 			
 		echo '<h3>Tarifas</h3>

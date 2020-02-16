@@ -13,6 +13,7 @@ class Usuarios extends BBDDController {
 	public $password;
 	public $fecha_registro;
 	public $fecha_ultima_actualizacion;
+	public $ultima_accion;
 	public $tipo_usuario;
 	public $newsletter;
 	public $estado;
@@ -92,6 +93,14 @@ class Usuarios extends BBDDController {
 		$this->fecha_ultima_actualizacion = $fecha_ultima_actualizacion;
 	}
 
+	public function getUltima_accion() {
+		return $this->ultima_accion;
+	}
+
+	public function setUltima_accion($ultima_accion) {
+		$this->ultima_accion = $ultima_accion;
+	}
+
 	public function getTipo_usuario() {
 		return $this->tipo_usuario;
 	}
@@ -133,23 +142,23 @@ class Usuarios extends BBDDController {
 	 * Insertamos un usuario en BBDD
 	 */
 	public function saveUsuario() {
-		
+
 		$save = false;
 		$fecha_actual = date('d-m-Y');
-		
-		$registrado = Usuarios::esRegistradoNickMail($this->nick, $this->email);
-		
+
+		$registrado = Usuarios::esRegistradoMail($this->email);
+
 		// Si ya está registrado actualizamos su fecha_ultima_actualizacion
 		if ($registrado) {
-			
-			$query = "UPDATE " . $this->tabla . " 
-						SET fecha_ultima_actualizacion = '" . $fecha_actual . "'
-						WHERE nick = '" . $this->nick . "' AND email = '" . $this->email . "';";
-			
+				
+			$query = "UPDATE " . $this->tabla . "
+						SET fecha_ultima_actualizacion = '" . $fecha_actual . "', ultima_accion = '" . $this->ultima_accion . "'
+						WHERE email = '" . $this->email . "';";
+				
 		} else {
-			
+				
 			$query = "INSERT INTO " . $this->tabla . " (nick, nombre, apellidos, telefono,
-						email, password, fecha_registro, fecha_ultima_actualizacion, tipo_usuario, newsletter, estado)
+						email, password, fecha_registro, fecha_ultima_actualizacion, ultima_accion, tipo_usuario, newsletter, estado)
 	                	VALUES('" . $this->nick . "',
 	                       '" . $this->nombre . "',
 	                       '" . $this->apellidos . "',
@@ -158,10 +167,10 @@ class Usuarios extends BBDDController {
 	                       '" . $this->password . "',
 	                       '" . $fecha_actual . "',
 	                       '" . $fecha_actual . "',
+	                       '" . $this->ultima_accion . "',
 	                       '" . $this->tipo_usuario . "',
 	                       '" . $this->newsletter . "',
 	                       '" . $this->estado . "');";
-	
 		}
 
 		$save = $this->c->query($query);
@@ -222,20 +231,18 @@ class Usuarios extends BBDDController {
 	}
 
 	/**
-	 * esRegistradoNickMail
-	 * Método que se utiliza para comprobar si un usuario está registrado.
+	 * esRegistradoMail
+	 * Método que se utiliza para comprobar si un usuario está registrado por su mail.
 	 *
-	 * @param
-	 *            $nick
 	 * @param
 	 *            $mail
 	 * @return boolean
 	 */
-	public function esRegistradoNickMail($nick, $mail)
+	public function esRegistradoMail($mail)
 	{
 		$resultado = false;
 
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND email = '" . $mail . "' AND estado = 'ACTV'";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE email = '" . $mail . "' AND estado = 'ACTV'";
 		$resultados = Usuarios::ejecutarQuery($this->c, $consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {

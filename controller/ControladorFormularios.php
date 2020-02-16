@@ -39,15 +39,16 @@ class ControladorFormularios
 
 				$usuario->setTipo_usuario("USU");
 				$usuario->setEstado("ACTV");
-				
+				$usuario->setUltima_accion("Reserva");
+
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
 				$usuario->setNombre($nombre);
 				$usuario->setNick($nombre);
-				
+
 				$mail = $_REQUEST['mail'];
 				$usuario->setEmail($mail);
-				
+
 				$dia = $_REQUEST['dia'];
 				$hora_entrada = $_REQUEST['hora_entrada'];
 				$hora_salida = $_REQUEST['hora_salida'];
@@ -142,18 +143,19 @@ class ControladorFormularios
 		if($respuesta_google->score > 0.2){
 
 			if(isset($_REQUEST['nombre']) AND isset($_REQUEST['mail'])){
-				
+
 				// Creamos un usuario
 				$usuario = new Usuarios();
 
 				$usuario->setTipo_usuario("USU");
 				$usuario->setEstado("ACTV");
+				$usuario->setUltima_accion("Contacto");
 					
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
 				$usuario->setNombre($nombre);
 				$usuario->setNick($nombre);
-				
+
 				$mail = $_REQUEST['mail'];
 				$usuario->setEmail($mail);
 				$telefonoValido = true;
