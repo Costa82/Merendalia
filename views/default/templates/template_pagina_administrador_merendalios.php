@@ -15,6 +15,11 @@
 	rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="./views/default/css/font-awesome.css" />
 
+
+<!-- Add jQuery library -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-latest.min.js"></script>
+
 <!-- Metemos un aleatorio para el css y el jss -->
 <script>
     var rutacss1 = "./views/default/css/font-awesome.css?" + Math.random();

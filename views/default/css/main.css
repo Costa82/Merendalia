@@ -355,7 +355,6 @@ nav>ul>li>ul#lista_movil li {
 .formulario_subida_productos,.formulario_edicion_productos {
 	padding: 5px;
 	font-size: 15px;
-	max-width: 400px;
 	margin: 0 auto;
 }
 
@@ -369,7 +368,6 @@ nav>ul>li>ul#lista_movil li {
 	margin: 10px 0;
 	padding: 5px;
 	border: solid 1px;
-	max-width: 400px;
 }
 
 .formulario_subida_productos input.titulo_producto {
@@ -388,8 +386,8 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 14px;
 }
 
-.formulario_edicion_productos input.titulo_producto {
-	margin-left: 48px;
+.formulario_edicion_productos input.titulo_producto_buscar {
+	margin-left: 33px;
 }
 
 .formulario_edicion_productos input.titulo_producto_nuevo {
@@ -424,6 +422,7 @@ nav>ul>li>ul#lista_movil li {
 	{
 	width: 140px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 #listado {
@@ -1333,9 +1332,10 @@ footer h3 {
 	.formulario_logueo,.formulario_subida_productos,.formulario_edicion_productos
 		{
 		padding: 5px;
-		max-width: 400px;
+		width: 350px;
 		margin: 0 auto;
 		font-size: 20px;
+		width: 400px;
 	}
 	.formulario_subida_productos label,.formulario_edicion_productos label {
 		font-size: 20px;
@@ -1347,10 +1347,10 @@ footer h3 {
 		margin-left: 10px;
 	}
 	.formulario_subida_productos input.titulo_producto {
-		margin-left: 18px;
+		margin-left: 10px;
 	}
 	.formulario_subida_productos input.precio {
-		margin-left: 107px;
+		margin-left: 98px;
 	}
 	.formulario_subida_productos input.title,.formulario_edicion_productos input.title
 		{
@@ -1364,8 +1364,8 @@ footer h3 {
 		{
 		max-width: 300px;
 	}
-	.formulario_edicion_productos input.titulo_producto {
-		margin-left: 48px;
+	.formulario_edicion_productos input.titulo_producto_buscar {
+		margin-left: 29px;
 	}
 	.formulario_edicion_productos input.titulo_producto_nuevo {
 		margin-left: 45px;

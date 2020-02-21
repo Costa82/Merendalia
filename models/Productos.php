@@ -137,7 +137,7 @@ class Productos extends AbstractBBDD {
 	 */
 	public function updateProducto() {
 
-		$query = "INSERT INTO " . $this->tabla . " (titulo_producto, descripcion, precio, tipo_producto,
+		$query = "UPDATE " . $this->tabla . " (titulo_producto, descripcion, precio, tipo_producto,
 		imagen, title, alt, listado, estado)
                 VALUES('".$this->titulo_producto."',
                        '".$this->descripcion."',
