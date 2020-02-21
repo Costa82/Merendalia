@@ -13,6 +13,9 @@ class Connection {
 	private $conex;
 	private static $instancia;
 
+	/**
+	 * Crea una instancia de BBDD
+	 */
 	public static function dameInstancia() {
 		if ( !self::$instancia ) {
 			self::$instancia = new self();

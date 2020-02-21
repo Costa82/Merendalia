@@ -10,6 +10,7 @@ class Productos extends AbstractBBDD {
 	private $id_producto;
 
 	private $titulo_producto = null;
+	private $titulo_producto_nuevo = null;
 	private $descripcion = null;
 	private $precio = null;
 	private $tipo_producto = null;
@@ -44,6 +45,14 @@ class Productos extends AbstractBBDD {
 
 	public function setTitulo_producto($titulo_producto) {
 		$this->titulo_producto = $titulo_producto;
+	}
+
+	public function getTitulo_producto_nuevo() {
+		return $this->titulo_producto_nuevo;
+	}
+
+	public function setTitulo_producto_nuevo($titulo_producto_nuevo) {
+		$this->titulo_producto_nuevo = $titulo_producto_nuevo;
 	}
 
 	public function getDescripcion() {
@@ -124,6 +133,28 @@ class Productos extends AbstractBBDD {
 	}
 
 	/**
+	 * Actualizamos un producto en BBDD
+	 */
+	public function updateProducto() {
+
+		$query = "INSERT INTO " . $this->tabla . " (titulo_producto, descripcion, precio, tipo_producto,
+		imagen, title, alt, listado, estado)
+                VALUES('".$this->titulo_producto."',
+                       '".$this->descripcion."',
+                       '".$this->precio."',
+                       '".$this->tipo_producto."',
+                       '".$this->imagen."',
+                       '".$this->title."',
+                       '".$this->alt."',
+                       '".$this->listado."',
+                       '".$this->estado."');";
+
+		$save = $this->c->query($query);
+
+		return $save;
+	}
+
+	/**
 	 * Insertamos un producto en BBDD
 	 */
 	public function saveProducto() {
@@ -172,7 +203,7 @@ class Productos extends AbstractBBDD {
 
 	/**
 	 * Obtenemos todos los productos de un mismo tipo
-	 * 
+	 *
 	 * @param String $tipo_producto
 	 */
 	public function getPorTipoProducto($tipo_producto)
@@ -322,7 +353,7 @@ class Productos extends AbstractBBDD {
 					foreach ($resultados['filas_consulta'][$j] as $key => $value) {
 
 						switch ($key) {
-							
+
 							case "id_producto":
 								$id_producto = $value;
 								break;

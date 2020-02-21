@@ -15,6 +15,11 @@ $map = array(
         'action' => 'subir_producto',
         'privada' => true
     ),
+    'editar_producto' => array(
+        'controller' => 'ControladorProductos',
+        'action' => 'editar_producto',
+        'privada' => true
+    ),
 	'merendalios' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'merendalios',
