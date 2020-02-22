@@ -247,7 +247,25 @@ class ControladorProductos
 
 		if (isset($_REQUEST['busquedaProducto'])) {
 				
-			$_SESSION['mostrar_formulario'] = "SI";
+			// Creamos un producto
+			$producto = new Productos();
+			
+			// titulo_producto
+			$producto->setTitulo_producto($_REQUEST["titulo_producto_buscar"]);
+			
+			$resultados = $producto->getPorTituloProducto();
+			
+			if ($resultados == 0 || $resultados['numero'] == 0) {
+				
+				// Ponemos la variable de sesión a SI para mostrar el formulario de edición
+				$_SESSION['mostrar_formulario'] = "NO";
+				$_SESSION['error'] = 608;
+				
+			} else {
+				
+				// Ponemos la variable de sesión a SI para mostrar el formulario de edición
+				$_SESSION['mostrar_formulario'] = "SI";
+			}
 				
 			$destino = "pagina_administrador_merendalios";
 
@@ -326,9 +344,9 @@ class ControladorProductos
 				if ($_SESSION['error'] == 0 && $guardado) {
 
 					// Actualizamos el producto
-					$saveProducto = $producto->updateProducto();
+					$updateProducto = $producto->updateProducto();
 
-					if ($saveProducto) {
+					if ($updateProducto) {
 
 						// Miramos si hay listado a añadir
 						if ($producto->getListado() == "SI") {
@@ -344,7 +362,7 @@ class ControladorProductos
 								}
 								$orden = '1';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea2"])) {
 								$linea = $_REQUEST["linea2"];
@@ -356,7 +374,7 @@ class ControladorProductos
 								}
 								$orden = '2';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea3"])) {
 								$linea = $_REQUEST["linea3"];
@@ -368,7 +386,7 @@ class ControladorProductos
 								}
 								$orden = '3';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea4"])) {
 								$linea = $_REQUEST["linea4"];
@@ -380,7 +398,7 @@ class ControladorProductos
 								}
 								$orden = '4';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea5"])) {
 								$linea = $_REQUEST["linea5"];
@@ -392,7 +410,7 @@ class ControladorProductos
 								}
 								$orden = '5';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea6"])) {
 								$linea = $_REQUEST["linea6"];
@@ -404,7 +422,7 @@ class ControladorProductos
 								}
 								$orden = '6';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea7"])) {
 								$linea = $_REQUEST["linea7"];
@@ -416,7 +434,7 @@ class ControladorProductos
 								}
 								$orden = '7';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea8"])) {
 								$linea = $_REQUEST["linea8"];
@@ -428,7 +446,7 @@ class ControladorProductos
 								}
 								$orden = '8';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea9"])) {
 								$linea = $_REQUEST["linea9"];
@@ -440,7 +458,7 @@ class ControladorProductos
 								}
 								$orden = '9';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 							if (!empty( $_REQUEST["linea10"])) {
 								$linea = $_REQUEST["linea10"];
@@ -452,10 +470,10 @@ class ControladorProductos
 								}
 								$orden = '10';
 
-								$saveListado = $producto->saveListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 							}
 
-							if ($saveListado) {
+							if ($updateListado) {
 								$_SESSION['error'] = 601;
 								$destino = "pagina_administrador_merendalios";
 							} else {

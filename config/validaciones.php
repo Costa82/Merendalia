@@ -105,6 +105,9 @@ function validacion($num)
 		case 607:
 			return $mensaje[LISTADO_PRODUCTO_SUBIDO_KO];
 			break;
+		case 608:
+			return $mensaje[PRODUCTO_NO_EXISTE];
+			break;
 		default:
 			return $mensaje[ERROR_GENERAL];
 			break;

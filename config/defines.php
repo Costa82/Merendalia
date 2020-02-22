@@ -17,6 +17,7 @@ define("ERROR_SUBIDA_IMAGEN_MOVER_ARCHIVO", 604); //Error al mover el archivo.
 define("ERROR_SUBIDA_IMAGEN_CREACION_CARPETA", 605); //Error al crear la carpeta.
 define("ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO", 606); //Imagen con formato incorrecto.
 define("LISTADO_PRODUCTO_SUBIDO_KO", 607); //Error al subir el listado del producto.
+define("PRODUCTO_NO_EXISTE", 608); //El producto no existe.
 
 // Error general
 define("ERROR_GENERAL", 1000); //Error General
@@ -36,6 +37,7 @@ $mensaje[ERROR_SUBIDA_IMAGEN_MOVER_ARCHIVO] = "Error al mover el archivo.";
 $mensaje[ERROR_SUBIDA_IMAGEN_CREACION_CARPETA] = "Error al crear la carpeta.";
 $mensaje[ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO] = "Imagen con formato incorrecto.";
 $mensaje[LISTADO_PRODUCTO_SUBIDO_KO] = "Error al subir el listado del producto.";
+$mensaje[PRODUCTO_NO_EXISTE] = "El producto no existe.";
 
 $mensaje[ERROR_GENERAL] = "Error General.";
 ?>

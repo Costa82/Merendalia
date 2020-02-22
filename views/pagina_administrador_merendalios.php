@@ -1,7 +1,19 @@
 <?php
 ob_start();
 
-echo "<h1>PÁGINA DEL ADMINISTRADOR</h1>";
+echo "<h1>PÁGINA DEL ADMINISTRADOR</h1>
+		<div id='errores'>
+			<center>";
+
+if ($params['error'] != 0) {
+	$num = $params['error'];
+	$mensaje = validacion($num);
+	echo $mensaje;
+}
+
+echo '
+		</div>
+			</center>';
 
 // Subir Productos
 
@@ -12,17 +24,6 @@ echo '
 			<div class="form-top">
 				<div class="form-top-left">
 					<h3>Subir Producto</h3>
-					
-					<div id="errores">';
-
-					if ($params['error'] != 0) {
-					    $num = $params['error'];
-					    $mensaje = validacion($num);
-					    echo $mensaje;
-					}
-
-echo '
-                    </div>
 					<p>
 						<span>(*)</span> <i>Campos obligatorios.</i>
 					</p>
@@ -241,16 +242,6 @@ echo '
 				<div class="form-top-left">
 					<h3>Editar Producto</h3>
 					
-					<div id="errores">';
-
-					if ($params['error'] != 0) {
-					    $num = $params['error'];
-					    $mensaje = validacion($num);
-					    echo $mensaje;
-					}
-
-echo '
-                    </div>
 					<p>
 						<span>(*)</span> <i>Campos obligatorios.</i>
 					</p>
@@ -271,23 +262,45 @@ echo '
 					<div class="botones">
 						<button type="submit" name="busquedaProducto" id="busqueda" class="btn">Buscar producto</button>
 					</div>';
-					
+
 if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] == "SI") {
-	
+
 	// Reiniciamos la variable a NO para no mostrar el formulario.
 	$_SESSION['mostrar_formulario'] = "NO";
-	
+
+	// Cargamos el producto en las variables de sesion
+	if (isset($_SESSION['producto'])) {
+
+		$titulo_producto = $_SESSION['producto']['titulo_producto'];
+		$precio = $_SESSION['producto']['precio'];
+		$imagen = $_SESSION['producto']['imagen'];
+		$title = $_SESSION['producto']['title'];
+		$alt = $_SESSION['producto']['alt'];
+	}
+
 	echo '
 					<div id="formulario_oculto" >
 					
 						<div class="form-group">
 							<label>Título nuevo</label> <input type="text"
-								name="titulo_producto_nuevo" class="titulo_producto_nuevo"/>
+								name="titulo_producto_nuevo" class="titulo_producto_nuevo" value="';
+
+	echo $titulo_producto;
+		
+	echo '
+								
+								"/>
 						</div>
 						
 						<div class="form-group">
 							<label>Precio nuevo</label> <input type="number" step="any"
-								name="precio" class="precio"/>
+								name="precio" class="precio" value="';
+
+	echo $precio;
+		
+	echo '
+																
+								"/>
 						</div>
 						
 						<div class="form-group">
@@ -322,7 +335,13 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						
 						<div class="form-group">
 							<label>Title nuevo</label> <input type="text"
-								name="title" class="title" />
+								name="title" class="title" value="';
+
+	echo $title;
+
+	echo '
+							
+							"/>
 						</div>
 						
 						<div class="form-group">
@@ -478,8 +497,8 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						</div>
 					</div>';
 }
-					
-echo '					
+
+echo '
 				</form>
 			</div>
 		</div>
