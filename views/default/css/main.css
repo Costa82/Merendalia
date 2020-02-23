@@ -337,7 +337,7 @@ nav>ul>li>ul#lista_movil li {
 	margin-bottom: 10px;
 }
 
-/* FORMULARIOS
+/* PÁGINA ADMINISTRADOR
    ========================================================================= */
 .formulario_logueo {
 	padding: 5px;
@@ -418,11 +418,16 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 10px;
 }
 
-.formulario_logueo .botones,.formulario_subida_productos .botones,.formulario_edicion_productos .botones
+.formulario_logueo .botones,.formulario_subida_productos .botones,.formulario_edicion_productos .botones,
+	.documento_excel .botones
 	{
 	width: 140px;
-	margin: 0 auto;
 	margin-bottom: 20px;
+	margin: 0 auto;
+}
+
+.documento_excel .botones {
+	width: 220px;
 }
 
 #listado {
@@ -435,6 +440,17 @@ nav>ul>li>ul#lista_movil li {
 
 #errores {
 	color: red;
+}
+
+.container_documento_excel {
+	margin-top: 25px;
+	width: 100%;
+	display: flow-root;	
+}
+
+.documento_excel {
+	width: 220px;
+	margin: 0 auto;
 }
 
 /* RESERVAS Y TARIFAS

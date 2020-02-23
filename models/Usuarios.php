@@ -137,6 +137,85 @@ class Usuarios extends AbstractBBDD {
 			}
 		}
 	}
+	
+	/**
+	 * Recupera todos los usuarios de la tabla por nombre
+	 */
+	public function mostrarUsuariosPorNombreEnTabla()
+	{
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY nombre ASC";
+		$resultados = Usuarios::ejecutarQuery($consulta);
+		
+		// Pintamos los resultados
+		Usuarios::mostrarResultadosUsuarios($resultados);
+	}
+		
+	/**
+	 * Recupera todos los usuarios de la tabla por fecha actualización
+	 */
+	public function mostrarUsuariosPorFechaEnTabla()
+	{
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY fecha_ultima_actualizacion DESC";
+		$resultados = Usuarios::ejecutarQuery($consulta);
+
+		// Pintamos los resultados
+		Usuarios::mostrarResultadosUsuarios($resultados);
+	}
+	
+	private function mostrarResultadosUsuarios($resultados) {
+		
+	// Mostramos todos los productos por cada tipo de producto
+		for ($j = 0; $j < count($resultados['filas_consulta']); $j ++) {
+
+			foreach ($resultados['filas_consulta'][$j] as $key => $value) {
+
+				switch ($key) {
+
+					case "nombre":
+						$nombre = $value;
+						break;
+					case "telefono":
+						$telefono = $value;
+						break;
+					case "email":
+						$email = $value;
+						break;
+					case "fecha_registro":
+						$fecha_registro = $value;
+						break;
+					case "fecha_ultima_actualizacion":
+						$fecha_ultima_actualizacion = $value;
+						break;
+					case "ultima_accion":
+						$ultima_accion = $value;
+						break;
+					default:
+						break;
+				}
+			}
+			
+			echo '
+			<tbody>
+
+				<tr>
+
+					<td>' . $nombre  . '</td>
+
+					<td>' . $telefono  . '</td>
+					
+					<td>' . $email  . '</td>
+					
+					<td>' . $fecha_registro  . '</td>
+
+					<td>' . $fecha_ultima_actualizacion  . '</td>
+					
+					<td>' . $ultima_accion  . '</td>
+					
+				</tr>
+
+			</tbody>';
+		}
+	}
 
 	/**
 	 * Insertamos un usuario en BBDD
@@ -150,13 +229,13 @@ class Usuarios extends AbstractBBDD {
 
 		// Si ya está registrado actualizamos su fecha_ultima_actualizacion
 		if ($registrado) {
-				
+
 			$query = "UPDATE " . $this->tabla . "
 						SET fecha_ultima_actualizacion = '" . $fecha_actual . "', ultima_accion = '" . $this->ultima_accion . "'
 						WHERE email = '" . $this->email . "';";
-				
+
 		} else {
-				
+
 			$query = "INSERT INTO " . $this->tabla . " (nick, nombre, apellidos, telefono,
 						email, password, fecha_registro, fecha_ultima_actualizacion, ultima_accion, tipo_usuario, newsletter, estado)
 	                	VALUES('" . $this->nick . "',

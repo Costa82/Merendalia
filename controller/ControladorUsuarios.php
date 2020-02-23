@@ -36,6 +36,25 @@ class ControladorUsuarios
 	}
 
 	/**
+	 * Método que descargar el documento excel
+	 */
+	public function documento_excel()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		
+		if (isset($_REQUEST['crearDocumentoNombre'])) {
+			require './views/documento_excel_nombre.php';
+		} else if (isset($_REQUEST['crearDocumentoFecha'])) {
+			require './views/documento_excel_fecha.php';
+		}
+	}
+
+	/**
 	 * Método que comprueba si está registrado el usuario y si lo está lo envía a la página de administrador
 	 */
 	public function logueo()

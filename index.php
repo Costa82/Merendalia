@@ -25,6 +25,11 @@ $map = array(
         'action' => 'merendalios',
         'privada' => false
     ),
+	'documento_excel' => array(
+        'controller' => 'ControladorUsuarios',
+        'action' => 'documento_excel',
+        'privada' => true
+    ),
     'logueo' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'logueo',

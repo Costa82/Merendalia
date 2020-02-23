@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-echo "<h1>PÁGINA DEL ADMINISTRADOR</h1>
+echo "<h1>PRODUCTOS</h1>
 		<div id='errores'>
 			<center>";
 
@@ -563,6 +563,29 @@ echo '
 			</div>
 		</div>
 	</div>
+</div>';
+
+// Usuarios
+echo '
+<div class="container_documento_excel">
+
+<div class="documento_excel">
+
+	<h1>USUARIOS</h1>
+	
+		<h3>Consulta Usuarios</h3>
+	
+		<form role="form" action="./documento_excel" method="post" class="login-form">
+	
+			<div class="botones">
+				<button type="submit" name="crearDocumentoNombre" class="btn">Exportar Datos ordenados por nombre</button>
+				<button type="submit" name="crearDocumentoFecha" class="btn">Exportar Datos ordenados por fecha</button>
+			</div>
+			
+		</form>	
+		
+	</div>
+
 </div>';
 
 $contenido = ob_get_clean();

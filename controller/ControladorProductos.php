@@ -245,6 +245,7 @@ class ControladorProductos
 		$_SESSION['error'] = 0;
 		$guardado = true;
 
+		// Búsqueda del producto
 		if (isset($_REQUEST['busquedaProducto'])) {
 
 			// Creamos un producto
@@ -275,6 +276,7 @@ class ControladorProductos
 			}
 		}
 
+		// Actualización del producto
 		if (isset($_REQUEST['updateProducto'])) {
 
 			// Creamos un producto
