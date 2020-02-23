@@ -13,9 +13,9 @@ class UtilsProductos {
 	public static function guardarImagen($carpetaDestino, $archivo) {
 
 		$guardado = false;
-		
+
 		# si es un formato de imagen
-		if($archivo["type"]=="image/jpeg" || $archivo["type"]=="image/pjpeg" || 
+		if($archivo["type"]=="image/jpeg" || $archivo["type"]=="image/pjpeg" ||
 		$archivo["type"]=="image/png")
 		{
 			# si exsite la carpeta o se ha creado
@@ -29,24 +29,24 @@ class UtilsProductos {
 				{
 					$guardado = true;
 				}else{
-					
+						
 					// Error al mover el archivo
 					$_SESSION['error'] = 604;
 					$guardado = false;
 				}
 			}else{
-				
+
 				// Error al crear la carpeta
 				$_SESSION['error'] = 605;
 				$guardado = false;
 			}
 		}else{
-			
+				
 			// Error en el formato del fichero
 			$_SESSION['error'] = 606;
 			$guardado = false;
 		}
-		
+
 		return $guardado;
 	}
 

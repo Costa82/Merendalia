@@ -246,27 +246,27 @@ class ControladorProductos
 		$guardado = true;
 
 		if (isset($_REQUEST['busquedaProducto'])) {
-				
+
 			// Creamos un producto
 			$producto = new Productos();
-			
+				
 			// titulo_producto
 			$producto->setTitulo_producto($_REQUEST["titulo_producto_buscar"]);
-			
-			$resultados = $producto->getPorTituloProducto();
-			
-			if ($resultados == 0 || $resultados['numero'] == 0) {
 				
+			$resultados = $producto->getPorTituloProducto();
+				
+			if ($resultados == 0 || $resultados['numero'] == 0) {
+
 				// Ponemos la variable de sesión a SI para mostrar el formulario de edición
 				$_SESSION['mostrar_formulario'] = "NO";
 				$_SESSION['error'] = 608;
-				
+
 			} else {
-				
+
 				// Ponemos la variable de sesión a SI para mostrar el formulario de edición
 				$_SESSION['mostrar_formulario'] = "SI";
 			}
-				
+
 			$destino = "pagina_administrador_merendalios";
 
 			if (! headers_sent()) {
@@ -281,15 +281,15 @@ class ControladorProductos
 			$producto = new Productos();
 
 			// titulo_producto
-			$producto->setTitulo_producto($_REQUEST["titulo_producto"]);
-				
+			$producto->setTitulo_producto($_REQUEST["titulo_producto_buscar"]);
+
 			// titulo_producto_nuevo
 			if (!empty($_REQUEST["titulo_producto_nuevo"]))
 			$producto->setTitulo_producto_nuevo($_REQUEST["titulo_producto_nuevo"]);
 
 			// precio
 			if (!empty($_REQUEST["precio"]))
-			$producto->setPrecio($_REQUEST["precio"] . ' €');
+			$producto->setPrecio($_REQUEST["precio"]);
 
 			// tipo_producto
 			if (!empty($_REQUEST["tipo_producto"]))
@@ -338,167 +338,168 @@ class ControladorProductos
 			}
 
 			// estado
-			if (!empty($_REQUEST["listado"])) {
+			if (!empty($_REQUEST["estado"])) {
 				$producto->setEstado('BAJA');
+			} else {
+				$producto->setEstado('ACTV');
+			}
 
-				if ($_SESSION['error'] == 0 && $guardado) {
+			if ($_SESSION['error'] == 0 && $guardado) {
 
-					// Actualizamos el producto
-					$updateProducto = $producto->updateProducto();
+				// Actualizamos el producto
+				$updateProducto = $producto->updateProducto();
 
-					if ($updateProducto) {
+				if ($updateProducto) {
 
-						// Miramos si hay listado a añadir
-						if ($producto->getListado() == "SI") {
+					// Miramos si hay listado a añadir
+					if ($producto->getListado() == "SI") {
 
-							// Líneas
-							if (!empty( $_REQUEST["linea1"])) {
-								$linea = $_REQUEST["linea1"];
+						// Líneas
+						if (!empty( $_REQUEST["linea1"])) {
+							$linea = $_REQUEST["linea1"];
 
-								if (!empty( $_REQUEST["titulo1"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '1';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea2"])) {
-								$linea = $_REQUEST["linea2"];
-
-								if (!empty( $_REQUEST["titulo2"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '2';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea3"])) {
-								$linea = $_REQUEST["linea3"];
-
-								if (!empty( $_REQUEST["titulo3"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '3';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea4"])) {
-								$linea = $_REQUEST["linea4"];
-
-								if (!empty( $_REQUEST["titulo4"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '4';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea5"])) {
-								$linea = $_REQUEST["linea5"];
-
-								if (!empty( $_REQUEST["titulo5"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '5';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea6"])) {
-								$linea = $_REQUEST["linea6"];
-
-								if (!empty( $_REQUEST["titulo6"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '6';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea7"])) {
-								$linea = $_REQUEST["linea7"];
-
-								if (!empty( $_REQUEST["titulo7"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '7';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea8"])) {
-								$linea = $_REQUEST["linea8"];
-
-								if (!empty( $_REQUEST["titulo8"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '8';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea9"])) {
-								$linea = $_REQUEST["linea9"];
-
-								if (!empty( $_REQUEST["titulo9"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '9';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-							if (!empty( $_REQUEST["linea10"])) {
-								$linea = $_REQUEST["linea10"];
-
-								if (!empty( $_REQUEST["titulo10"])) {
-									$es_titulo = 'SI';
-								} else {
-									$es_titulo = 'NO';
-								}
-								$orden = '10';
-
-								$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
-							}
-
-							if ($updateListado) {
-								$_SESSION['error'] = 601;
-								$destino = "pagina_administrador_merendalios";
+							if (!empty( $_REQUEST["titulo1"])) {
+								$es_titulo = 'SI';
 							} else {
-								$_SESSION['error'] = 607;
-								$destino = "pagina_administrador_merendalios";
+								$es_titulo = 'NO';
 							}
-						} else {
-							$_SESSION['error'] = 601;
-							$destino = "pagina_administrador_merendalios";
+							$orden = '1';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea2"])) {
+							$linea = $_REQUEST["linea2"];
+
+							if (!empty( $_REQUEST["titulo2"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '2';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea3"])) {
+							$linea = $_REQUEST["linea3"];
+
+							if (!empty( $_REQUEST["titulo3"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '3';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea4"])) {
+							$linea = $_REQUEST["linea4"];
+
+							if (!empty( $_REQUEST["titulo4"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '4';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea5"])) {
+							$linea = $_REQUEST["linea5"];
+
+							if (!empty( $_REQUEST["titulo5"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '5';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea6"])) {
+							$linea = $_REQUEST["linea6"];
+
+							if (!empty( $_REQUEST["titulo6"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '6';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea7"])) {
+							$linea = $_REQUEST["linea7"];
+
+							if (!empty( $_REQUEST["titulo7"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '7';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea8"])) {
+							$linea = $_REQUEST["linea8"];
+
+							if (!empty( $_REQUEST["titulo8"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '8';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea9"])) {
+							$linea = $_REQUEST["linea9"];
+
+							if (!empty( $_REQUEST["titulo9"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '9';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+						}
+						if (!empty( $_REQUEST["linea10"])) {
+							$linea = $_REQUEST["linea10"];
+
+							if (!empty( $_REQUEST["titulo10"])) {
+								$es_titulo = 'SI';
+							} else {
+								$es_titulo = 'NO';
+							}
+							$orden = '10';
+
+							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
 						}
 
+						if ($updateListado) {
+							$_SESSION['error'] = 601;
+							$destino = "pagina_administrador_merendalios";
+						} else {
+							$_SESSION['error'] = 607;
+							$destino = "pagina_administrador_merendalios";
+						}
 					} else {
-						$_SESSION['error'] = 602;
+						$_SESSION['error'] = 609;
 						$destino = "pagina_administrador_merendalios";
 					}
+
 				} else {
+					$_SESSION['error'] = 610;
 					$destino = "pagina_administrador_merendalios";
 				}
-			}
-
-			if (! headers_sent()) {
-				header('Location:' . $destino);
-				exit();
+			} else {
+				$destino = "pagina_administrador_merendalios";
 			}
 		}
+
+		if (! headers_sent()) {
+			header('Location:' . $destino);
+			exit();
+		}
 	}
-	
 }

@@ -18,6 +18,8 @@ define("ERROR_SUBIDA_IMAGEN_CREACION_CARPETA", 605); //Error al crear la carpeta
 define("ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO", 606); //Imagen con formato incorrecto.
 define("LISTADO_PRODUCTO_SUBIDO_KO", 607); //Error al subir el listado del producto.
 define("PRODUCTO_NO_EXISTE", 608); //El producto no existe.
+define("PRODUCTO_ACTUALIZADO_OK", 609); //Producto actualizado correctamente.
+define("PRODUCTO_ACTUALIZADO_KO", 610); //Error al actualizar el producto.
 
 // Error general
 define("ERROR_GENERAL", 1000); //Error General
@@ -38,6 +40,8 @@ $mensaje[ERROR_SUBIDA_IMAGEN_CREACION_CARPETA] = "Error al crear la carpeta.";
 $mensaje[ERROR_SUBIDA_IMAGEN_FORMATO_INCORRECTO] = "Imagen con formato incorrecto.";
 $mensaje[LISTADO_PRODUCTO_SUBIDO_KO] = "Error al subir el listado del producto.";
 $mensaje[PRODUCTO_NO_EXISTE] = "El producto no existe.";
+$mensaje[PRODUCTO_ACTUALIZADO_OK] = "Producto actualizado correctamente.";
+$mensaje[PRODUCTO_ACTUALIZADO_KO] = "Error al actualizar el producto.";
 
 $mensaje[ERROR_GENERAL] = "Error General.";
 ?>

@@ -137,21 +137,21 @@ class Productos extends AbstractBBDD {
 	 */
 	public function updateProducto() {
 
-		$query = "UPDATE " . $this->tabla . " (titulo_producto, descripcion, precio, tipo_producto,
-		imagen, title, alt, listado, estado)
-                VALUES('".$this->titulo_producto."',
-                       '".$this->descripcion."',
-                       '".$this->precio."',
-                       '".$this->tipo_producto."',
-                       '".$this->imagen."',
-                       '".$this->title."',
-                       '".$this->alt."',
-                       '".$this->listado."',
-                       '".$this->estado."');";
+		$query = "UPDATE " . $this->tabla . " SET 
+			titulo_producto = '".$this->titulo_producto_nuevo."', 
+			descripcion = '".$this->descripcion."', 
+			precio = '".$this->precio."', 
+			tipo_producto = '".$this->tipo_producto."',
+			imagen = '".$this->imagen."', 
+			title = '".$this->title."', 
+			alt = '".$this->alt."',
+			listado = '".$this->listado."', 
+			estado = '".$this->estado."' WHERE 
+			titulo_producto = '".$this->titulo_producto."'";
 
-		$save = $this->c->query($query);
+		$update = $this->c->query($query);
 
-		return $save;
+		return $update;
 	}
 
 	/**
@@ -237,8 +237,16 @@ class Productos extends AbstractBBDD {
 						$precio = $value;
 						$_SESSION['producto']['precio'] = $precio;
 						break;
+					case "descripcion":
+						$descripcion = $value;
+						$_SESSION['producto']['descripcion'] = $descripcion;
+						break;
+					case "tipo_producto":
+						$tipo_producto = $value;
+						$_SESSION['producto']['tipo_producto'] = $tipo_producto;
+						break;
 					case "imagen":
-						$imagen = $value;
+						$imagen = trim($value, "€");
 						$_SESSION['producto']['imagen'] = $imagen;
 						break;
 					case "title":

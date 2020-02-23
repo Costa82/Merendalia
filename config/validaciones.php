@@ -108,6 +108,12 @@ function validacion($num)
 		case 608:
 			return $mensaje[PRODUCTO_NO_EXISTE];
 			break;
+		case 609:
+			return $mensaje[PRODUCTO_ACTUALIZADO_OK];
+			break;
+		case 610:
+			return $mensaje[PRODUCTO_ACTUALIZADO_KO];
+			break;
 		default:
 			return $mensaje[ERROR_GENERAL];
 			break;

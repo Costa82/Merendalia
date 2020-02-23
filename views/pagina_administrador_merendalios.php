@@ -235,6 +235,39 @@ echo '
 
 // Editar Productos
 
+$titulo_producto = null;
+$precio = null;
+$descripcion = null;
+$tipo_producto = null;
+$imagen = null;
+$title = null;
+$alt = null;
+
+// Cargamos el producto en las variables de sesion
+if (isset($_SESSION['producto'])) {
+
+	if (isset($_SESSION['producto']['titulo_producto']))
+	$titulo_producto = $_SESSION['producto']['titulo_producto'];
+
+	if (isset($_SESSION['producto']['precio']))
+	$precio = $_SESSION['producto']['precio'];
+
+	if (isset($_SESSION['producto']['descripcion']))
+	$descripcion = $_SESSION['producto']['descripcion'];
+
+	if (isset($_SESSION['producto']['tipo_producto']))
+	$tipo_producto = $_SESSION['producto']['tipo_producto'];
+
+	if (isset($_SESSION['producto']['imagen']))
+	$imagen = $_SESSION['producto']['imagen'];
+
+	if (isset($_SESSION['producto']['title']))
+	$title = $_SESSION['producto']['title'];
+
+	if (isset($_SESSION['producto']['alt']))
+	$alt = $_SESSION['producto']['alt'];
+}
+
 echo '
     <div class="formulario_edicion_productos">
 		<div class="form-box">
@@ -256,7 +289,15 @@ echo '
 					
 					<div class="form-group">
 						<label><span>* </span>Buscar título</label> <input type="text"
-							name="titulo_producto_buscar" class="titulo_producto_buscar" required="required" />
+							name="titulo_producto_buscar" class="titulo_producto_buscar" required="required" ';
+
+if ($titulo_producto != null) {
+	echo 'value="' . $titulo_producto . '" />';
+} else {
+	echo '"/>';
+}
+
+echo '
 					</div>
 
 					<div class="botones">
@@ -268,44 +309,44 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 	// Reiniciamos la variable a NO para no mostrar el formulario.
 	$_SESSION['mostrar_formulario'] = "NO";
 
-	// Cargamos el producto en las variables de sesion
-	if (isset($_SESSION['producto'])) {
-
-		$titulo_producto = $_SESSION['producto']['titulo_producto'];
-		$precio = $_SESSION['producto']['precio'];
-		$imagen = $_SESSION['producto']['imagen'];
-		$title = $_SESSION['producto']['title'];
-		$alt = $_SESSION['producto']['alt'];
-	}
-
 	echo '
 					<div id="formulario_oculto" >
 					
 						<div class="form-group">
 							<label>Título nuevo</label> <input type="text"
-								name="titulo_producto_nuevo" class="titulo_producto_nuevo" value="';
+								name="titulo_producto_nuevo" class="titulo_producto_nuevo" ';
 
-	echo $titulo_producto;
-		
+	if ($titulo_producto != null) {
+		echo 'value="' . $titulo_producto . '" />';
+	} else {
+		echo '"/>';
+	}
+
 	echo '
-								
-								"/>
 						</div>
 						
 						<div class="form-group">
-							<label>Precio nuevo</label> <input type="number" step="any"
-								name="precio" class="precio" value="';
+							<label>Precio nuevo</label> <input type="text"
+								name="precio" class="precio" ';
 
-	echo $precio;
-		
+	if ($precio != null) {
+		echo 'value="' . $precio . '" />';
+	} else {
+		echo '"/>';
+	}
+
 	echo '
-																
-								"/>
 						</div>
 						
 						<div class="form-group">
 							<label>Tipo nuevo</label>
-							<select name="tipo_producto" class="tipo_producto">
+							<select name="tipo_producto" class="tipo_producto">';
+
+	if ($tipo_producto != null) {
+		echo '<option value="' . $tipo_producto . '" selected>' . $tipo_producto . '</option>';
+	}
+
+	echo '
 								<option value="Raciones">Raciones</option>
 								<option value="Canapes">Canapés</option>
 								<option value="Ensaladas">Ensaladas</option>
@@ -325,7 +366,14 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 							<p>
 							<label>Descripción nueva</label>
 							</p>
-							<textarea name="descripcion" rows="5" cols="43" ></textarea>
+							<textarea name="descripcion" rows="5" cols="43" >';
+
+	if ($descripcion != null) {
+		echo $descripcion;
+	}
+
+	echo '
+							</textarea>
 						</div>
 						
 						<div class="form-group">
@@ -335,22 +383,32 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						
 						<div class="form-group">
 							<label>Title nuevo</label> <input type="text"
-								name="title" class="title" value="';
+								name="title" class="title" ';
 
-	echo $title;
+	if ($title != null) {
+		echo 'value="' . $title . '" />';
+	} else {
+		echo '"/>';
+	}
 
 	echo '
-							
-							"/>
 						</div>
 						
 						<div class="form-group">
 							<label>Alt nuevo</label> <input type="text"
-								name="alt" class="alt" />
+								name="alt" class="alt" ';
+
+	if ($alt != null) {
+		echo 'value="' . $alt . '" />';
+	} else {
+		echo '"/>';
+	}
+	
+	echo '
 						</div>
 						
 						<div class="form-group">
-							<label>Poner de baja</label> <input type="checkbox" name="baja" value="baja"">
+							<label>Poner de baja</label> <input type="checkbox" name="estado" value="estado">
 						</div>
 						
 						<div class="form-group">
@@ -497,6 +555,8 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						</div>
 					</div>';
 }
+
+$_SESSION['producto'] = null;
 
 echo '
 				</form>
