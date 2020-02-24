@@ -450,23 +450,23 @@ class Productos extends AbstractBBDD {
 									<p><strong>" . $precio . "</strong></p>
 							</div>";
 
-							if ($imagen != null && $title != null && $alt != null) {
+							//if ($imagen != null && $title != null && $alt != null) {
 
-								echo "<div class='icono_imagen'>
-										<a class='fancybox' rel='group'
-												href='./views/default/img/" . $imagen . "'
-												title='" . $title . "'> <i
-												class='fa fa-eye' title='imagen del producto'></i> </a> <img
-												src='./views/default/img/" . $imagen . "' class='foto img_catering'
-												title='" . $title . "'
-												alt='" . $alt . "' />
-								</div>";
-							} else {
+								//echo "<div class='icono_imagen'>
+										//<a class='fancybox' rel='group'
+												//href='./views/default/img/" . $imagen . "'
+												//title='" . $title . "'> <i
+												//class='fa fa-eye' title='imagen del producto'></i> </a> <img
+												//src='./views/default/img/" . $imagen . "' class='foto img_catering'
+												//title='" . $title . "'
+												//alt='" . $alt . "' />
+								//</div>";
+							//} else {
 
-								echo "<div class='icono_imagen'>
-										<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-								</div>";
-							}
+								//echo "<div class='icono_imagen'>
+										//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
+								//</div>";
+							//}
 
 						}
 						// Productos con listados
@@ -477,23 +477,23 @@ class Productos extends AbstractBBDD {
 
 							echo "<p><strong>" . $precio . "</strong></p>";
 
-							if ($imagen != null && $title != null && $alt != null) {
+							//if ($imagen != null && $title != null && $alt != null) {
 
-								echo "<div class='icono_imagen bandeja'>
-										<a class='fancybox' rel='group'
-												href='./views/default/img/" . $imagen . "'
-												title='" . $title . "'> <i
-												class='fa fa-eye' title='imagen del producto'></i> </a> <img
-												src='./views/default/img/" . $imagen . "' class='foto img_catering'
-												title='" . $title . "'
-												alt='" . $alt . "' />
-								</div>";
-							} else {
+								//echo "<div class='icono_imagen bandeja'>
+										//<a class='fancybox' rel='group'
+												//href='./views/default/img/" . $imagen . "'
+												//title='" . $title . "'> <i
+												//class='fa fa-eye' title='imagen del producto'></i> </a> <img
+												//src='./views/default/img/" . $imagen . "' class='foto img_catering'
+												//title='" . $title . "'
+												//alt='" . $alt . "' />
+								//</div>";
+							//} else {
 
-								echo "<div class='icono_imagen bandeja'>
-									<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-								</div>";
-							}
+								//echo "<div class='icono_imagen bandeja'>
+									//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
+								//</div>";
+							//}
 
 							// Obtenemos el listado del producto
 							$listadoProducto = Productos::getListadoProducto($id_producto);

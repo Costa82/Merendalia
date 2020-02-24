@@ -143,7 +143,7 @@ class Usuarios extends AbstractBBDD {
 	 */
 	public function mostrarUsuariosPorNombreEnTabla()
 	{
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY nombre ASC";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' AND tipo_usuario = 'USU' ORDER BY nombre ASC";
 		$resultados = Usuarios::ejecutarQuery($consulta);
 		
 		// Pintamos los resultados
@@ -155,7 +155,7 @@ class Usuarios extends AbstractBBDD {
 	 */
 	public function mostrarUsuariosPorFechaEnTabla()
 	{
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY fecha_ultima_actualizacion DESC";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' AND tipo_usuario = 'USU' ORDER BY fecha_ultima_actualizacion DESC";
 		$resultados = Usuarios::ejecutarQuery($consulta);
 
 		// Pintamos los resultados

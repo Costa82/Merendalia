@@ -25,7 +25,7 @@
               <li id="eventos"><a href="eventos" title="Eventos">Eventos</a></li>
               <li id="espacio"><a href="espacio" title="Espacio">Espacio</a></li>
               <li id="menus"><a href="catering" title="Catering">Catering</a></li>
-              <li id="blogMerendalia"><a href="blog-merendalia" title="Blog Merendalia">Blog</a></li>
+              <li id="blogMerendalia"><a href="blog_merendalia" title="Blog Merendalia">Blog</a></li>
               <li id="contacto"><a href="contacto" title="Contacto">Contacto</a></li>
               <li id="legal"><a href="aviso_legal" title="Aviso Legal">Aviso Legal</a></li>
               <li id="proteccionDatos"><a href="politica_privacidad_y_proteccion_datos" title="Política de privacidad y Protección de datos">Política de privacidad y Protección de datos</a></li>';
