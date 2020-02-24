@@ -94,6 +94,7 @@ class ControladorFormularios
 				if ( $mail === "info@basededatos-info.com" || $mail === "yourmail@gmail.com" || $mail === "artyea@msn.com" || !$telefonoValido ) {
 					$envio = "KO";
 				} else {
+					$correo = new Correo();
 					$envio = $correo->enviarMailsReserva($mail, $nombre, $dia, $hora_entrada, $hora_salida, $telefono, $comentario, $whatsapp);
 				}
 
@@ -197,6 +198,7 @@ class ControladorFormularios
 				if ( $mail === "info@basededatos-info.com" || $mail === "yourmail@gmail.com" || $mail === "artyea@msn.com" || !$telefonoValido ) {
 					$envio = "KO";
 				} else {
+					$correo = new Correo();
 					$envio = $correo->enviarMailsConsulta($mail, $nombre, $telefono, $consulta, $whatsapp);
 				}
 					

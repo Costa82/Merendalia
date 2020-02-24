@@ -2,7 +2,7 @@
 
 	<h2>Realiza tu reserva</h2>
 
-	<form action="formulario_reserva" method="post"
+	<form action="./formulario_reserva" method="post"
 		class="formularioRegistro" onSubmit="return validar();">
 		<div class="form">
 			<label>Nombre</label> <input type="text" name="nombre" class="nombre"
