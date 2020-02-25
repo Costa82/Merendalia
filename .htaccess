@@ -3,6 +3,11 @@ RewriteRule ^([a-z_]+)$ index.php?action=$1 [L]
 RewriteRule ^([a-z_]+)/pag:([0-9]+)$ index.php?action=$1&opcion=$2 [L]
 RewriteRule ^([a-z_]+)/([0-9]+)$ index.php?action=$1&opcion=$2 [L]
 
+Redirect 301 /catering/ https://www.merendalia.es/catering
+Redirect 301 /espacio/ https://www.merendalia.es/espacio
+Redirect 301 /galeria/ https://www.merendalia.es/galeria
+Redirect 301 /blog-merendalia/ https://www.merendalia.es/blog_merendalia
+
 # DESCOMENTAR ESTA LÍNEA AL SUBIR A PRODUCCIÓN
 # REDIRECCIÓN A HTTPS
 #RewriteEngine On

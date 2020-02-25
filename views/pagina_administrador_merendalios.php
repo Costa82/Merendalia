@@ -1,6 +1,8 @@
 <?php
 ob_start();
 
+$productos = new Productos();
+
 echo "<h1>PRODUCTOS</h1>
 		<div id='errores'>
 			<center>";
@@ -275,10 +277,6 @@ echo '
 				<div class="form-top-left">
 					<h3>Editar Producto</h3>
 					
-					<p>
-						<span>(*)</span> <i>Campos obligatorios.</i>
-					</p>
-					
 				</div>
 			</div>
 			
@@ -286,20 +284,20 @@ echo '
 					
 				<form role="form" action="./editar_producto" enctype="multipart/form-data" method="post" 
 					class="login-form">
-					
 					<div class="form-group">
-						<label><span>* </span>Buscar título</label> <input type="text"
-							name="titulo_producto_buscar" class="titulo_producto_buscar" required="required" ';
+				<label>Nombre producto</label>
+					<select name="titulo_producto_buscar" class="titulo_producto">';
 
 if ($titulo_producto != null) {
-	echo 'value="' . $titulo_producto . '" />';
-} else {
-	echo '"/>';
+	echo '<option value="' . $titulo_producto . '" selected>' . $titulo_producto . '</option>';
 }
 
+$productos->mostrarProductosEnSelect();
+	
 echo '
-					</div>
-
+					</select>
+				</div>
+				
 					<div class="botones">
 						<button type="submit" name="busquedaProducto" id="busqueda" class="btn">Buscar producto</button>
 					</div>';
@@ -403,7 +401,7 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 	} else {
 		echo '"/>';
 	}
-	
+
 	echo '
 						</div>
 						
