@@ -189,6 +189,12 @@ class Usuarios extends AbstractBBDD {
 					case "ultima_accion":
 						$ultima_accion = $value;
 						break;
+					case "newsletter":
+						if ($value == 1)
+							$newsletter = 'SI';
+						else
+							$newsletter = 'NO';
+						break;
 					default:
 						break;
 				}
@@ -210,6 +216,8 @@ class Usuarios extends AbstractBBDD {
 					<td>' . $fecha_ultima_actualizacion  . '</td>
 					
 					<td>' . $ultima_accion  . '</td>
+					
+					<td>' . $newsletter  . '</td>
 					
 				</tr>
 

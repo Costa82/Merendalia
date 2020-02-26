@@ -14,6 +14,7 @@ echo '
         <th>Fecha registro</th>
         <th>' . utf8_decode('Fecha última actualización') . '</th>
         <th>' . utf8_decode('Última acción') . '</th>
+        <th>' . utf8_decode('Difusión Whatsapp') . '</th>
         
     </tr>';
 
