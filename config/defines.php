@@ -1,7 +1,7 @@
 <?php
 
 // Validaciones Usuario
-define("USER_NOEXIS", 201); //El usuario no está registrado
+define("USER_NOEXIS", 201); //El usuario no es administrador
 define("CLAVE_NOEXIS", 202); //La contraseña es incorrecta
 
 // Validaciones Correo
@@ -25,7 +25,7 @@ define("PRODUCTO_ACTUALIZADO_KO", 610); //Error al actualizar el producto.
 define("ERROR_GENERAL", 1000); //Error General
 
 // Definiciones
-$mensaje[USER_NOEXIS] = "El usuario no está registrado.";
+$mensaje[USER_NOEXIS] = "El usuario no es administrador.";
 $mensaje[CLAVE_NOEXIS] = "La contraseña es incorrecta";
 
 $mensaje[ERROR_ENVIO] = "Error al enviar el correo.";

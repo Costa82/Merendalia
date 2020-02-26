@@ -277,7 +277,7 @@ class Usuarios extends AbstractBBDD {
 		$resultado = false;
 
 		$passMD5 = md5($pass);
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND password = '$passMD5' AND estado = 'ACTV'";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND password = '$passMD5' AND tipo_usuario = 'ADM' AND estado = 'ACTV'";
 
 		$resultados = Usuarios::ejecutarQuery($consulta);
 
@@ -300,7 +300,7 @@ class Usuarios extends AbstractBBDD {
 	{
 		$resultado = false;
 
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND estado = 'ACTV'";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(nick) = UPPER('$nick') AND tipo_usuario = 'ADM' AND estado = 'ACTV'";
 		$resultados = Usuarios::ejecutarQuery($consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {
