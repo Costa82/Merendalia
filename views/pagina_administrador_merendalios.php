@@ -418,7 +418,13 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						</div>
 						
 						<div class="form-group">
-							<label>Listado nuevo</label> <input type="checkbox" name="listado" id="check_edicion" value="listado"
+							<label>Listado nuevo</label> <input type="checkbox" ';
+	
+	if (isset($listado) && $listado == "SI")
+	echo 'checked = "true"';	
+	
+	echo '
+						name="listado" id="check_edicion" value="listado"
 							onchange="javascript:showContent()">
 						</div>
 						

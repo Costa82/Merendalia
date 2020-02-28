@@ -1,3 +1,12 @@
+$(document).ready(function() {
+
+	if ($('#check_edicion').prop('checked')) {
+		element_edicion = document.getElementById("listado_edicion");
+		element_edicion.style.display = 'block';
+	}
+
+});
+
 function showContent() {
 	element = document.getElementById("listado");
 	check = document.getElementById("check");
