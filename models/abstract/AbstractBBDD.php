@@ -80,7 +80,7 @@ abstract class AbstractBBDD {
      */
     public function getCampoBy($campo, $column, $value)
     {
-        $sql = "SELECT " . $campo . " FROM " . $this->tabla . " WHERE " . $column . " = '" . $value . "'";
+        $sql = "SELECT " . $campo . " FROM " . $this->tabla . " WHERE " . $column . " = '" . $value . "' and estado = 'ACTV'";
         
         $conexion = $this->c;
         

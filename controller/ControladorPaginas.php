@@ -20,7 +20,6 @@ class ControladorPaginas
 		}
 		
 		// Ponemos a false la variable de sesion del administrador
-		$_SESSION['administrador'] = false;
 		require './views/inicio.php';
 	}
 

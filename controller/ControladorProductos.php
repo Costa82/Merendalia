@@ -17,10 +17,11 @@ class ControladorProductos
 		$_SESSION['error'] = 0;
 		$guardado = true;
 
-		if (isset($_REQUEST['addProducto'])) {
+		// Creamos un producto
+		$producto = new Productos();
+		
+		if (isset($_REQUEST['addProducto']) && !$producto->existeTitulo($_REQUEST["titulo_producto"])) {
 
-			// Creamos un producto
-			$producto = new Productos();
 
 			// titulo_producto
 			$producto->setTitulo_producto($_REQUEST["titulo_producto"]);
@@ -228,6 +229,9 @@ class ControladorProductos
 			} else {
 				$destino = "pagina_administrador_merendalios";
 			}
+		} else {
+			$_SESSION['error'] = 611;
+			$destino = "pagina_administrador_merendalios";
 		}
 
 		if (! headers_sent()) {
@@ -246,7 +250,7 @@ class ControladorProductos
 		$guardado = true;
 
 		// Búsqueda del producto
-		if (isset($_REQUEST['busquedaProducto'])) {
+		if (isset($_REQUEST['titulo_producto_buscar'])) {
 
 			// Creamos un producto
 			$producto = new Productos();
@@ -367,7 +371,7 @@ class ControladorProductos
 							}
 							$orden = '1';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea2"])) {
 							$linea = $_REQUEST["linea2"];
@@ -379,7 +383,7 @@ class ControladorProductos
 							}
 							$orden = '2';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea3"])) {
 							$linea = $_REQUEST["linea3"];
@@ -391,7 +395,7 @@ class ControladorProductos
 							}
 							$orden = '3';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea4"])) {
 							$linea = $_REQUEST["linea4"];
@@ -403,7 +407,7 @@ class ControladorProductos
 							}
 							$orden = '4';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea5"])) {
 							$linea = $_REQUEST["linea5"];
@@ -415,7 +419,7 @@ class ControladorProductos
 							}
 							$orden = '5';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea6"])) {
 							$linea = $_REQUEST["linea6"];
@@ -427,7 +431,7 @@ class ControladorProductos
 							}
 							$orden = '6';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea7"])) {
 							$linea = $_REQUEST["linea7"];
@@ -439,7 +443,7 @@ class ControladorProductos
 							}
 							$orden = '7';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea8"])) {
 							$linea = $_REQUEST["linea8"];
@@ -451,7 +455,7 @@ class ControladorProductos
 							}
 							$orden = '8';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea9"])) {
 							$linea = $_REQUEST["linea9"];
@@ -463,7 +467,7 @@ class ControladorProductos
 							}
 							$orden = '9';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 						if (!empty( $_REQUEST["linea10"])) {
 							$linea = $_REQUEST["linea10"];
@@ -475,7 +479,7 @@ class ControladorProductos
 							}
 							$orden = '10';
 
-							$updateListado = $producto->updateListado($producto->getTitulo_producto(), $linea, $es_titulo, $orden);
+							$updateListado = $producto->updateListado($producto->getTitulo_producto_nuevo(), $linea, $es_titulo, $orden);
 						}
 
 						if ($updateListado) {

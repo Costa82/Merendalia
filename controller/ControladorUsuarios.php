@@ -55,7 +55,7 @@ class ControladorUsuarios
 	}
 
 	/**
-	 * Método que comprueba si está registrado el usuario y si lo está lo envía a la página de administrador
+	 * Método que comprueba si está registrado el usuario y si lo está muestra el error
 	 */
 	public function logueo()
 	{

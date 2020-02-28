@@ -268,6 +268,13 @@ if (isset($_SESSION['producto'])) {
 
 	if (isset($_SESSION['producto']['alt']))
 	$alt = $_SESSION['producto']['alt'];
+	
+	if (isset($_SESSION['producto']['listado']))
+	$listado = $_SESSION['producto']['listado'];
+	
+	if (isset($_SESSION['producto']['linea']))
+	$lineas = $_SESSION['producto']['linea'];
+	
 }
 
 echo '
@@ -286,10 +293,12 @@ echo '
 					class="login-form">
 					<div class="form-group">
 				<label>Nombre producto</label>
-					<select name="titulo_producto_buscar" class="titulo_producto">';
+					<select name="titulo_producto_buscar" onchange="this.form.submit()" class="titulo_producto">';
 
 if ($titulo_producto != null) {
 	echo '<option value="' . $titulo_producto . '" selected>' . $titulo_producto . '</option>';
+} else {
+	echo '<option value="seleccionar_producto" selected>Seleccionar producto</option>';
 }
 
 $productos->mostrarProductosEnSelect();
@@ -298,9 +307,9 @@ echo '
 					</select>
 				</div>
 				
-					<div class="botones">
+					<!-- div class="botones">
 						<button type="submit" name="busquedaProducto" id="busqueda" class="btn">Buscar producto</button>
-					</div>';
+					</div -->';
 
 if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] == "SI") {
 
@@ -370,8 +379,7 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 		echo $descripcion;
 	}
 
-	echo '
-							</textarea>
+	echo '</textarea>
 						</div>
 						
 						<div class="form-group">
@@ -410,142 +418,38 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						</div>
 						
 						<div class="form-group">
-							<label>Listado nuevo</label> <input type="checkbox" name="listado_edicion" id="check_edicion" value="listado"
+							<label>Listado nuevo</label> <input type="checkbox" name="listado" id="check_edicion" value="listado"
 							onchange="javascript:showContent()">
 						</div>
 						
-						<div id="listado_edicion">
-						
+						<div id="listado_edicion">';
+	
+	// Pintamos las líneas que existan
+	if (isset($lineas)) {
+		
+		for ($i = 1; $i < 11; $i ++) {
+			
+			echo '
 							<div class="linea">
-						
-								<div class="form-group">
-									<label>Línea 1</label> <input type="text"
-										name="linea1"/>
-								</div>
 								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo1" value="titulo1">
-								</div>
-							
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 2</label> <input type="text"
-										name="linea2"/>
-								</div>
+									<div class="form-group">
+										<label>Línea ' . $i . '</label> <input type="text"
+											name="linea' . $i . '" value="';		
+			
+			if (isset($lineas) && isset($lineas[$i]))
+				echo $lineas[$i];
+			echo '"/>
+									</div>
+									
+									<div class="form-group">
+										<label>Título</label> <input type="checkbox" name="titulo2" value="titulo2">
+									</div>
 								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo2" value="titulo2">
-								</div>
-							
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 3</label> <input type="text"
-										name="linea3"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo3" value="titulo3">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 4</label> <input type="text"
-										name="linea4"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo4" value="titulo4">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 5</label> <input type="text"
-										name="linea5"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo5" value="titulo5">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 6</label> <input type="text"
-										name="linea6"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo6" value="titulo6">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 7</label> <input type="text"
-										name="linea7"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo7" value="titulo7">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 8</label> <input type="text"
-										name="linea8"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo8" value="titulo8">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 9</label> <input type="text"
-										name="linea9"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo9" value="titulo9">
-								</div>
-								
-							</div>
-							
-							<div class="linea">
-							
-								<div class="form-group">
-									<label>Línea 10</label> <input type="text"
-										name="linea10"/>
-								</div>
-								
-								<div class="form-group">
-									<label>Título</label> <input type="checkbox" name="titulo10" value="titulo10">
-								</div>
-								
-							</div>
-						
+								</div>';
+		}									
+	}														
+									
+	echo '						
 						</div>
 	
 						<div class="botones">

@@ -846,6 +846,10 @@ ul.lista_productos_comida li {
 	margin: 10px 0;
 }
 
+.menus_opciones p.precio {
+	margin-bottom: 15px;
+}
+
 .texto_producto {
 	width: 41%;
 	padding-left: 10px;

@@ -155,6 +155,24 @@ class Productos extends AbstractBBDD {
 	}
 
 	/**
+	 * Actualizamos una lista en BBDD
+	 */
+	public function updateListado($titulo_producto, $linea, $es_titulo, $orden) {
+		
+		$id_producto = Productos::getCampoBy("id_producto", "titulo_producto", $titulo_producto);
+
+		$query = "UPDATE listado_producto SET
+			linea = '" . $linea . "', 
+			es_titulo = '" . $es_titulo . "',
+			estado = 'ACTV' WHERE 
+			id_producto = " . $id_producto . " AND orden = " . $orden . "";
+
+		$update = $this->c->query($query);
+
+		return $update;
+	}
+
+	/**
 	 * Insertamos un producto en BBDD
 	 */
 	public function saveProducto() {
@@ -218,7 +236,9 @@ class Productos extends AbstractBBDD {
 	 */
 	public function getPorTituloProducto()
 	{
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE titulo_producto = '" . $this->titulo_producto . "' AND estado = 'ACTV' ORDER BY titulo_producto ASC";
+		$consulta = "SELECT * FROM " . $this->tabla . " as producto LEFT OUTER JOIN listado_producto as listado
+		 ON producto.id_producto = listado.id_producto WHERE producto.titulo_producto = '" . $this->titulo_producto . "' 
+		 AND producto.estado = 'ACTV' ORDER BY producto.titulo_producto ASC";
 
 		$resultados = Productos::ejecutarQuery($consulta);
 
@@ -259,6 +279,11 @@ class Productos extends AbstractBBDD {
 						break;
 					case "listado":
 						$listado = $value;
+						$_SESSION['producto']['listado'] = $listado;
+						break;
+					case "linea":
+						$linea = $value;
+						$_SESSION['producto']['linea'][$j+1] = $linea;
 						break;
 					default:
 						break;
@@ -475,7 +500,7 @@ class Productos extends AbstractBBDD {
 						echo "<div class='menus_opciones'>
 									<p><strong>" . $titulo_producto . "</strong></p></br>";
 
-						echo "<p><strong>" . $precio . "</strong></p>";
+						echo "<p class='precio'><strong>" . $precio . "</strong></p>";
 
 						//if ($imagen != null && $title != null && $alt != null) {
 
@@ -533,14 +558,14 @@ class Productos extends AbstractBBDD {
 	 */
 	public function getProductosOrderByNombre()
 	{
-		$consulta = "SELECT * FROM " . $this->tabla . " ORDER BY titulo_producto ASC";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE estado = 'ACTV' ORDER BY titulo_producto ASC";
 		return AbstractBBDD::ejecutarQuery($consulta);
 	}
 
 	/**
 	 * Select de productos
 	 */
-	public function mostrarProductosEnSelect() 
+	public function mostrarProductosEnSelect()
 	{
 
 		$resultados = Productos::getProductosOrderByNombre();
@@ -558,8 +583,28 @@ class Productos extends AbstractBBDD {
 						$value_titulo_producto = Utils::eliminar_acentos(strtolower(utf8_decode($titulo_producto)));
 					}
 				}
-					echo "<option value='" . $titulo_producto . "' select>" . $titulo_producto ."</option>";
+				echo "<option value='" . $titulo_producto . "' select>" . $titulo_producto ."</option>";
 			}
 		}
+	}
+
+	/**
+	 * Método que se utiliza para comprobar si existe un título.
+	 *
+	 * @param String $titulo_producto
+	 * @return boolean
+	 */
+	public function existeTitulo($titulo_producto)
+	{
+		$existe = true;
+
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(titulo_producto) = UPPER('$titulo_producto') AND estado = 'ACTV'";
+		$resultados = Productos::ejecutarQuery($consulta);
+
+		if ($resultados == 0 || $resultados['numero'] == 0) {
+			$existe = false;
+		}
+
+		return $existe;
 	}
 }

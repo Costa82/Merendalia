@@ -20,6 +20,7 @@ define("LISTADO_PRODUCTO_SUBIDO_KO", 607); //Error al subir el listado del produ
 define("PRODUCTO_NO_EXISTE", 608); //El producto no existe.
 define("PRODUCTO_ACTUALIZADO_OK", 609); //Producto actualizado correctamente.
 define("PRODUCTO_ACTUALIZADO_KO", 610); //Error al actualizar el producto.
+define("PRODUCTO_REPETIDO", 611); //Ya existe un producto con ese nombre.
 
 // Error general
 define("ERROR_GENERAL", 1000); //Error General
@@ -42,6 +43,7 @@ $mensaje[LISTADO_PRODUCTO_SUBIDO_KO] = "Error al subir el listado del producto."
 $mensaje[PRODUCTO_NO_EXISTE] = "El producto no existe.";
 $mensaje[PRODUCTO_ACTUALIZADO_OK] = "Producto actualizado correctamente.";
 $mensaje[PRODUCTO_ACTUALIZADO_KO] = "Error al actualizar el producto.";
+$mensaje[PRODUCTO_REPETIDO] = "Ya existe un producto con ese nombre.";
 
 $mensaje[ERROR_GENERAL] = "Error General.";
 ?>

@@ -132,7 +132,7 @@ $metodo = $controlador['action'];
 
 // Si la pagina es privada comprobamos si el usuario es administrador, sino redirigimos a inicio
 if ($controlador['privada'] && (!isset($_SESSION['administrador']) || !$_SESSION['administrador'])) {
-    header('location:/Merendalia/inicio'); // Si lo ponemos en el servidor poner /Foro/inicio
+    header('location:./inicio');
     die();
 }
 

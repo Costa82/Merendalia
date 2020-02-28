@@ -114,6 +114,9 @@ function validacion($num)
 		case 610:
 			return $mensaje[PRODUCTO_ACTUALIZADO_KO];
 			break;
+		case 611:
+			return $mensaje[PRODUCTO_REPETIDO];
+			break;
 		default:
 			return $mensaje[ERROR_GENERAL];
 			break;
