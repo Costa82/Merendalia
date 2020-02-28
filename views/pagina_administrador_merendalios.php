@@ -433,7 +433,7 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 	// Pintamos las líneas que existan
 	if (isset($lineas)) {
 		
-		for ($i = 1; $i < 11; $i ++) {
+		for ($i = 1; $i < count($lineas) + 1; $i ++) {
 			
 			echo '
 							<div class="linea">
