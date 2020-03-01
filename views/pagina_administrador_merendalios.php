@@ -275,6 +275,9 @@ if (isset($_SESSION['producto'])) {
 	if (isset($_SESSION['producto']['linea']))
 	$lineas = $_SESSION['producto']['linea'];
 	
+	if (isset($_SESSION['producto']['es_titulo']))
+	$es_titulo = $_SESSION['producto']['es_titulo'];
+	
 }
 
 echo '
@@ -431,7 +434,7 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 						<div id="listado_edicion">';
 	
 	// Pintamos las líneas que existan
-	if (isset($lineas)) {
+	if (isset($lineas) && count($lineas) > 1) {
 		
 		for ($i = 1; $i < count($lineas) + 1; $i ++) {
 			
@@ -448,12 +451,18 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 									</div>
 									
 									<div class="form-group">
-										<label>Título</label> <input type="checkbox" name="titulo2" value="titulo2">
+										<label>Título</label> <input type="checkbox" ';
+			
+			if ($es_titulo[$i] == 'SI')
+				echo 'checked = "true" ';
+
+			echo '
+										name="titulo' . $i . '" value="titulo' . $i . '">
 									</div>
 								
-								</div>';
+							</div>';
 		}									
-	}														
+	}																
 									
 	echo '						
 						</div>

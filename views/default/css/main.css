@@ -434,10 +434,6 @@ nav>ul>li>ul#lista_movil li {
 	display: none;
 }
 
-#listado_edicion {
-	display: none;
-}
-
 #errores {
 	color: red;
 }

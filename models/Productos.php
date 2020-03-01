@@ -238,7 +238,7 @@ class Productos extends AbstractBBDD {
 	{
 		$consulta = "SELECT * FROM " . $this->tabla . " as producto LEFT OUTER JOIN listado_producto as listado
 		 ON producto.id_producto = listado.id_producto WHERE producto.titulo_producto = '" . $this->titulo_producto . "' 
-		 AND producto.estado = 'ACTV' ORDER BY producto.titulo_producto ASC";
+		 AND producto.estado = 'ACTV' ORDER BY producto.titulo_producto ASC, listado.orden ASC";
 
 		$resultados = Productos::ejecutarQuery($consulta);
 
@@ -284,6 +284,10 @@ class Productos extends AbstractBBDD {
 					case "linea":
 						$linea = $value;
 						$_SESSION['producto']['linea'][$j+1] = $linea;
+						break;
+					case "es_titulo":
+						$es_titulo = $value;
+						$_SESSION['producto']['es_titulo'][$j+1] = $es_titulo;
 						break;
 					default:
 						break;
