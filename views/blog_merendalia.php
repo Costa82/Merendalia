@@ -208,15 +208,15 @@ echo "<div class='explicacion_blog'>
 
 					</div>
 
-					<div class='explicacion_final'>
+					<!-- div class='explicacion_final'>
 						<p>Y si sois de esas personas que si no tomáis café es como que no habéis comido, pues ¡café al canto!
 						</p></br>
-					</div>
+					</div -->
 					
-					<div class='articulo_secundario'>
+					<!-- div class='articulo_secundario' -->
 
 						<!-- img con zoom -->
-						<a class='fancybox' rel='group'
+						<!-- a class='fancybox' rel='group'
 							href='./views/default/img/Maquina de café.jpg'><img
 							src='./views/default/img/Maquina de café.jpg'
 							class='img_articulo_secundaria'
@@ -224,7 +224,7 @@ echo "<div class='explicacion_blog'>
 							alt='Café y menaje' /></a>
 						<p class='pieFoto'>Café y menaje</p>
 
-					</div>
+					</div -->
 					
 					<div class='explicacion_final'>
 						<p>¡Venga! y después de estas fotos que abren el apetito, nos despedimos con unas de caritas sonrientes en alguna
