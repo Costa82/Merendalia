@@ -73,7 +73,7 @@ class Correo
         $contenidoHTML .= "<h1 style='color: #d8c12d'>¡Hola " . $nombre . "!</h1>";
         $contenidoHTML .= "<p>En merendalia hemos recibido tu solicitud, vamos a revisar lo que nos pides, ver si es posible, y nos pondremos en contacto contigo a la mayor brevedad posible.
 											</br>Un saludo y ¡¡gracias por contactar con nosotros!!</p>
-                                                                                        </br><strong>Teléfono de contacto:</strong> 983 85 73 69
+                                                                                        </br><strong>Teléfono de contacto:</strong> 680 21 97 94 / 983 85 73 69
 											</br>
 											</br><a href='https://www.merendalia.es'><img src='" . $imagen . "' height='50'/></a>
 											</br><p style='font-size: 10px;'><strong>AVISO SEGURIDAD</strong>
@@ -275,7 +275,7 @@ class Correo
         $contenidoHTML .= "<h1 style='color: #d8c12d'>¡Hola " . $nombre . "!</h1>";
         $contenidoHTML .= "<p>En merendalia hemos recibido tu consulta, nos pondremos en contacto contigo a la mayor brevedad posible.
 											</br>Un saludo y ¡¡gracias por contactar con nosotros!!</p>
-                                                                                        </br><strong>Teléfono de contacto:</strong> 983 85 73 69
+                                                                                        </br><strong>Teléfono de contacto:</strong> 680 21 97 94 / 983 85 73 69
 											</br>
 											</br><a href='https://www.merendalia.es'><img src='" . $imagen . "' height='50'/></a>
 											</br><p style='font-size: 10px;'><strong>AVISO SEGURIDAD</strong>
