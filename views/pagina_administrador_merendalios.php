@@ -420,17 +420,6 @@ if (isset($_SESSION['mostrar_formulario']) && $_SESSION['mostrar_formulario'] ==
 							<label>Poner de baja</label> <input type="checkbox" name="estado" value="estado">
 						</div>
 						
-						<div class="form-group">
-							<label>Listado nuevo</label> <input type="checkbox" ';
-	
-	if (isset($listado) && $listado == "SI")
-	echo 'checked = "true"';	
-	
-	echo '
-						name="listado" id="check_edicion" value="listado"
-							onchange="javascript:showContent()">
-						</div>
-						
 						<div id="listado_edicion">';
 	
 	// Pintamos las líneas que existan

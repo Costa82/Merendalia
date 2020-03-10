@@ -172,7 +172,7 @@ class Usuarios extends AbstractBBDD {
 				switch ($key) {
 
 					case "nombre":
-						$nombre = $value;
+						$nombre = utf8_decode($value);
 						break;
 					case "telefono":
 						$telefono = $value;
