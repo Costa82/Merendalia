@@ -1,10 +1,13 @@
 <?php
 class Connection {
-	// 	private $host = "qach704.merendalia";
-	// 	private $username = "qach704";
-	// 	private $password = "Sandia82";
-	//  private $base = "qach704";
+	
+	// Conexión Producción
+	//private $host = "qach704.merendalia";
+	//private $username = "qach704";
+	//private $password = "Sandia82";
+	//private $base = "qach704";
 
+	// Conexión Local
 	private $host = "localhost";
 	private $username = "root";
 	private $password = "";
