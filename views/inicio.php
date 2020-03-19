@@ -34,6 +34,8 @@ echo "<div class='presentacion'>
 	</div>
 	<!--//FIN BLOQUE COOKIES-->";
 
+include './views/default/templates/template_aviso.php';
+
 $contenido = ob_get_clean();
 
 include './views/default/templates/template_inicio.php';

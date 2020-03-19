@@ -259,6 +259,27 @@ nav>ul>li>ul#lista_movil li {
 	margin: 0 auto;
 }
 
+/* AVISO
+   ========================================================================= */
+.aviso {
+	cursor: pointer;
+	padding: 10px 20px;
+	background: white;
+	font-size: 17px;
+	width: 300px;
+	position: absolute;
+	z-index: 9999999999999;
+	border-radius: 5px;
+	border: black 2px solid;
+	-webkit-box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.75);
+	color: black;
+}
+
+.img_aviso {
+	width: 100%;
+}
+
 /* CIRCULOS
    ========================================================================= */
 .contenedor_circulos {
@@ -1247,6 +1268,9 @@ footer h3 {
 		text-align: center;
 		font-size: 30px;
 	}
+	.aviso {
+		width: 450px;
+	}
 	.contenedor_circulos {
 		max-width: 700px;
 	}
@@ -1725,6 +1749,9 @@ footer h3 {
 		margin: 20px 60px;
 		font-size: 25px;
 	}
+	.aviso {
+		width: 500px;
+	}
 }
 
 /* Para resoluciones a partir de 1250px */
@@ -1822,5 +1849,8 @@ footer h3 {
 		border-radius: 300px;
 		height: 330px;
 		width: 330px;
+	}
+	.aviso {
+		width: 550px;
 	}
 }

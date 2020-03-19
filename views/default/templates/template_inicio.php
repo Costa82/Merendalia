@@ -16,9 +16,17 @@
 <title>Merendalia</title>
 <link type="text/css" rel="stylesheet" href="./views/default/css/font-awesome.css" />
 
+<!-- Add jQuery library -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-latest.min.js"></script>
+
 <script>
      var rutacss1 = "./views/default/css/main.css?" + Math.random();
+     var rutajs5 = "./views/default/jquery/jquery_aviso.js?" + Math.random();
+     var script = "script";
+     
      document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />'); 
+     document.write('<script src="' + rutajs5 + '"></' + script + '>');
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
