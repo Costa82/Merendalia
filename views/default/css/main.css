@@ -225,11 +225,14 @@ nav>ul>li>ul#lista_movil {
 	background: linear-gradient(to up, rgba(226, 226, 226, 1) 0%,
 		rgba(209, 209, 209, 1) 0%, rgba(219, 219, 219, 1) 14%,
 		rgba(244, 244, 244, 1) 58%, rgba(254, 254, 254, 1) 76% );
-	filter: progid :           DXImageTransform.Microsoft.gradient (        
-		    startColorstr =     
-		     '#e2e2e2', endColorstr =           '#fefefe', GradientType =
+	filter: progid :                   DXImageTransform.Microsoft.gradient (
+		  
 		        
-		 1 );
+		        startColorstr =         
+		         '#e2e2e2', endColorstr =                   '#fefefe',
+		GradientType =    
+		        
+		     1 );
 }
 
 nav>ul>li>ul#lista_movil a {
@@ -254,6 +257,26 @@ nav>ul>li>ul#lista_movil li {
 	padding-top: 100px;
 	width: 90%;
 	margin: 0 auto;
+}
+
+/* AVISO
+   ========================================================================= */
+.aviso {
+	cursor: pointer;
+	background: white;
+	font-size: 17px;
+	width: 300px;
+	position: absolute;
+	z-index: 9999999999999;
+	border-radius: 5px;
+	border: black 2px solid;
+	-webkit-box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.75);
+	color: black;
+}
+
+.img_aviso {
+	width: 100%;
 }
 
 /* CIRCULOS
@@ -332,6 +355,118 @@ nav>ul>li>ul#lista_movil li {
 
 .resenas_google .nombre {
 	margin-bottom: 10px;
+}
+
+/* PÁGINA ADMINISTRADOR
+   ========================================================================= */
+.formulario_logueo {
+	padding: 5px;
+	max-width: 400px;
+	margin: 0 auto;
+	font-size: 15px;
+}
+
+.container_formulario_productos {
+	padding: 5px;
+	max-width: 820px;
+	margin: 0 auto;
+}
+
+.formulario_subida_productos,.formulario_edicion_productos {
+	padding: 5px;
+	font-size: 15px;
+	margin: 0 auto;
+}
+
+.formulario_logueo input,.formulario_subida_productos input,.formulario_subida_productos textarea,.formulario_subida_productos select,.formulario_edicion_productos input,.formulario_edicion_productos textarea,.formulario_edicion_productos select
+	{
+	margin-bottom: 5px;
+}
+
+.formulario_edicion_productos select {
+	width: 170px;	
+	margin-left: 5px;
+}
+
+.formulario_subida_productos .linea,.formulario_edicion_productos .linea
+	{
+	margin: 10px 0;
+	padding: 5px;
+	border: solid 1px;
+}
+
+.formulario_subida_productos input.titulo_producto {
+	margin-left: 14px;
+}
+
+.formulario_subida_productos input.precio {
+	margin-left: 80px;
+}
+
+.formulario_subida_productos input.title {
+	margin-left: 4px;
+}
+
+.formulario_subida_productos input.alt {
+	margin-left: 14px;
+}
+
+.formulario_edicion_productos input.titulo_producto_buscar {
+	margin-left: 33px;
+}
+
+.formulario_edicion_productos input.titulo_producto_nuevo {
+	margin-left: 45px;
+}
+
+.formulario_edicion_productos input.precio {
+	margin-left: 40px;
+}
+
+.formulario_edicion_productos input.title {
+	margin-left: 55px;
+}
+
+.formulario_edicion_productos input.alt {
+	margin-left: 65px;
+}
+
+.formulario_logueo input.nick {
+	margin-left: 59px;
+}
+
+.formulario_logueo input.contrasena {
+	margin-left: 10px;
+}
+
+.formulario_logueo .botones,.formulario_subida_productos .botones,.formulario_edicion_productos .botones,
+	.documento_excel .botones
+	{
+	width: 140px;
+	margin: 0 auto;
+}
+
+.documento_excel .botones {
+	width: 220px;
+}
+
+#listado {
+	display: none;
+}
+
+#errores {
+	color: red;
+}
+
+.container_documento_excel {
+	margin-top: 25px;
+	width: 100%;
+	display: flow-root;	
+}
+
+.documento_excel {
+	width: 220px;
+	margin: 0 auto;
 }
 
 /* RESERVAS Y TARIFAS
@@ -527,6 +662,7 @@ form a:hover { #9bd155
 
 .btn {
 	margin-top: 15px;
+	margin-bottom: 30px;
 	font-family: Montserrat-UltraLight;
 	font-size: 15px;
 	border-radius: 5px;
@@ -724,6 +860,10 @@ ul.lista_productos_comida li {
 .menus_opciones .bandeja {
 	text-align: center;
 	margin: 10px 0;
+}
+
+.menus_opciones p.precio {
+	margin-bottom: 15px;
 }
 
 .texto_producto {
@@ -1127,6 +1267,9 @@ footer h3 {
 		text-align: center;
 		font-size: 30px;
 	}
+	.aviso {
+		width: 450px;
+	}
 	.contenedor_circulos {
 		max-width: 700px;
 	}
@@ -1224,6 +1367,53 @@ footer h3 {
 		display: none;
 	}
 	.condiciones,.whatsapp {
+		margin-left: 75px;
+	}
+	.formulario_logueo,.formulario_subida_productos,.formulario_edicion_productos
+		{
+		padding: 5px;
+		width: 350px;
+		margin: 0 auto;
+		font-size: 20px;
+		width: 400px;
+	}
+	.formulario_subida_productos label,.formulario_edicion_productos label {
+		font-size: 20px;
+	}
+	.formulario_logueo input.nick {
+		margin-left: 76px;
+	}
+	.formulario_logueo input.contrasena {
+		margin-left: 10px;
+	}
+	.formulario_subida_productos input.titulo_producto {
+		margin-left: 18px;
+	}
+	.formulario_subida_productos input.precio {
+		margin-left: 107px;
+	}
+	.formulario_subida_productos input.title,.formulario_edicion_productos input.title
+		{
+		margin-left: 6px;
+	}
+	.formulario_subida_productos input.alt,.formulario_edicion_productos input.alt
+		{
+		margin-left: 20px;
+	}
+	.formulario_subida_productos .linea,.formulario_edicion_productos .linea
+		{
+		max-width: 300px;
+	}
+	.formulario_edicion_productos input.titulo_producto_nuevo {
+		margin-left: 45px;
+	}
+	.formulario_edicion_productos input.precio {
+		margin-left: 38px;
+	}
+	.formulario_edicion_productos input.title {
+		margin-left: 61px;
+	}
+	.formulario_edicion_productos input.alt {
 		margin-left: 75px;
 	}
 }
@@ -1334,6 +1524,12 @@ footer h3 {
 	}
 	.evento_secundario,.articulo_secundario {
 		min-width: 350px;
+	}
+	.formulario_subida_productos {
+		float: left;
+	}
+	.formulario_edicion_productos {
+		float: right;
 	}
 }
 
@@ -1536,7 +1732,8 @@ footer h3 {
 	nav>ul>li#menu_moviles {
 		display: none;
 	}
-	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos {
+	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos
+		{
 		display: block;
 	}
 	.contenedor_circulos {
@@ -1550,6 +1747,9 @@ footer h3 {
 		display: inline-block;
 		margin: 20px 60px;
 		font-size: 25px;
+	}
+	.aviso {
+		width: 500px;
 	}
 }
 
@@ -1648,5 +1848,8 @@ footer h3 {
 		border-radius: 300px;
 		height: 330px;
 		width: 330px;
+	}
+	.aviso {
+		width: 550px;
 	}
 }

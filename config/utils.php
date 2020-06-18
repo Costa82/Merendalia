@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Clase Utils para normalizar cadenas
+ */
 class Utils
 {
 
@@ -12,9 +15,9 @@ class Utils
 	public static function normaliza($cadenaOriginal)
 	{
 		$originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ
-		ßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ?¿-!¡';
+		ßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ?¿-!¡€';
 		$modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuy
-		bsaaaaaaaceeeeiiiidnoooooouuuyybyRr     ';
+		bsaaaaaaaceeeeiiiidnoooooouuuyybyRr      ';
 		$cadena = utf8_decode($cadenaOriginal);
 		$cadena = strtr($cadena, utf8_decode($originales), $modificadas);
 		$cadena = strtolower($cadena);

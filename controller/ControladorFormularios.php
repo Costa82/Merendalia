@@ -1,9 +1,8 @@
 <?php
-require_once './config/validaciones.php';
+require_once './config/Validaciones.php';
 require_once './config/Correo.php';
 
 $correo = new Correo();
-$validaciones = new Validaciones();
 
 /**
  * Controlador de gestión de formularios
@@ -34,10 +33,22 @@ class ControladorFormularios
 		if($respuesta_google->score > 0.2){
 
 			if(isset($_REQUEST['nombre']) AND isset($_REQUEST['mail']) AND isset($_REQUEST['dia']) AND isset($_REQUEST['hora_entrada']) AND isset($_REQUEST['hora_salida'])) {
+					
+				// Creamos un usuario
+				$usuario = new Usuarios();
+
+				$usuario->setTipo_usuario("USU");
+				$usuario->setEstado("ACTV");
+				$usuario->setUltima_accion("Reserva");
 
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
+				$usuario->setNombre($nombre);
+				$usuario->setNick($nombre);
+
 				$mail = $_REQUEST['mail'];
+				$usuario->setEmail($mail);
+
 				$dia = $_REQUEST['dia'];
 				$hora_entrada = $_REQUEST['hora_entrada'];
 				$hora_salida = $_REQUEST['hora_salida'];
@@ -47,10 +58,11 @@ class ControladorFormularios
 				if ( isset($_REQUEST['telefono']) ) {
 
 					$telefono = $_REQUEST['telefono'];
+					$usuario->setTelefono($telefono);
 
 					if ($telefono != "" && $telefono != null) {
 
-						if (!$validaciones->validarTelefono($telefono)) {
+						if (!validarTelefono($telefono)) {
 							$telefonoValido = false;
 						}
 					} else {
@@ -70,6 +82,7 @@ class ControladorFormularios
 				if (isset($_POST['whatsapp']) && $_POST['whatsapp'] == '1')
 				{
 					$whatsapp = "OK";
+					$usuario->setNewsletter(1);
 				}
 				else
 				{
@@ -81,22 +94,25 @@ class ControladorFormularios
 				if ( $mail === "info@basededatos-info.com" || $mail === "yourmail@gmail.com" || $mail === "artyea@msn.com" || !$telefonoValido ) {
 					$envio = "KO";
 				} else {
+					$correo = new Correo();
 					$envio = $correo->enviarMailsReserva($mail, $nombre, $dia, $hora_entrada, $hora_salida, $telefono, $comentario, $whatsapp);
 				}
 
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
-					$_SESSION['error'] = 201;
+					$_SESSION['error'] = 501;
+				} else {
+					$usuario->saveUsuario();
 				}
 
-			// El nombre y el mail tienen que ser obligatorios
+				// El nombre y el mail tienen que ser obligatorios
 			} else {
-				$_SESSION['error'] = 202;
+				$_SESSION['error'] = 502;
 			}
 
-		// El recaptcha ha ido mal
+			// El recaptcha ha ido mal
 		} else {
-			$_SESSION['error'] = 203;
+			$_SESSION['error'] = 503;
 		}
 
 		if (!headers_sent()) {
@@ -128,20 +144,32 @@ class ControladorFormularios
 		if($respuesta_google->score > 0.2){
 
 			if(isset($_REQUEST['nombre']) AND isset($_REQUEST['mail'])){
+
+				// Creamos un usuario
+				$usuario = new Usuarios();
+
+				$usuario->setTipo_usuario("USU");
+				$usuario->setEstado("ACTV");
+				$usuario->setUltima_accion("Contacto");
 					
 				// Campos obligatorios
 				$nombre = $_REQUEST['nombre'];
+				$usuario->setNombre($nombre);
+				$usuario->setNick($nombre);
+
 				$mail = $_REQUEST['mail'];
+				$usuario->setEmail($mail);
 				$telefonoValido = true;
 					
 				// Campos opcionales
 				if ( isset($_REQUEST['telefono']) ) {
 
 					$telefono = $_REQUEST['telefono'];
+					$usuario->setTelefono($telefono);
 
 					if ($telefono != "" && $telefono != null) {
 							
-						if (!$validaciones->validarTelefono($telefono)) {
+						if (!validarTelefono($telefono)) {
 							$telefonoValido = false;
 						}
 					} else {
@@ -160,6 +188,7 @@ class ControladorFormularios
 					
 				if (isset($_POST['whatsapp']) && $_POST['whatsapp'] == '1') {
 					$whatsapp = "OK";
+					$usuario->setNewsletter(1);
 				} else {
 					$whatsapp = "KO";
 				}
@@ -169,22 +198,25 @@ class ControladorFormularios
 				if ( $mail === "info@basededatos-info.com" || $mail === "yourmail@gmail.com" || $mail === "artyea@msn.com" || !$telefonoValido ) {
 					$envio = "KO";
 				} else {
+					$correo = new Correo();
 					$envio = $correo->enviarMailsConsulta($mail, $nombre, $telefono, $consulta, $whatsapp);
 				}
 					
 				// Comprobamos cómo ha ido el envío
 				if ( $envio != "OK" ) {
-					$_SESSION['error'] = 201;
+					$_SESSION['error'] = 501;
+				} else {
+					$usuario->saveUsuario();
 				}
 
-			// El nombre y el mail tienen que ser obligatorios
+				// El nombre y el mail tienen que ser obligatorios
 			} else {
-				$_SESSION['error'] = 202;
+				$_SESSION['error'] = 502;
 			}
 
-		// El recaptcha ha ido mal
+			// El recaptcha ha ido mal
 		} else {
-			$_SESSION['error'] = 203;
+			$_SESSION['error'] = 503;
 		}
 
 		if (!headers_sent()) {
