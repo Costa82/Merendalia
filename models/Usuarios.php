@@ -231,7 +231,7 @@ class Usuarios extends AbstractBBDD {
 	public function saveUsuario() {
 
 		$save = false;
-		$fecha_actual = date('d-m-Y');
+		$fecha_actual = date('Y-m-d');
 
 		$registrado = Usuarios::esRegistradoMail($this->email);
 
