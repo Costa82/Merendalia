@@ -97,5 +97,46 @@ class ControladorUsuarios
 			exit();
 		}
 	}
+	
+	/**
+	 * Método que añade un usuario en BBDD
+	 */
+	public function subir_usuario()
+	{
+		if (isset($_REQUEST['addUsuario'])) {
+
+			if (!empty($_REQUEST['nombre']) and !empty($_REQUEST['email'])) {
+
+				$usuario = new Usuarios();
+				
+				$usuario->setNombre($_REQUEST['nombre']);
+				$usuario->setNick($_REQUEST['nombre']);
+				$usuario->setEmail($_REQUEST['email']);
+				$usuario->setUltima_accion($_REQUEST['ultima_accion']);
+				$usuario->setTipo_usuario("USU");
+				$usuario->setNewsletter(0);
+				$usuario->setEstado("ACTV");
+				
+				if (!empty($_REQUEST['apellidos']))
+					$usuario->setApellidos($_REQUEST['apellidos']);
+					
+				if (!empty($_REQUEST['telefono']))
+					$usuario->setTelefono($_REQUEST['telefono']);
+					
+				if ($usuario->saveUsuario()) {
+					$_SESSION['error'] = 203;
+					$destino = "pagina_administrador_merendalios";
+				} else {
+					$_SESSION['error'] = 204;
+					$destino = "pagina_administrador_merendalios";
+				}
+			}
+		}
+
+		if (! headers_sent()) {
+			header('Location:' . $destino);
+			exit();
+		}
+	}
 
 }

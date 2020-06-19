@@ -411,6 +411,18 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 14px;
 }
 
+.formulario_subida_productos input.apellidos {
+	margin-left: 5px;
+}
+
+.formulario_subida_productos input.telefono {
+	margin-left: 12px;
+}
+
+.formulario_subida_productos input.email {
+	margin-left: 26px;
+}
+
 .formulario_edicion_productos input.titulo_producto_buscar {
 	margin-left: 33px;
 }
@@ -459,14 +471,23 @@ nav>ul>li>ul#lista_movil li {
 }
 
 .container_documento_excel {
-	margin-top: 25px;
 	width: 100%;
 	display: flow-root;	
 }
 
 .documento_excel {
-	width: 220px;
+	width: 300px;	
 	margin: 0 auto;
+}
+
+.documento_excel input {
+	width: 200px;	
+}
+
+.documento_excel .btn {
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 /* RESERVAS Y TARIFAS

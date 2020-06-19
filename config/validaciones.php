@@ -75,6 +75,12 @@ function validacion($num)
 		case 202:
 			return $mensaje[CLAVE_NOEXIS];
 			break;
+		case 203:
+			return $mensaje[USUARIO_SUBIDO_OK];
+			break;
+		case 204:
+			return $mensaje[USUARIO_SUBIDO_KO];
+			break;
 		case 501:
 			return $mensaje[ERROR_ENVIO];
 			break;

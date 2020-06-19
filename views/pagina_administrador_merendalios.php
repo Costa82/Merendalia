@@ -2,10 +2,10 @@
 ob_start();
 
 $productos = new Productos();
+$usuarios = new Usuarios();
 
-echo "<h1>PRODUCTOS</h1>
-		<div id='errores'>
-			<center>";
+echo "<div id='errores'>
+		<center>";
 
 if ($params['error'] != 0) {
 	$num = $params['error'];
@@ -14,12 +14,12 @@ if ($params['error'] != 0) {
 }
 
 echo '
-		</div>
-			</center>';
+		</center>
+	</div>';
 
-// Subir Productos
-
+// SUBIR PRODUCTOS
 echo '
+<h1>PRODUCTOS</h1>
 <div class="container_formulario_productos">
     <div class="formulario_subida_productos">
 		<div class="form-box">
@@ -235,8 +235,7 @@ echo '
 	</div>';
 
 
-// Editar Productos
-
+// EDITAR PRODUCTOS
 $titulo_producto = null;
 $precio = null;
 $descripcion = null;
@@ -471,7 +470,9 @@ echo '
 	</div>
 </div>';
 
-// Usuarios
+
+
+// USUARIOS
 echo '
 <div class="container_documento_excel">
 
@@ -479,19 +480,74 @@ echo '
 
 	<h1>USUARIOS</h1>
 	
-		<h3>Consulta Usuarios</h3>
-	
+	<div class="formulario_subida_productos">
+
+		<div class="form-box">
+			<div class="form-top">
+				<div class="form-top-left">
+					<h3>Añadir Usuario</h3>
+					<p>
+						<span>(*)</span> <i>Campos obligatorios.</i>
+					</p>
+					
+				</div>
+			</div>
+			<div class="form-bottom">
+				<form role="form" action="./subir_usuario" enctype="multipart/form-data" method="post"
+					class="login-form">
+					
+					<div class="form-group">
+						<label><span>* </span>Nombre</label> <input type="text"
+							name="nombre" class="nombre" required="required" />
+					</div>
+					
+					<div class="form-group">
+						<label>Apellidos</label> <input type="text"
+							name="apellidos" class="apellidos" />
+					</div>
+					
+					<div class="form-group">
+						<label>Teléfono</label> <input type="tel"
+							name="telefono" class="telefono" />
+					</div>
+					
+					<div class="form-group">
+						<label><span>* </span>Email</label> <input type="email"
+							name="email" class="email" required="required" />
+					</div>
+					
+					<div class="form-group">
+						<label><span>* </span>Email</label> <input type="email"
+							name="email" class="email" required="required" />
+					</div>
+					
+					<div class="form-group">
+						<span>* </span><label>Ultima acción</label>
+						<select name="ultima_accion" class="ultima_accion">
+							<option value="Contacto">Contacto</option>
+							<option value="Reserva">Reserva</option>
+						</select>
+					</div>
+					
+					<div class="botones">
+						<button type="submit" name="addUsuario" class="btn">Añadir Usuario</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>	
+		
 		<form role="form" action="./documento_excel" method="post" class="login-form">
 	
 			<div class="botones">
 				<button type="submit" name="crearDocumentoNombre" class="btn">Exportar Datos ordenados por nombre</button>
 				<button type="submit" name="crearDocumentoFecha" class="btn">Exportar Datos ordenados por fecha</button>
 			</div>
-			
+				
 		</form>	
-		
+	
 	</div>
-
+		
 </div>';
 
 $contenido = ob_get_clean();

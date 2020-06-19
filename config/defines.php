@@ -3,6 +3,8 @@
 // Validaciones Usuario
 define("USER_NOEXIS", 201); //El usuario no es administrador
 define("CLAVE_NOEXIS", 202); //La contraseña es incorrecta
+define("USUARIO_SUBIDO_OK", 203); //El usuario se dio de alta correctamente
+define("USUARIO_SUBIDO_KO", 204); //No se pudo dar de alta al usuario
 
 // Validaciones Correo
 define("ERROR_ENVIO", 501); //Error al enviar el correo.
@@ -28,6 +30,8 @@ define("ERROR_GENERAL", 1000); //Error General
 // Definiciones
 $mensaje[USER_NOEXIS] = "El usuario no es administrador.";
 $mensaje[CLAVE_NOEXIS] = "La contraseña es incorrecta";
+$mensaje[USUARIO_SUBIDO_OK] = "El usuario se dio de alta correctamente.";
+$mensaje[USUARIO_SUBIDO_KO] = "No se pudo dar de alta al usuario.";
 
 $mensaje[ERROR_ENVIO] = "Error al enviar el correo.";
 $mensaje[ERROR_ENVIO_NOMBRE_MAIL] = "Error al enviar el correo, falta el nombre o el mail.";
