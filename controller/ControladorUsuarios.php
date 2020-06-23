@@ -123,6 +123,12 @@ class ControladorUsuarios
 				if (!empty($_REQUEST['telefono']))
 					$usuario->setTelefono($_REQUEST['telefono']);
 					
+				if (!empty($_REQUEST['fecha_alta']))
+					$usuario->setFecha_registro($_REQUEST['fecha_alta']);
+					
+				if (!empty($_REQUEST['fecha_ultima_actualizacion']))
+					$usuario->setFecha_ultima_actualizacion($_REQUEST['fecha_ultima_actualizacion']);
+					
 				if ($usuario->saveUsuario()) {
 					$_SESSION['error'] = 203;
 					$destino = "pagina_administrador_merendalios";

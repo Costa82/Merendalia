@@ -232,6 +232,16 @@ class Usuarios extends AbstractBBDD {
 
 		$save = false;
 		$fecha_actual = date('Y-m-d');
+		
+		if ($this->getFecha_registro() != null)
+			$fecha_registro = $this->getFecha_registro();
+		else 
+			$fecha_registro = $fecha_actual;
+			
+		if ($this->getFecha_ultima_actualizacion() != null)
+			$fecha_ultima_actualizacion = $this->getFecha_ultima_actualizacion();
+		else 
+			$fecha_ultima_actualizacion = $fecha_actual;
 
 		$registrado = Usuarios::esRegistradoMail($this->email);
 
@@ -239,7 +249,7 @@ class Usuarios extends AbstractBBDD {
 		if ($registrado) {
 
 			$query = "UPDATE " . $this->tabla . "
-						SET fecha_ultima_actualizacion = '" . $fecha_actual . "', ultima_accion = '" . $this->ultima_accion . "'
+						SET fecha_ultima_actualizacion = '" . $fecha_ultima_actualizacion . "', ultima_accion = '" . $this->ultima_accion . "'
 						WHERE email = '" . $this->email . "';";
 
 		} else {
@@ -252,8 +262,8 @@ class Usuarios extends AbstractBBDD {
 	                       '" . $this->telefono . "',
 	                       '" . $this->email . "',
 	                       '" . $this->password . "',
-	                       '" . $fecha_actual . "',
-	                       '" . $fecha_actual . "',
+	                       '" . $fecha_registro . "',
+	                       '" . $fecha_ultima_actualizacion . "',
 	                       '" . $this->ultima_accion . "',
 	                       '" . $this->tipo_usuario . "',
 	                       '" . $this->newsletter . "',

@@ -502,6 +502,11 @@ echo '
 					</div>
 					
 					<div class="form-group">
+						<label><span>* </span>Email</label> <input type="email"
+							name="email" class="email" required="required" />
+					</div>
+					
+					<div class="form-group">
 						<label>Apellidos</label> <input type="text"
 							name="apellidos" class="apellidos" />
 					</div>
@@ -512,17 +517,17 @@ echo '
 					</div>
 					
 					<div class="form-group">
-						<label><span>* </span>Email</label> <input type="email"
-							name="email" class="email" required="required" />
+						<label>F. Alta</label> <input type="date"
+							name="fecha_alta" class="fecha_alta"/>
 					</div>
 					
 					<div class="form-group">
-						<label><span>* </span>Email</label> <input type="email"
-							name="email" class="email" required="required" />
+						<label>F. Ult. Act</label> <input type="date"
+							name="fecha_ultima_actualizacion" class="fecha_ultima_actualizacion"/>
 					</div>
 					
 					<div class="form-group">
-						<span>* </span><label>Ultima acción</label>
+						<label>Ultima acción</label>
 						<select name="ultima_accion" class="ultima_accion">
 							<option value="Contacto">Contacto</option>
 							<option value="Reserva">Reserva</option>

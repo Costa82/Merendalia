@@ -423,6 +423,14 @@ nav>ul>li>ul#lista_movil li {
 	margin-left: 26px;
 }
 
+.formulario_subida_productos input.fecha_alta {
+	margin-left: 35px;
+}
+
+.formulario_subida_productos input.fecha_ultima_actualizacion {
+	margin-left: 4px;
+}
+
 .formulario_edicion_productos input.titulo_producto_buscar {
 	margin-left: 33px;
 }
