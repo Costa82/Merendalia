@@ -1074,7 +1074,7 @@ h3.titulo_articulo {
 	cursor: pointer;
 }
 
-.img_articulo {
+.img_articulo, video {
 	width: 80%;
 	margin-top: 25px;
 }

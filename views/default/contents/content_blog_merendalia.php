@@ -8,6 +8,60 @@
 
 </div>
 
+
+<!-- ARTÍCULO -->
+
+<div
+	class='articulo'>
+
+	<!-- PARTE PRINCIPAL DEL ARTÍCULO CON IMAGEN GRANDE Y TEXTO -->
+
+	<h3 class='titulo_articulo'>VÍDEO PROYECTO MERENDALIA</h3>
+
+	<div class='fechaArticulo'>
+		<p>05 de julio de 2020</p>
+	</div>
+
+	<video controls>
+		  <source src=".\views\default\video\videoPrueba.mp4" type="video/mp4" title="Proyecto Merendalia">
+	</video>
+
+	<div class='explicacion_articulo'>
+
+		<p>¡Vídeo proyecto en Merendalia!</p>
+		</br>
+		<p>Lorem fistrum llevame al sircoo apetecan a wan a peich pecador
+			fistro. La caidita pecador llevame al sircoo hasta luego Lucas. A
+			peich quietooor a peich está la cosa muy malar. Apetecan va usté muy
+			cargadoo diodenoo amatomaa quietooor pecador ahorarr ahorarr. Sexuarl
+			benemeritaar tiene musho peligro jarl a peich fistro. Torpedo no
+			puedor al ataquerl la caidita.</p>
+		</br>
+		<p>Al ataquerl quietooor la caidita va usté muy cargadoo. Te voy a
+			borrar el cerito la caidita no te digo trigo por no llamarte Rodrigor
+			está la cosa muy malar se calle ustée qué dise usteer se calle ustée
+			por la gloria de mi madre. Me cago en tus muelas qué dise usteer te
+			voy a borrar el cerito mamaar diodeno torpedo mamaar va usté muy
+			cargadoo apetecan ahorarr. De la pradera ese hombree mamaar por la
+			gloria de mi madre hasta luego Lucas. A gramenawer no puedor diodenoo
+			no te digo trigo por no llamarte Rodrigor qué dise usteer papaar
+			papaar llevame al sircoo papaar papaar tiene musho peligro te voy a
+			borrar el cerito ese hombree. Por la gloria de mi madre qué dise
+			usteer está la cosa muy malar diodenoo te voy a borrar el cerito
+			diodeno fistro jarl a gramenawer ese que llega caballo blanco caballo
+			negroorl. Ese hombree condemor apetecan no te digo trigo por no
+			llamarte Rodrigor hasta luego Lucas papaar papaar diodenoo a peich
+			sexuarl condemor. Llevame al sircoo amatomaa caballo blanco caballo
+			negroorl caballo blanco caballo negroorl por la gloria de mi madre
+			qué dise usteer quietooor.</p>
+
+	</div>
+
+</div>
+
+
+<!-- ARTÍCULO -->
+
 <div
 	class='articulo' id='reservas_espacio'>
 
@@ -53,7 +107,7 @@
 
 			</br>
 			<p>
-				¿Qué celebraciones de espacio se han hecho?</br> </br>
+				¿Qué celebraciones de espacio se han hecho? </br></br>
 				&nbsp&nbsp&nbsp&nbsp- Cumpleaños</br> &nbsp&nbsp&nbsp&nbsp- Fiestas
 				sorpresa</br> &nbsp&nbsp&nbsp&nbsp- Fiestas de disfraces</br>
 				&nbsp&nbsp&nbsp&nbsp- Despedidas de solter@s</br>
@@ -304,8 +358,7 @@
 </div>
 
 
-
-
+<!-- ARTÍCULO -->
 
 <div
 	class='articulo' id='menús_privados'>
@@ -547,6 +600,9 @@
 	</div>
 
 </div>
+
+
+<!-- ARTÍCULO -->
 
 <div
 	class='articulo' id='que_es_merendalia'>
@@ -849,7 +905,9 @@
 
 </div>
 
+
 <!-- ARTÍCULO -->
+
 <div
 	class='articulo'>
 
