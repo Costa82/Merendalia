@@ -16,45 +16,51 @@
 
 	<!-- PARTE PRINCIPAL DEL ARTÍCULO CON IMAGEN GRANDE Y TEXTO -->
 
-	<h3 class='titulo_articulo'>VÍDEO PROYECTO MERENDALIA</h3>
+	<h3 class='titulo_articulo'>CORTO HUMMUS</h3>
 
 	<div class='fechaArticulo'>
 		<p>05 de julio de 2020</p>
 	</div>
 
-	<video controls>
-		  <source src=".\views\default\video\videoPrueba.mp4" type="video/mp4" title="Proyecto Merendalia">
-	</video>
+	<iframe src="https://www.youtube.com/embed/YOGyiC0VR1M" frameborder="0"
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen></iframe>
 
 	<div class='explicacion_articulo'>
 
-		<p>¡Vídeo proyecto en Merendalia!</p>
+		<p>Os presentamos el corto 'Hummus, proyecto fin de carrera de Sergio
+			Pozuelo Parrado, estudiante en la Escuela Superior de Imagen y Sonido
+			ACEIMAR Valladolid. Gracias Sergio por confiar en nosotros como
+			ubicación para tu corto 'Hummus'</p>
 		</br>
-		<p>Lorem fistrum llevame al sircoo apetecan a wan a peich pecador
-			fistro. La caidita pecador llevame al sircoo hasta luego Lucas. A
-			peich quietooor a peich está la cosa muy malar. Apetecan va usté muy
-			cargadoo diodenoo amatomaa quietooor pecador ahorarr ahorarr. Sexuarl
-			benemeritaar tiene musho peligro jarl a peich fistro. Torpedo no
-			puedor al ataquerl la caidita.</p>
+		<p>
+			<b>Palabras del director</b>
+		</p>
 		</br>
-		<p>Al ataquerl quietooor la caidita va usté muy cargadoo. Te voy a
-			borrar el cerito la caidita no te digo trigo por no llamarte Rodrigor
-			está la cosa muy malar se calle ustée qué dise usteer se calle ustée
-			por la gloria de mi madre. Me cago en tus muelas qué dise usteer te
-			voy a borrar el cerito mamaar diodeno torpedo mamaar va usté muy
-			cargadoo apetecan ahorarr. De la pradera ese hombree mamaar por la
-			gloria de mi madre hasta luego Lucas. A gramenawer no puedor diodenoo
-			no te digo trigo por no llamarte Rodrigor qué dise usteer papaar
-			papaar llevame al sircoo papaar papaar tiene musho peligro te voy a
-			borrar el cerito ese hombree. Por la gloria de mi madre qué dise
-			usteer está la cosa muy malar diodenoo te voy a borrar el cerito
-			diodeno fistro jarl a gramenawer ese que llega caballo blanco caballo
-			negroorl. Ese hombree condemor apetecan no te digo trigo por no
-			llamarte Rodrigor hasta luego Lucas papaar papaar diodenoo a peich
-			sexuarl condemor. Llevame al sircoo amatomaa caballo blanco caballo
-			negroorl caballo blanco caballo negroorl por la gloria de mi madre
-			qué dise usteer quietooor.</p>
-
+		<p>El cortometraje de 'Hummus' nace de una insospechada inspiración a
+			raíz de una conversación con un gran amigo durante las vacaciones de
+			verano de 2019 en San Vicente de la Barquera. Un cortometraje que no
+			se hubiera podido llevar a cabo sin la colaboración de todo el equipo
+			que estuvo involucrado en todas las fases. El interés por parte de
+			mis compañeros fue crucial y jamás sabré como agradecérselo. Un
+			rodaje intenso de dos días, a pesar de que el primero fuera fallido,
+			conseguimos aprender de los errores y hacer reflotar el barco, un
+			barco en el que yo era el capitán junto con mi tripulación. Un
+			trabajo en equipo indispensable para todo el desarrollo del rodaje.
+			El equipo artístico también realizó un meritorio esfuerzo a la altura
+			de lo que esperábamos. Un trabajo como actores, digno de aplaudir y
+			que deseo que haya supuesto una artística experiencia irrepetible de
+			la que hayan disfrutado. Por último, el barco físico, merendalia,
+			local que nos permitió surcar los mares de la interpretación
+			escénica, un espacio magnífico y muy bien equipado para la
+			realización de cualquier actividad que implique el uso de un
+			restaurante. No me queda otra que daros las gracias por haber
+			encontrado el tesoro del cortometraje, 'Hummus'. La expedición ha
+			merecido la pena. De nuevo, gracias.</p>
+		</br>
+		<p>
+			<i>Sergio Pozuelo Parrado</i>
+		</p>
 	</div>
 
 </div>
@@ -107,7 +113,7 @@
 
 			</br>
 			<p>
-				¿Qué celebraciones de espacio se han hecho? </br></br>
+				¿Qué celebraciones de espacio se han hecho? </br> </br>
 				&nbsp&nbsp&nbsp&nbsp- Cumpleaños</br> &nbsp&nbsp&nbsp&nbsp- Fiestas
 				sorpresa</br> &nbsp&nbsp&nbsp&nbsp- Fiestas de disfraces</br>
 				&nbsp&nbsp&nbsp&nbsp- Despedidas de solter@s</br>
