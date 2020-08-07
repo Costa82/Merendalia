@@ -75,6 +75,31 @@ $map = array(
         'action' => 'blog_merendalia',
         'privada' => false
     ),
+    'corto_hummus' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'corto_hummus',
+        'privada' => false
+    ),
+    'reserva_el_espacio_en_ferias_de_valladolid' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'reserva_el_espacio_en_ferias_de_valladolid',
+        'privada' => false
+    ),
+    'experiencia_merendalia_que_son_los_menus_privados' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'experiencia_merendalia_que_son_los_menus_privados',
+        'privada' => false
+    ),
+    'que_es_merendalia_y_por_que_elegirnos' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'que_es_merendalia_y_por_que_elegirnos',
+        'privada' => false
+    ),
+    'arranque_de_las_meriendas_taller_de_merendalia' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'arranque_de_las_meriendas_taller_de_merendalia',
+        'privada' => false
+    ),
     'contacto' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'contacto',

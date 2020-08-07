@@ -1,7 +1,7 @@
 <?php
 // Menu principal para la pagina principal index.php
 echo "<ul id='lista_principal_index'>
-        <li id='inicio'><a href='inicio' title='Inicio'><img src='./views/default/img/merendalia_logotipo_RGB-01.png' alt='Merendalia'/></a></li>
+        <li id='inicio'><a href='.' title='Inicio'><img src='./views/default/img/merendalia_logotipo_RGB-01.png' alt='Merendalia'/></a></li>
         <li id='galeria'><a href='galeria' title='Galería'>Galería</a></li>
         <li id='eventos'><a href='eventos' title='Eventos'>Eventos</a></li>
         <li id='espacio'><a href='espacio' title='Espacio'>Espacio</a></li>
