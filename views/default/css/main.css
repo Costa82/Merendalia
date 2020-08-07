@@ -708,6 +708,22 @@ form a:hover { #9bd155
 
 /* EVENTOS Y BLOG
    ========================================================================= */
+.entradas_blog {
+	text-align: center;
+}
+
+.entradas_blog h4.titulo_entradas {
+	font-size: 23px;	
+}
+
+.entrada_blog {
+	margin-top: 20px;	
+}
+
+.entrada_blog a {
+	color: black;	
+}
+   
 .evento_principal {
 	text-align: center;
 }
@@ -740,6 +756,10 @@ h3.eventos_pasados {
 	margin: 35px 0 25px;
 	font-size: 20px;
 	text-align: center;
+}
+
+.titulo_articulo {
+	padding-top: 100px;
 }
 
 .evento_secundario h3,.articulo_secundario h3 {

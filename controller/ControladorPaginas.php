@@ -92,6 +92,76 @@ class ControladorPaginas
 		}
 		require './views/blog_merendalia.php';
 	}
+	
+	/**
+	 * Método para cargar la entrada corto_hummus
+	 */
+	public function corto_hummus()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/corto_hummus.php';
+	}
+	
+	/**
+	 * Método para cargar la entrada reserva_el_espacio_en_ferias_de_valladolid
+	 */
+	public function reserva_el_espacio_en_ferias_de_valladolid()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/reserva_el_espacio_en_ferias_de_valladolid.php';
+	}
+	
+	/**
+	 * Método para cargar la entrada experiencia_merendalia_que_son_los_menus_privados
+	 */
+	public function experiencia_merendalia_que_son_los_menus_privados()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/experiencia_merendalia_que_son_los_menus_privados.php';
+	}
+	
+	/**
+	 * Método para cargar la entrada que_es_merendalia_y_por_que_elegirnos
+	 */
+	public function que_es_merendalia_y_por_que_elegirnos()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/que_es_merendalia_y_por_que_elegirnos.php';
+	}
+	
+	/**
+	 * Método para cargar la entrada arranque_de_las_meriendas_taller_de_merendalia
+	 */
+	public function arranque_de_las_meriendas_taller_de_merendalia()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/arranque_de_las_meriendas_taller_de_merendalia.php';
+	}
 
 	/**
 	 * Método para cargar el contacto
