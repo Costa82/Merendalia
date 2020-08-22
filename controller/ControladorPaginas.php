@@ -1,5 +1,5 @@
 <?php
-require_once './config/Validaciones.php';
+require_once './config/Validations.php';
 
 /**
  * Controlador de gestión de usuarios
