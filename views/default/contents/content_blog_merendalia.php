@@ -13,7 +13,7 @@
 <div class="entradas_blog">
 	
 	<div class="entrada_blog">
-		<a href='cortometraje%20restaurante%20video'><p class="titulo_entrada_blog"><b>CORTO HUMMUS</b></p>
+		<a href='cortometraje-restaurante-video'><p class="titulo_entrada_blog"><b>CORTO HUMMUS</b></p>
 		<img src='./views/default/img/Portada.jpg'
 		title='amigos fiesta merendalia' alt='amigos fiesta merendalia'
 		class='img_articulo_blog' /></a>
@@ -21,7 +21,7 @@
 	</div>
 	
 	<div class="entrada_blog">
-		<a href='reserva_el_espacio_en_ferias_de_valladolid'><p class="titulo_entrada_blog"><b>RESERVA EL ESPACIO EN FERIAS DE VALLADOLID 2019</b></p>
+		<a href='alquilar-local-fiestas-celebraciones-cumpleanos'><p class="titulo_entrada_blog"><b>RESERVA EL ESPACIO EN FERIAS DE VALLADOLID 2019</b></p>
 		<img src='./views/default/img/Portada.jpg'
 		title='amigos fiesta merendalia' alt='amigos fiesta merendalia'
 		class='img_articulo_blog' /></a>
@@ -29,7 +29,7 @@
 	</div>
 	
 	<div class="entrada_blog">
-		<a href='experiencia_merendalia_que_son_los_menus_privados'><p class="titulo_entrada_blog"><b>EXPERIENCIA MERENDALIA: ¿QUÉ SON LOS MENÚS PRIVADOS?</b></p>
+		<a href='restaurante-privado-coctel-catering'><p class="titulo_entrada_blog"><b>EXPERIENCIA MERENDALIA: ¿QUÉ SON LOS MENÚS PRIVADOS?</b></p>
 		<img src='./views/default/img/brindis_mesa_amigos_comida.jpg'
 		title='brindis mesa amigos comida merendalia'
 		alt='brindis mesa amigos comida merendalia' class='img_articulo_blog' /></a>
@@ -37,7 +37,7 @@
 	</div>
 	
 	<div class="entrada_blog">
-		<a href='que_es_merendalia_y_por_que_elegirnos'><p class="titulo_entrada_blog"><b>¿QUÉ ES MERENDALIA Y POR QUÉ ELEGIRNOS?</b></p>
+		<a href='merendalia-celebraciones-eventos-cumpleanos-catering'><p class="titulo_entrada_blog"><b>¿QUÉ ES MERENDALIA Y POR QUÉ ELEGIRNOS?</b></p>
 		<img src='./views/default/img/copas brindis brindar amigos celebración merendalia.jpg'
 		title='copas brindis brindar amigos celebración merendalia'
 		alt='copas brindis brindar amigos celebración merendalia'
@@ -46,7 +46,7 @@
 	</div>
 	
 	<div class="entrada_blog">
-		<a href='arranque_de_las_meriendas_taller_de_merendalia'><p class="titulo_entrada_blog"><b>ARRANQUE DE LAS MERIENDAS TALLER DE MERENDALIA</b></p>
+		<a href='merienda-taller-ninos-infantil'><p class="titulo_entrada_blog"><b>ARRANQUE DE LAS MERIENDAS TALLER DE MERENDALIA</b></p>
 		<img src='./views/default/img/1. taller infantil merienda pinturas rotuladores.jpg'
 		title='Taller infantil merienda pinturas rotuladores'
 		alt='Talleres Infantiles merienda pinturas rotuladores'
