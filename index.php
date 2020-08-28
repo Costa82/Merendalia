@@ -102,6 +102,11 @@ $map = array(
         'action' => 'arranque_de_las_meriendas_taller_de_merendalia',
         'privada' => false
     ),
+    'consejos_evento_seguro_pandemia_covid_fiesta' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'consejos_pandemia',
+        'privada' => false
+    ),
     'contacto' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'contacto',

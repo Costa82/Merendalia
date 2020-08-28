@@ -25,11 +25,11 @@
 			de menú. En cualquiera de ellas se dispone de la totalidad del
 			espacio y un servicio dedicado en exclusiva para tu grupo.
 		</p>
-		</br> <span class='leerMas'><strong>leer más...</strong> </span>
+<!-- 		</br> <span class='leerMas'><strong>leer más...</strong> </span> -->
 
 		<!-- Esta parte del texto estará oculta hasta hacer click en 'leer más...' -->
 
-		<div class='texto_leerMas'>
+<!-- 		<div class='texto_leerMas'> -->
 
 			</br>
 			<p>
@@ -232,10 +232,10 @@
 
 			</div>
 
-		</div>
+<!-- 		</div> -->
 
 		<!-- enlace de 'leer menos...' para ocultar el texto y las imágenes -->
-		<span class='leerMenos'><strong>leer menos...</strong> </span>
+<!-- 		<span class='leerMenos'><strong>leer menos...</strong> </span> -->
 
 	</div>
 

@@ -108,6 +108,20 @@ class ControladorPaginas
 	}
 	
 	/**
+	 * Método para cargar la entrada consejos_pandemia
+	 */
+	public function consejos_pandemia()
+	{
+	    if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+	        $params['error'] = $_SESSION['error'];
+	        $_SESSION['error'] = 0;
+	    } else {
+	        $params['error'] = 0;
+	    }
+	    require './views/consejos_pandemia.php';
+	}
+	
+	/**
 	 * Método para cargar la entrada reserva_el_espacio_en_ferias_de_valladolid
 	 */
 	public function reserva_el_espacio_en_ferias_de_valladolid()

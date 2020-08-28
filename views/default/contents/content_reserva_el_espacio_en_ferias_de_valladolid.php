@@ -37,11 +37,11 @@
 			hablamos de las reservas de espacio:</br>
 
 		</p>
-		</br> <span class='leerMas'><strong>leer más...</strong> </span>
+<!-- 		</br> <span class='leerMas'><strong>leer más...</strong> </span> -->
 
 		<!-- Esta parte del texto estará oculta hasta hacer click en 'leer más...' -->
 
-		<div class='texto_leerMas'>
+<!-- 		<div class='texto_leerMas'> -->
 
 			</br>
 			<p>
@@ -79,7 +79,7 @@
 				jamón y la empanada de carne o de atún, por ejemplo. ¡Mejor las dos
 				y así las probáis…!
 
-			</p>
+			</p></br>
 
 			<div class='contenedor_articulo_secundario'>
 
@@ -286,10 +286,10 @@
 
 			</div>
 
-		</div>
+<!-- 		</div> -->
 
 		<!-- enlace de 'leer menos...' para ocultar el texto y las imágenes -->
-		<span class='leerMenos'><strong>leer menos...</strong> </span>
+<!-- 		<span class='leerMenos'><strong>leer menos...</strong> </span> -->
 
 	</div>
 
