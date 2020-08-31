@@ -8,8 +8,6 @@
 
 </div>
 
-<h4 class="titulo_entradas">ENTRADAS</h4>
-
 <div class="entradas_blog">
 
 	<div class="entrada_blog">
