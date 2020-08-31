@@ -3,10 +3,12 @@ session_start();
 require_once 'core/Connection.php';
 
 // Incluimos automaticamente el model que sea necesario
-function __autoload($class)
+function my_autoloader($class)
 {
     require_once ("models/$class.php");
 }
+
+spl_autoload_register('my_autoloader');
 
 // Enrutamiento. Selecciona el controlador y la accion a ejecutar
 $map = array(
@@ -75,29 +77,34 @@ $map = array(
         'action' => 'blog_merendalia',
         'privada' => false
     ),
-    'corto_hummus' => array(
+    'cortometraje_restaurante_video' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'corto_hummus',
         'privada' => false
     ),
-    'reserva_el_espacio_en_ferias_de_valladolid' => array(
+    'alquilar_local_fiestas_celebraciones_cumpleanos' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'reserva_el_espacio_en_ferias_de_valladolid',
         'privada' => false
     ),
-    'experiencia_merendalia_que_son_los_menus_privados' => array(
+    'restaurante_privado_coctel_catering' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'experiencia_merendalia_que_son_los_menus_privados',
         'privada' => false
     ),
-    'que_es_merendalia_y_por_que_elegirnos' => array(
+    'merendalia_celebraciones_eventos_cumpleanos_catering' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'que_es_merendalia_y_por_que_elegirnos',
         'privada' => false
     ),
-    'arranque_de_las_meriendas_taller_de_merendalia' => array(
+    'merienda_taller_ninos_infantil' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'arranque_de_las_meriendas_taller_de_merendalia',
+        'privada' => false
+    ),
+    'consejos_evento_seguro_pandemia_covid_fiesta' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'consejos_pandemia',
         'privada' => false
     ),
     'contacto' => array(
@@ -141,14 +148,18 @@ $map = array(
 // Comprobamos si hay alguna accion que ejecutar, sino ejecutamos inicio
 if (isset($_GET['action'])) {
     
+    // Hacemos un replace para las urls amigables con '-'
+    $action_normalizado = str_replace("-", "_", $_GET['action']);
+    
     // Comprobamos que la accion existe en el mapa del enrutamiento, sino mostramos error 404
-    if (isset($map[$_GET['action']])) {
-        $action = $_GET['action'];
+    if (isset($map[$action_normalizado])) {
+        $action = $action_normalizado;
     } else {
         header('Status: 404 Not Found');
-        echo '<html><body><h1>Error 404: No existe la ruta ' . $_GET['action'] . ' </h1></body></html>';
+        echo '<html><body><h1>Error 404: No existe la ruta ' . $action_normalizado . ' </h1></body></html>';
         exit();
     }
+    
 } else {
     $action = 'inicio';
 }

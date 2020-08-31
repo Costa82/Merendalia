@@ -1,5 +1,5 @@
 <?php
-require_once './config/Validaciones.php';
+require_once './config/Validations.php';
 
 /**
  * Controlador de gestión de usuarios
@@ -105,6 +105,20 @@ class ControladorPaginas
 			$params['error'] = 0;
 		}
 		require './views/corto_hummus.php';
+	}
+	
+	/**
+	 * Método para cargar la entrada consejos_pandemia
+	 */
+	public function consejos_pandemia()
+	{
+	    if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+	        $params['error'] = $_SESSION['error'];
+	        $_SESSION['error'] = 0;
+	    } else {
+	        $params['error'] = 0;
+	    }
+	    require './views/consejos_pandemia.php';
 	}
 	
 	/**

@@ -7,8 +7,8 @@ class UtilsProductos {
 
 	/**
 	 * Guardamos la imagen en la carpeta de destino
-	 * @param unknown_type $carpetaDestino
-	 * @param unknown_type $archivo
+	 * @param string $carpetaDestino
+	 * @param string $archivo
 	 */
 	public static function guardarImagen($carpetaDestino, $archivo) {
 

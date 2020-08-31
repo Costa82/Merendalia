@@ -6,7 +6,7 @@
 
 <?php
 require_once './config/Defines.php';
-require_once './config/Validaciones.php';
+require_once './config/Validations.php';
 ?>
 
 <!DOCTYPE html>

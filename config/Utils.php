@@ -31,7 +31,7 @@ class Utils
 	 * @param $cadena
 	 * @return String
 	 */
-	function eliminar_acentos($cadena){
+	public static function eliminar_acentos($cadena){
 
 		$cadena = utf8_encode($cadena);
 		

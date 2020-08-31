@@ -35,12 +35,12 @@
 			tiene por qué ser aburrida para que sea efectiva, más bien todo lo
 			contrario.</p>
 
-		<span class='leerMas'><strong>leer más...</strong> </span>
+<!-- 		<span class='leerMas'><strong>leer más...</strong> </span> -->
 
 
 		<!-- Esta parte del texto estará oculta hasta hacer click en 'leer más...' -->
 
-		<div class='texto_leerMas'>
+<!-- 		<div class='texto_leerMas'> -->
 
 			</br>
 			<p>Sabemos que muchos de vosotros tenéis problemas de horarios para
@@ -167,10 +167,10 @@
 
 			</div>
 
-		</div>
+<!-- 		</div> -->
 
 		<!-- enlace de 'leer menos...' para ocultar el texto y las imágenes -->
-		<span class='leerMenos'><strong>leer menos...</strong> </span>
+<!-- 		<span class='leerMenos'><strong>leer menos...</strong> </span> -->
 
 	</div>
 
