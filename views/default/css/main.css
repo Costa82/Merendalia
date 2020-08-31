@@ -264,7 +264,7 @@ nav>ul>li>ul#lista_movil li {
 .aviso {
 	cursor: pointer;
 	background: white;
-	font-size: 17px;
+	font-size: 0px;
 	width: 300px;
 	position: absolute;
 	z-index: 9999999999999;
@@ -1064,7 +1064,6 @@ ul.lista_productos_comida li {
 .explicacion_blog {
 	width: 80%;
 	margin: 0 auto;
-	margin-bottom: 15px;
 	padding-top: 80px;
 }
 
