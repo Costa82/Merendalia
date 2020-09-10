@@ -5,7 +5,7 @@
 	<!-- TARIFAS -->
 
 	<div class='tarifas'>
-	
+
 	<?php
 	$tabla->mostrarTablaTarifas();
 	?>
@@ -28,7 +28,7 @@
 			</br>
 			<p>
 				<sup>(2)</sup> La reserva del espacio deberá realizarse por un
-				mínimo de 3 horas. Los sábados el mínimo será de 4 horas.
+				mínimo de 3 horas. Los sábados el mínimo será de 4 horas. 
 			</p>
 
 			</br>

@@ -54,6 +54,10 @@ class Tabla_tarifas extends AbstractBBDD {
 		$resultados1 = Tabla_tarifas::getTitulosTabla();
 			
 		echo '<h3>Tarifas</h3>
+				<p class="explicacion_tarifas">
+					<sup>(*)</sup> Los horarios se pueden ver modificados por las medidas sanitarias
+					tomadas por el Covid-19.
+				</p>
 				<table border="1">
 					<tr>';
 
