@@ -42,11 +42,11 @@
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
     		<a class='fancybox' rel='group'
-    				href='./views/default/img/celebraciones/_MG_0474.JPG' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
-    				src='./views/default/img/celebraciones/_MG_0474.JPG' class='foto img_ordenador'
+    				href='./views/default/img/celebraciones/_MG_0474.jpg' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
+    				src='./views/default/img/celebraciones/_MG_0474.jpg' class='foto img_ordenador'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' /></a>
     				<img
-    				src='./views/default/img/celebraciones/_MG_0474.JPG' class='foto img_movil'
+    				src='./views/default/img/celebraciones/_MG_0474.jpg' class='foto img_movil'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
 		</div>	
@@ -86,19 +86,19 @@
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
     		<a class='fancybox' rel='group'
-    				href='./views/default/img/celebraciones/_MG_0469.JPG' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
-    				src='./views/default/img/celebraciones/_MG_0469.JPG' class='foto img_ordenador'
+    				href='./views/default/img/celebraciones/_MG_0469.jpg' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
+    				src='./views/default/img/celebraciones/_MG_0469.jpg' class='foto img_ordenador'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' /></a>
     				<img
-    				src='./views/default/img/celebraciones/_MG_0469.JPG' class='foto img_movil'
+    				src='./views/default/img/celebraciones/_MG_0469.jpg' class='foto img_movil'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
     		<a class='fancybox' rel='group'
-    				href='./views/default/img/celebraciones/_MG_0471.JPG' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
-    				src='./views/default/img/celebraciones/_MG_0471.JPG' class='foto img_ordenador'
+    				href='./views/default/img/celebraciones/_MG_0471.jpg' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
+    				src='./views/default/img/celebraciones/_MG_0471.jpg' class='foto img_ordenador'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' /></a>
     				<img
-    				src='./views/default/img/celebraciones/_MG_0471.JPG' class='foto img_movil'
+    				src='./views/default/img/celebraciones/_MG_0471.jpg' class='foto img_movil'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
     		<a class='fancybox' rel='group'
