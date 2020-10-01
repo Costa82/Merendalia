@@ -34,11 +34,11 @@
 		<div class='seccion_visible'>
 
     		<a class='fancybox' rel='group'
-    				href='./views/default/img/celebraciones/_MG_0486_recortada.JPG' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
-    				src='./views/default/img/celebraciones/_MG_0486_recortada.JPG' class='foto img_ordenador'
+    				href='./views/default/img/celebraciones/_MG_0486_recortada.jpg' title='Merendalia Celebración Fiesta Amigos Familia Juntarse'><img
+    				src='./views/default/img/celebraciones/_MG_0486_recortada.jpg' class='foto img_ordenador'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' /></a>
     				<img
-    				src='./views/default/img/celebraciones/_MG_0486_recortada.JPG' class='foto img_movil'
+    				src='./views/default/img/celebraciones/_MG_0486_recortada.jpg' class='foto img_movil'
     				title='Merendalia Celebración Fiesta Amigos Familia Juntarse' alt='Merendalia Celebración Fiesta Amigos Familia Juntarse' />
     				
     		<a class='fancybox' rel='group'
