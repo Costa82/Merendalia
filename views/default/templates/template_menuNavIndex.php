@@ -20,5 +20,4 @@ echo "<ul id='lista_principal_index'>
                 <!-- li id='avisoLegal2'><a href='aviso-legal-y-politica-de-privacidad/' title='Aviso Legal y política de privacidad'>Política de privacidad</a></li -->
             </ul>
         </li>
-    
-      <ul>";
+      </ul>";
