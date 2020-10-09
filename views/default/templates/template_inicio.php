@@ -55,7 +55,6 @@
 <script src="./views/default/jquery/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-latest.min.js"
 	type="text/javascript"></script>
-<script src="./views/default/jquery/merendalia.js" type="text/javascript"></script>
 
 </head>
 <body>
