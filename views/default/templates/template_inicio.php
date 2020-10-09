@@ -11,9 +11,9 @@
 <meta http-equiv="Content-Language" content="es"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
-	content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia Valladolid. Reserva los menús privados solo para tu grupo." />
+	content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
 <meta name="robots" content="NOODP">
-<title>Merendalia</title>
+<title>Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid</title>
 <link type="text/css" rel="stylesheet" href="./views/default/css/font-awesome.css" />
 
 <!-- Add jQuery library -->
@@ -22,11 +22,11 @@
 
 <script>
      var rutacss1 = "./views/default/css/main.css?" + Math.random();
-     var rutajs5 = "./views/default/jquery/jquery_aviso.js?" + Math.random();
+     var rutajs2 = "./views/default/jquery/merendalia.js?" + Math.random();
      var script = "script";
      
      document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />'); 
-     document.write('<script src="' + rutajs5 + '"></' + script + '>');
+     document.write('<script src="' + rutajs2 + '"></' + script + '>');
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -55,8 +55,7 @@
 <script src="./views/default/jquery/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-latest.min.js"
 	type="text/javascript"></script>
-<script src="./views/default/jquery/cookies.js" type="text/javascript"></script>
-<script src="./views/default/jquery/jquery_menuMoviles_desplegable.js"></script>
+<script src="./views/default/jquery/merendalia.js" type="text/javascript"></script>
 
 </head>
 <body>

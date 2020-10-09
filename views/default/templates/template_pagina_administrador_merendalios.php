@@ -24,7 +24,7 @@
 <script>
     var rutacss1 = "./views/default/css/font-awesome.css?" + Math.random();
     var rutacss2 = "./views/default/css/main.css?" + Math.random();
-    var rutajs1 = "./views/default/jquery/jquery_mostrarListado.js?" + Math.random();
+    var rutajs1 = "./views/default/jquery/merendalia.js?" + Math.random();
     var script = "script";
 
     document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />'); 
