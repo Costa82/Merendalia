@@ -38,12 +38,15 @@
 	<div class="redes">
 		<h3>Síguenos</h3>
 		<a href="https://m.facebook.com/merendalia" title="Facebook"
-			target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i>
-		</a> <a href="https://www.twitter.com/merendalia?lang=es"
-			title="Twitter" target="_blank"><i class="fa fa-twitter"
-			aria-hidden="true"></i> </a> <a
-			href="https://www.instagram.com/merendalia/" title="Instagram"
-			target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a>
+			target="_blank" rel="noopener"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+		</a> 
+		<a href="https://www.twitter.com/merendalia?lang=es"
+			title="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"
+			aria-hidden="true"></i> 
+		</a> 
+		<a href="https://www.instagram.com/merendalia/" title="Instagram"
+			target="_blank" rel="noopener"><i class="fa fa-instagram" aria-hidden="true"></i>
+		</a>
 	</div>
 
 </div>
