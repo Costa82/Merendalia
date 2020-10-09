@@ -28,11 +28,11 @@
 <script>
 
     var rutacss1 = "./views/default/css/main.css?" + Math.random();
-    var rutacss2 = "./views/default/jquery/jquery_menuMoviles_desplegable.js?" + Math.random();
+    var rutajs2 = "./views/default/jquery/merendalia.js?" + Math.random();
     var script = "script";
     
     document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />');
-    document.write('<script src="' + rutacss2 + '"></' + script + '>');
+    document.write('<script src="' + rutajs2 + '"></' + script + '>');
 	
 </script>
 
