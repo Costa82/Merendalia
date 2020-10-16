@@ -18,7 +18,7 @@
 			tu celebración o fiesta.
 			Baño adaptado PMR, con cambiador de bebés. </br>
 			Te dejamos el  <a
-				href='blog_merendalia' class='mostrar_blog'><strong><i>link</i></strong></a> de
+				href='blog-merendalia' class='mostrar_blog'><strong><i>link</i></strong></a> de
 			nuestra entrada de blog donde explicamos un poco mejor cómo puedes 
 			disfrutar en merendalia.</br></br>
 			Ahora solo queda

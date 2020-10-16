@@ -34,9 +34,9 @@
     
     if (strpos($_SERVER['REQUEST_URI'], "blog") !== false) {
         // blog.php found
-        echo "<li id='menus'><a href='blog_merendalia' title='Blog Merendalia' class='seleccionado'>Blog</a></li>";
+        echo "<li id='menus'><a href='blog-merendalia' title='Blog Merendalia' class='seleccionado'>Blog</a></li>";
     } else {
-        echo "<li id='menus'><a href='blog_merendalia' title='Blog Merendalia'>Blog</a></li>";
+        echo "<li id='menus'><a href='blog-merendalia' title='Blog Merendalia'>Blog</a></li>";
     }
     
     if (strpos($_SERVER['REQUEST_URI'], "contacto") !== false) {
@@ -52,7 +52,7 @@
                         <li id='eventos2'><a href='eventos' title='Eventos'>Eventos</a></li>
                         <li id='espacio2'><a href='espacio' title='Espacio'>Espacio</a></li>
                         <li id='menus2'><a href='catering' title='Menús'>Catering</a></li>
-                        <li id='blogMerendalia2'><a href='blog_merendalia' title='Blog Merendalia'>Blog</a></li>
+                        <li id='blogMerendalia2'><a href='blog-merendalia' title='Blog Merendalia'>Blog</a></li>
                         <li id='contacto2'><a href='contacto' title='Contacto'>Contacto</a></li>
                     </ul>
                 </li>
