@@ -97,6 +97,11 @@ a.mostrar_menus:hover {
 a.enlace_legal:hover {
 	color: #d8c12d;
 }
+
+.fixed_bottom {
+	position: fixed; 
+	bottom: 0;	
+}	
 /* HEADER
    ========================================================================= */
 
@@ -1162,6 +1167,10 @@ p.pieFoto {
 
 .avisoLegal {
 	padding-top: 100px;
+}
+
+.avisoLegal a {
+	color:black;	
 }
 
 .contenedor_texto h3 {

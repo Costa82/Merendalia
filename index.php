@@ -12,6 +12,8 @@ spl_autoload_register('my_autoloader');
 
 // Enrutamiento. Selecciona el controlador y la accion a ejecutar
 $map = array(
+
+	// Productos
 	'subir_producto' => array(
         'controller' => 'ControladorProductos',
         'action' => 'subir_producto',
@@ -22,6 +24,8 @@ $map = array(
         'action' => 'editar_producto',
         'privada' => true
     ),
+    
+    // Usuarios
 	'merendalios' => array(
         'controller' => 'ControladorUsuarios',
         'action' => 'merendalios',
@@ -47,6 +51,8 @@ $map = array(
         'action' => 'pagina_administrador_merendalios',
         'privada' => true
     ),
+    
+    // Páginas
     'inicio' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'inicio',
@@ -127,6 +133,8 @@ $map = array(
         'action' => 'cookies',
         'privada' => false
     ),
+    
+    // Formularios
     'formulario_reserva' => array(
         'controller' => 'ControladorFormularios',
         'action' => 'formulario_reserva',
@@ -140,6 +148,13 @@ $map = array(
     'respuesta_envio' => array(
         'controller' => 'ControladorFormularios',
         'action' => 'respuesta_envio',
+        'privada' => false
+    ),
+    
+    // Páginas de error
+    'page404' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'page404',
         'privada' => false
     )
 );
@@ -155,9 +170,7 @@ if (isset($_GET['action'])) {
     if (isset($map[$action_normalizado])) {
         $action = $action_normalizado;
     } else {
-        header('Status: 404 Not Found');
-        echo '<html><body><h1>Error 404: No existe la ruta ' . $action_normalizado . ' </h1></body></html>';
-        exit();
+		$action = 'page404';
     }
     
 } else {

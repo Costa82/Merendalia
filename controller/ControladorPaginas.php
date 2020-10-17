@@ -22,6 +22,21 @@ class ControladorPaginas
 		// Ponemos a false la variable de sesion del administrador
 		require './views/inicio.php';
 	}
+	
+	/**
+	 * Método para cargar la página de error 404
+	 */
+	public function page404()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		
+		require './views/page404.php';
+	}
 
 	/**
 	 * Método para cargar la galeria
