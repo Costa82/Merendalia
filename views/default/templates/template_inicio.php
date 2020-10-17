@@ -4,7 +4,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: http://ogp.me/ns#">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,13 @@
 <meta name="description"
 	content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
 <meta name="robots" content="NOODP">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid" />
+<meta property="og:description" content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
+<meta property="og:image" content="https://www.merendalia.es/views/default/img/celebraciones/Terraza_cubierta_Merendalia.jpg" />
+<meta property="og:image:width" content="681" />
+<meta property="og:image:height" content="494" />
+<meta property="og:url" content="https://www.merendalia.es/" />
 <title>Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid</title>
 <link type="text/css" rel="stylesheet" href="./views/default/css/font-awesome.css" />
 
@@ -55,6 +62,23 @@
 <script src="./views/default/jquery/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-latest.min.js"
 	type="text/javascript"></script>
+
+<!-- Marcado JSON-LD generado por el Asistente para el marcado de datos estructurados de Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Merendalia",
+  "image" : "https://www.merendalia.es/views/default/img/merendalia_logotipo_RGB-01.png",
+  "telephone" : "680.21.97.94",
+  "email" : "info@merendalia.es",
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "Calle Paraíso 2 (Pasaje Alarcón)  47003 Valladolid"
+  },
+  "url" : "https://www.merendalia.es/"
+}
+</script>
 
 </head>
 <body>

@@ -54,14 +54,30 @@
 
 <!-- Metemos un aleatorio para la recarga automática del css y el js -->
 <script>
-
     var rutacss1 = "./views/default/css/main.css?" + Math.random();
     var rutajs2 = "./views/default/jquery/merendalia.js?" + Math.random();
     var script = "script";
     
     document.write('<link rel="stylesheet" href="' + rutacss1 + '" type="text/css" media="screen" />');
     document.write('<script src="' + rutajs2 + '"></' + script + '>');
-	
+</script>
+
+<!-- Marcado JSON-LD generado por el Asistente para el marcado de datos estructurados de Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Event",
+  "name" : "LOS JUEVES DE CATAS",
+  "startDate" : "2020-01-01",
+  "location" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "streetAddress" : "Calle Paraíso 2 (Pasaje Alarcón)  47003 Valladolid"
+    }
+  },
+  "description" : "Merendalia</STRONG> se une con <STRONG><A class=\"mostrar_menus\" href=\"http://www.cervezasla.es/\">Cervezas La</A>\n\t\t\t\t</STRONG> para crear un espacio en el que disfrutar de una buena\n\t\t\t\tcata de cervezas artesanas acompañadas de un estupendo maridaje para\n\t\t\t\tcada una de ellas.\n\t\t\t</P>\n\t\t\t<BR/>\n\t\t\t<P>Es el plan perfecto para un día tonto con tus amigos, familia,\n\t\t\t\tcompañeros de trabajo; una actividad diferente que además os\n\t\t\t\tadentrará en el mundo de la cerveza artesana, ¡no sin olvidar las\n\t\t\t\tsabrosas viandas que acompañarán al rico zumo de cebada!</P>\n\t\t\t<BR/> <BR/>\n\n\t\t\t<P>\n\t\t\t\tPara hacer tus reservas, ponte en contacto con nosotros a través de\n\t\t\t\tllamada o WhatsApp en el <STRONG>680.21.97.94</STRONG>, o por email\n\t\t\t\ten <STRONG>info@merendalia.es"
+}
 </script>
 
 </head>
