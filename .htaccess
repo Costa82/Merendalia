@@ -8,7 +8,9 @@ Redirect 301 /espacio/ https://www.merendalia.es/espacio
 Redirect 301 /galeria/ https://www.merendalia.es/galeria
 Redirect 301 /blog-merendalia/ https://www.merendalia.es/blog-merendalia
 
-ErrorDocument 404 /page404
+#Error
+RewriteEngine On
+ErrorDocument 404 /page404.php
 
 # DESCOMENTAR ESTA LÍNEA AL SUBIR A PRODUCCIÓN
 # REDIRECCIÓN A HTTPS
