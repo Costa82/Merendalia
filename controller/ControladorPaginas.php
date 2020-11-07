@@ -247,6 +247,20 @@ class ControladorPaginas
 		}
 		require './views/cookies.php';
 	}
+	
+	/**
+	 * Método para cargar la pagina de cookies
+	 */
+	public function declaracion_cookies()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/declaracion_cookies.php';
+	}
 
 }
 ?>

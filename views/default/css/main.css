@@ -144,7 +144,7 @@ nav>#lista_principal_index {
 	font-size: 11px;
 }
 
-#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos
+#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
 	{
 	display: none;
 }
@@ -1827,7 +1827,7 @@ footer h3 {
 	nav>ul>li#menu_moviles {
 		display: none;
 	}
-	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos
+	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
 		{
 		display: block;
 	}

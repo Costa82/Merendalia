@@ -27,6 +27,7 @@
               <li id="menus"><a href="catering" title="Catering">Catering</a></li>
               <li id="blogMerendalia"><a href="blog-merendalia" title="Blog Merendalia">Blog</a></li>
               <li id="contacto"><a href="contacto" title="Contacto">Contacto</a></li>
+              <li id="declaracionCookies"><a href="declaracion-cookies" title="Declaración de Cookies">Declaración de Cookies</a></li>
               <li id="legal"><a href="aviso-legal" title="Aviso Legal">Aviso Legal</a></li>
               <li id="proteccionDatos"><a href="politica-privacidad-y-proteccion-datos" title="Política de privacidad y Protección de datos">Política de privacidad y Protección de datos</a></li>';
 		?>
@@ -53,7 +54,8 @@
 
 <div class="avisoLegal_movil">
 <?php
-echo '<p><a class="enlace_legal" href="aviso-legal" title="Aviso Legal">Aviso Legal</a></p>
+echo '<p><a class="enlace_legal" href="declaracion-cookies" title="Declaración de Cookies">Declaración de Cookies</a></p>
+	  <p><a class="enlace_legal" href="aviso-legal" title="Aviso Legal">Aviso Legal</a></p>
 	  <p><a class="enlace_legal" href="politica-privacidad-y-proteccion-datos" title="Política de privacidad y Protección de datos">Política de privacidad y Protección de datos</a></p>';
 ?>
 </div>

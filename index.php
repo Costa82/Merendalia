@@ -133,6 +133,11 @@ $map = array(
         'action' => 'cookies',
         'privada' => false
     ),
+    'declaracion_cookies' => array(
+        'controller' => 'ControladorPaginas',
+        'action' => 'declaracion_cookies',
+        'privada' => false
+    ),
     
     // Formularios
     'formulario_reserva' => array(
