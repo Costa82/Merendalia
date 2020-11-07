@@ -8,20 +8,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Language" content="es"/>
+<meta http-equiv="Content-Language" content="es" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
 	content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
 <meta name="robots" content="NOODP">
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid" />
-<meta property="og:description" content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
-<meta property="og:image" content="https://www.merendalia.es/views/default/img/celebraciones/Terraza_cubierta_Merendalia.jpg" />
+<meta property="og:title"
+	content="Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid" />
+<meta property="og:description"
+	content="Alquila el local para celebraciones, cumpleaños, fiestas sorpresa, reuniones con amigos y familia en el centro de Valladolid." />
+<meta property="og:image"
+	content="https://www.merendalia.es/views/default/img/celebraciones/Terraza_cubierta_Merendalia.jpg" />
 <meta property="og:image:width" content="681" />
 <meta property="og:image:height" content="494" />
 <meta property="og:url" content="https://www.merendalia.es/" />
-<title>Merendalia - Alquiler local para cumpleaños y celebraciones Valladolid</title>
-<link type="text/css" rel="stylesheet" href="./views/default/css/font-awesome.css" />
+<title>Merendalia - Alquiler local para cumpleaños y celebraciones
+	Valladolid</title>
+<link type="text/css" rel="stylesheet"
+	href="./views/default/css/font-awesome.css" />
+
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+	data-cbid="02242fa2-d798-4493-bc01-ef4d666afa09"
+	data-blockingmode="auto" type="text/javascript"></script>
 
 <!-- Add jQuery library -->
 <script type="text/javascript"
@@ -85,17 +94,21 @@
 	<header>
 
 		<nav>
-          <?php include_once("template_menuNavIndex.php");?>		
-      	</nav>
+		<?php include_once("template_menuNavIndex.php");?>
+		</nav>
 
 	</header>
 
+	<!-- script id="CookieDeclaration"
+		src="https://consent.cookiebot.com/02242fa2-d798-4493-bc01-ef4d666afa09/cd.js"
+		type="text/javascript" async></script -->
+
 	<!-- Contenido -->
-    <?php echo $contenido; ?>
+		<?php echo $contenido; ?>
 
 	<footer>
-        <?php include_once("template_footer.php");?>        
-    </footer>
+	<?php include_once("template_footer.php");?>
+	</footer>
 
 </body>
 </html>

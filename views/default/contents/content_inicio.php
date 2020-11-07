@@ -17,7 +17,7 @@
 		<h2>Catering</h2> </a>
 </div>
 
-<!--//BLOQUE COOKIES-->
+<!--//BLOQUE COOKIES
 <div id='overbox3'>
 	<div id='infobox3'>
 		<p>
@@ -29,4 +29,4 @@
 		</p>
 	</div>
 </div>
-<!--//FIN BLOQUE COOKIES-->
+//FIN BLOQUE COOKIES-->
