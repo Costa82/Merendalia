@@ -1302,6 +1302,12 @@ footer h3 {
 	margin-bottom: 10px;
 }
 
+/*DECLARACIÓN DE COOKIES
+========================================================================= */
+.CookieDeclarationTableCell{
+	font-size: 15px;
+}
+
 /*RESPONSIVE
 ========================================================================= */
 
@@ -1505,6 +1511,9 @@ footer h3 {
 
 /* Para resoluciones a partir de 800px */
 @media only screen and (min-width: 800px) {
+	.CookieDeclarationTableCell{
+		font-size: 20px;
+	}
 	h1 {
 		font-size: 30px;
 	}
