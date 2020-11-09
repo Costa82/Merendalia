@@ -1157,6 +1157,10 @@ p.pieFoto {
 	color: #d8c12d;
 }
 
+.grecaptcha-logo iframe {
+	margin-top: 0;
+}
+
 /* TEXTOS LEGALES
    ========================================================================= */
 .contenedor_texto {
