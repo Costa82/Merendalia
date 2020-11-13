@@ -17,7 +17,6 @@
 		title='consejos pandemia'
 		alt='consejos pandemia'
 		class='img_articulo_blog' /></a>
-		<p>28 de agosto de 2020</p>
 	</div>
 
 	<div class="entrada_blog">
@@ -25,7 +24,6 @@
 		<img src='./views/default/img/mediterranean-1759337_1920 (1).jpg'
 		title='cortometraje' alt='cortometraje'
 		class='img_articulo_blog' /></a>
-		<p>05 de julio de 2020</p>
 	</div>
 	
 	<div class="entrada_blog">
@@ -33,7 +31,6 @@
 		<img src='./views/default/img/Portada.jpg'
 		title='amigos fiesta merendalia' alt='amigos fiesta merendalia'
 		class='img_articulo_blog' /></a>
-		<p>21 de agosto de 2019</p>
 	</div>
 	
 	<div class="entrada_blog">
@@ -41,7 +38,6 @@
 		<img src='./views/default/img/brindis_mesa_amigos_comida.jpg'
 		title='brindis mesa amigos comida merendalia'
 		alt='brindis mesa amigos comida merendalia' class='img_articulo_blog' /></a>
-		<p>07 de marzo de 2019</p>
 	</div>
 	
 	<div class="entrada_blog">
@@ -50,7 +46,6 @@
 		title='copas brindis brindar amigos celebración merendalia'
 		alt='copas brindis brindar amigos celebración merendalia'
 		class='img_articulo_blog' /></a>
-		<p>24 de enero de 2019</p>
 	</div>
 	
 	<div class="entrada_blog">
@@ -59,7 +54,6 @@
 		title='Taller infantil merienda pinturas rotuladores'
 		alt='Talleres Infantiles merienda pinturas rotuladores'
 		class='img_articulo_blog' /></a>
-		<p>19 de enero de 2019</p>
 	</div>
 
 </div>

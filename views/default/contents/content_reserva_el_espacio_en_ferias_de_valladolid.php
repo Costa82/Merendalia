@@ -8,10 +8,6 @@
 	<h3 class='titulo_articulo'>¡RESERVA EL ESPACIO EN FERIAS DE VALLADOLID
 		2019!</h3>
 
-	<div class='fechaArticulo'>
-		<p>21 de agosto de 2019</p>
-	</div>
-
 	<img src='./views/default/img/Portada.jpg'
 		title='amigos fiesta merendalia' alt='amigos fiesta merendalia'
 		class='img_articulo' />

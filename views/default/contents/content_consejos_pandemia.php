@@ -7,10 +7,6 @@
 	<h3 class='titulo_articulo'>5 CONSEJOS PARA HACER UN EVENTO SEGURO EN
 		MEDIO DE LA PANDEMIA</h3>
 
-	<div class='fechaArticulo'>
-		<p>28 de agosto de 2020</p>
-	</div>
-
 	<img
 		src='./views/default/img/pexels-cottonbro-3951901.jpg'
 		title='consejos pandemia'

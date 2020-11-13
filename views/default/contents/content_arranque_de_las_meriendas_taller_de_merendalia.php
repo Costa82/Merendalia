@@ -8,10 +8,6 @@
 	<h3 class='titulo_articulo'>ARRANQUE DE LAS MERIENDAS - TALLER DE
 		MERENDALIA</h3>
 
-	<div class='fechaArticulo'>
-		<p>19 de enero de 2019</p>
-	</div>
-
 	<img
 		src='./views/default/img/1. taller infantil merienda pinturas rotuladores.jpg'
 		title='Taller infantil merienda pinturas rotuladores'

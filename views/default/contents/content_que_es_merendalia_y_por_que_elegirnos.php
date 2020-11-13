@@ -7,10 +7,6 @@
 
 	<h3 class='titulo_articulo'>¿QUÉ ES MERENDALIA Y POR QUÉ ELEGIRNOS?</h3>
 
-	<div class='fechaArticulo'>
-		<p>24 de enero de 2019</p>
-	</div>
-
 	<img
 		src='./views/default/img/copas brindis brindar amigos celebración merendalia.jpg'
 		title='copas brindis brindar amigos celebración merendalia'

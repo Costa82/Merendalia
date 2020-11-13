@@ -28,10 +28,6 @@
 <link type="text/css" rel="stylesheet"
 	href="./views/default/css/font-awesome.css" />
 
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
-	data-cbid="02242fa2-d798-4493-bc01-ef4d666afa09"
-	data-blockingmode="auto" type="text/javascript"></script>
-
 <!-- Add jQuery library -->
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -91,6 +87,11 @@
 
 </head>
 <body>
+
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+	data-cbid="02242fa2-d798-4493-bc01-ef4d666afa09"
+	data-blockingmode="auto" type="text/javascript"></script>
+	
 	<header>
 
 		<nav>

@@ -7,10 +7,6 @@
 
 	<h3 class='titulo_articulo'>CORTO HUMMUS</h3>
 
-	<div class='fechaArticulo'>
-		<p>05 de julio de 2020</p>
-	</div>
-
 	<iframe src="https://www.youtube.com/embed/YOGyiC0VR1M" frameborder="0"
 		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 		allowfullscreen></iframe>

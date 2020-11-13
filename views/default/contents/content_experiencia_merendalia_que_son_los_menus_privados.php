@@ -8,10 +8,6 @@
 	<h3 class='titulo_articulo'>EXPERIENCIA MERENDALIA: ¿QUÉ SON LOS MENÚS
 		PRIVADOS?</h3>
 
-	<div class='fechaArticulo'>
-		<p>07 de marzo de 2019</p>
-	</div>
-
 	<img src='./views/default/img/brindis_mesa_amigos_comida.jpg'
 		title='brindis mesa amigos comida merendalia'
 		alt='brindis mesa amigos comida merendalia' class='img_articulo' />
