@@ -354,7 +354,7 @@ nav>ul>li>ul#lista_movil li {
 }
 
 .google a {
-	color: #ff3123;
+	color: #9bd155;
 }
 
 .google_flex {
@@ -374,6 +374,25 @@ nav>ul>li>ul#lista_movil li {
 	flex: 1 1 auto;
 }
 
+.bocadillo {
+    position: relative;
+    border-radius: 8px 8px 8px 8px;
+    border-color: #eefcdb;
+    background-color: #eefcdb;
+    padding: 10px;
+}
+.bocadillo:after {
+    content: "";
+    color: #eefcdb;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-top: 15px solid #eefcdb;
+    border-top-color: inherit;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
 .resenas_google a {
 	style: none;
 	color: black;	
@@ -389,7 +408,7 @@ nav>ul>li>ul#lista_movil li {
 
 .resenas_google .nombre {
 	width: 100%;
-	margin-bottom: 10px;
+	margin: 20px 0 10px 0;
 	font-weight: bold;
 }
 
