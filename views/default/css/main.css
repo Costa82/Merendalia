@@ -1294,6 +1294,17 @@ p.pieFoto {
 	color: #4cb164;
 }
 
+table.table_cookies {
+	border: black 3px solid;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table.table_cookies th, table.table_cookies td {
+	border: black 1px solid;
+	padding: 2px 10px;
+}
+
 /* FOOTER
    ========================================================================= */
 footer {
