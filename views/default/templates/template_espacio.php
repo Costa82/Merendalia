@@ -24,6 +24,11 @@
 <link href="icon-normal.png" rel="icon" sizes="128x128" />
 
 <script src="./views/default/jquery/jquery-3.1.1.min.js"></script>
+<script src="./views/default/jquery/zoom_fancybox.js"></script>
+
+<!-- Add jQuery library -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 <script
 	src='https://www.google.com/recaptcha/api.js?render=6LcJW8QUAAAAAOBS6vnwKWyFxynJTvXWaLmuxeA-'> 
@@ -36,6 +41,14 @@
 	recaptchaResponse.value = token;
 	});});
 </script>
+
+<!-- Add fancyBox -->
+<script>
+    var rutacss2 = "./views/default/fancybox/source/jquery.fancybox.css?v=2.1.7?" + Math.random();
+    document.write('<link rel="stylesheet" href="' + rutacss2 + '" type="text/css" media="screen" />'); 
+</script>
+<script type="text/javascript"
+	src="./views/default/fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
 
 <!-- Metemos un aleatorio para la recarga automática del css y el js -->
 <script>

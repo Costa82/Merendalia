@@ -1,6 +1,6 @@
 <div class="formulario">
 
-	<h2>Realiza tu reserva</h2>
+	<h2>consúltanos para reservar</h2>
 
 	<form action="./formulario_reserva" method="post"
 		class="formularioRegistro" onSubmit="return validar();">

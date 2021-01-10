@@ -1,5 +1,5 @@
 <?php
-require_once './config/Validaciones.php';
+require_once './config/Validations.php';
 require_once './config/UtilsProductos.php';
 
 /**
@@ -20,7 +20,7 @@ class ControladorProductos
 		// Creamos un producto
 		$producto = new Productos();
 
-		if (isset($_REQUEST['addProducto']) && !$producto->existeTitulo($_REQUEST["titulo_producto"])) {
+		if (isset($_REQUEST['addProducto']) && !$producto->existeTitulo($_REQUEST["titulo_producto"], $_REQUEST["tipo_producto"])) {
 
 
 			// titulo_producto
@@ -68,12 +68,8 @@ class ControladorProductos
 				}
 			}
 
-			// listado
-			if (!empty($_REQUEST["listado"])) {
-				$producto->setListado('SI');
-			} else {
-				$producto->setListado('NO');
-			}
+			// listado (siempre llevará un listado de descripción)
+			$producto->setListado('SI');
 
 			// estado
 			$producto->setEstado('ACTV');
@@ -278,10 +274,7 @@ class ControladorProductos
 			$producto->setDescripcion($_REQUEST["descripcion"]);
 				
 			// listado
-			if (!empty( $_REQUEST["linea1"]))
 			$producto->setListado("SI");
-			else
-			$producto->setListado("NO");
 
 			// imagen
 			$archivo = $_FILES['imagen'];
@@ -312,13 +305,6 @@ class ControladorProductos
 					$carpetaDestino = './views/default/img/';
 					$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 				}
-			}
-
-			// listado
-			if (!empty($_REQUEST["listado"])) {
-				$producto->setListado('SI');
-			} else {
-				$producto->setListado('NO');
 			}
 
 			// estado

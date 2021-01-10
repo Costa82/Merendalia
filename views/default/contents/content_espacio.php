@@ -6,7 +6,112 @@
 
 	<div class='tarifas'>
 
-	<?php
+		<h3>TARIFAS</h3>
+
+		<img
+			src='./views/default/img/tuSitio/tabla precios blanco 1.png'
+			class='img_tarifas' title='Tabla Tarifas' alt='Tabla Tarifas' />
+		<img
+			src='./views/default/img/tuSitio/tabla precios blanco 2.png'
+			class='img_tarifas' title='Tabla Tarifas' alt='Tabla Tarifas' />
+
+	</div>
+
+	<div class='texto_descriptivo'>
+
+		<h3>EL SITIO, TU LUGAR</h3>
+
+		<p>Salón de banquetes con capacidad para 37 personas y adaptado a
+			personas de movilidad reducida (PMR). Mesas altas, bajas, sillas,
+			taburetes, TV, WiFI, parque de bolas, cocina equipada, zona
+			exterior... Sin lugar a dudas el mejor lugar de Valladolid para todas
+			tus celebraciones privadas y ubicado en pleno centro, junto a la
+			iglesia de "La Antigua". Disponemos de catering propio casero y hecho
+			en el día. Organizamos el espacio, a tu gusto.</p>
+			
+	</div>
+
+	<div class="galeria">
+		<h3>
+			<strong>TIPO COCTEL</strong>
+		</h3>
+	
+		<div class="contenedor-flex">
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/Coctel_1.png" title="Imagen tipo coctel 1"><img
+	    				src="./views/default/img/tuSitio/Coctel_1.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 1" alt="Imagen tipo coctel 1" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/Coctel_1.png" class="foto img_movil"
+	    				title="Imagen tipo coctel 1" alt="Imagen tipo coctel 1" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/Coctel_2.png" title="Imagen tipo coctel 2"><img
+	    				src="./views/default/img/tuSitio/Coctel_2.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 2" alt="Imagen tipo coctel 2" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/Coctel_2.png" class="foto img_movil"
+	    				title="Imagen tipo coctel 2" alt="Imagen tipo coctel 2" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/Coctel_3.png" title="Imagen tipo coctel 3"><img
+	    				src="./views/default/img/tuSitio/Coctel_3.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 3" alt="Imagen tipo coctel 3" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/Coctel_3.png" class="foto img_movil"
+	    				title="Imagen tipo coctel 3" alt="Imagen tipo coctel 3" />
+			</div>
+	
+		</div>
+	</div>
+
+	<div class="bloque_texto galeria">
+		<h3>
+			<strong>TIPO COMEDOR</strong>
+		</h3>
+	
+		<div class="contenedor-flex">
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/restaurante_1.png" title="Imagen tipo comedor 1"><img
+	    				src="./views/default/img/tuSitio/restaurante_1.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 1" alt="Imagen tipo comedor 1" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/restaurante_1.png" class="foto img_movil"
+	    				title="Imagen tipo comedor 1" alt="Imagen tipo comedor 1" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/restaurante_2.png" title="Imagen tipo comedor 2"><img
+	    				src="./views/default/img/tuSitio/restaurante_2.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 2" alt="Imagen tipo comedor 2" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/restaurante_2.png" class="foto img_movil"
+	    				title="Imagen tipo comedor 2" alt="Imagen tipo comedor 2" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/restaurante_3.png" title="Imagen tipo comedor 3"><img
+	    				src="./views/default/img/tuSitio/restaurante_3.png" class="foto img_ordenador"
+	    				title="Imagen tipo coctel 3" alt="Imagen tipo comedor 3" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/restaurante_3.png" class="foto img_movil"
+	    				title="Imagen tipo comedor 3" alt="Imagen tipo comedor 3" />
+			</div>
+	
+		</div>
+	</div>
+
+	<!-- ?php
 	$tabla->mostrarTablaTarifas();
 	?>
 		<div class='explicacion_tarifas'>
@@ -104,6 +209,6 @@
 		</ul>
 		</p>
 
-	</div>
+	</div -->
 
-</div>
+	</div>

@@ -94,5 +94,29 @@ abstract class AbstractBBDD {
             echo $conexion->errno . " -> " . $conexion->error;
         }
     }
+    
+    /**
+     * Buscamos un campo específico de la tabla por columnas y valores
+     * 
+     * @param String $campo Campo buscado en la consulta
+     * @param String $column Columna a filtrar
+     * @param String $value Valor de la columna a filtrar
+     */
+    public function getCampoByMoreValues($campo, $column1, $value1, $column2, $value2)
+    {
+        $sql = "SELECT " . $campo . " FROM " . $this->tabla . " WHERE " . $column1 . " = '" . $value1 . "' and " . $column2 . " = '" . $value2 . "' and estado = 'ACTV'";
+        
+        $conexion = $this->c;
+        
+        if ($conexion->real_query($sql)) {
+            if ($resul = $conexion->store_result()) {
+                $mostrar = $resul->fetch_assoc();
+                
+                return $mostrar[$campo];
+            }
+        } else {
+            echo $conexion->errno . " -> " . $conexion->error;
+        }
+    }
 
 }

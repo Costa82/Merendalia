@@ -101,7 +101,27 @@ a.enlace_legal:hover {
 .fixed_bottom {
 	position: fixed; 
 	bottom: 0;	
-}	
+}
+
+.verde {
+	background-color: #9bd155;
+}
+
+.rojo {
+	background-color: #ff3123;
+}
+
+.amarillo {
+	background-color: #d8c12d;
+}
+
+.negro {
+	background-color: #3c3c3b;
+}
+
+.letra_verde {
+	color: #9bd155;
+}
 /* HEADER
    ========================================================================= */
 
@@ -302,22 +322,6 @@ nav>ul>li>ul#lista_movil li {
 	margin: 20px;
 	font-size: 20px;
 	opacity: 1;
-}
-
-.verde {
-	background-color: #9bd155;
-}
-
-.rojo {
-	background-color: #ff3123;
-}
-
-.amarillo {
-	background-color: #d8c12d;
-}
-
-.negro {
-	background-color: #3c3c3b;
 }
 
 .contenedor_circulos h2.bocaditos {
@@ -572,16 +576,14 @@ h3.titulo_reservas {
 }
 
 .contenedor_reservas {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
 	padding-top: 100px;
+	width: 100%;
 }
 
 /* TARIFAS */
 .tarifas h3,.calendario h3,.texto_descriptivo h3 {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
+	text-align: center;
 }
 
 .texto_descriptivo ul {
@@ -589,10 +591,14 @@ h3.titulo_reservas {
 }
 
 .tarifas {
-	margin: 10px 10px 25px;
-	width: 500px;
+	margin: 10px auto;
+	width: 100%;
+	max-width: 800px;
 	text-align: center;
-	display: inline-block;
+}
+
+.tarifas img {
+	width: 90%;
 }
 
 .tarifas table p {
@@ -631,10 +637,6 @@ h3.titulo_reservas {
 	height: 50px;
 }
 
-.tarifas img {
-	height: 280px;
-}
-
 /* CALENDARIO */
 .ordenador {
 	display: none;
@@ -648,11 +650,13 @@ h3.titulo_reservas {
 }
 
 .texto_descriptivo {
-	margin: 5px;
+	margin: 5px auto;
 	width: 80%;
-	text-align: left;
-	display: inline-block;
 	padding: 0 10px;
+}
+
+.texto_descriptivo p {
+	text-align: justify;
 }
 
 .ordenador {
@@ -907,8 +911,8 @@ h3.eventos_pasados {
 
 .foto {
 	background-size: cover;
-	margin: 10px;
 	width: 300px;
+	margin-bottom: 25px;
 }
 
 .mostrar_blog {
@@ -918,6 +922,53 @@ h3.eventos_pasados {
 .seccion_fotos {
 	text-align: center;
 	margin: 40px 0 20px;
+}
+
+/* GALERIA TU SITIO */
+.contenedor-flex {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	flex-flow: wrap;
+}
+
+img.img_ordenador {
+	display: none;
+}
+
+img.img_movil {
+	display: inline-block;
+}
+
+.galeria {
+	margin-top: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.galeria .hijo-flex {
+	flex-grow: 1;
+	width: 100%;
+	padding: 0;
+}
+
+.galeria .hijo-flex img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+.galeria .contenedor-flex {
+	margin-top: 30px;
+	font-size: 0;
+}
+
+.fancybox-nav span {
+	visibility: inherit;
+	padding: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 /* CATERING
@@ -1412,6 +1463,9 @@ footer h3 {
 
 /* Para resoluciones a partir de 600px */
 @media only screen and (min-width: 600px) {
+	.galeria .hijo-flex {
+		width: 50%;
+	}
 	nav>ul>li>ul#lista_movil a {
 		color: black;
 		font-size: 19px;
@@ -1452,19 +1506,6 @@ footer h3 {
 	}
 	.evento_secundario,.articulo_secundario {
 		text-align: center;
-		max-width: 600px;
-	}
-	.tarifas {
-		margin: 10px 10px 25px;
-		width: 600px;
-		text-align: center;
-		display: inline-block;
-	}
-	.tarifas img {
-		height: 450px;
-	}
-	.calendario,.texto_descriptivo {
-		margin: 5px;
 		max-width: 600px;
 	}
 	.ordenador {
@@ -1587,6 +1628,9 @@ footer h3 {
 
 /* Para resoluciones a partir de 800px */
 @media only screen and (min-width: 800px) {
+	.galeria {
+		width: 100%
+	}
 	.CookieDeclarationTableCell{
 		font-size: 20px;
 	}
@@ -1708,7 +1752,9 @@ footer h3 {
 
 /* Para resoluciones a partir de 1000px */
 @media only screen and (min-width: 1000px) {
-	
+	.galeria .hijo-flex {
+		width: 33%;
+	}
 	.entrada_blog {
 		margin-top: 55px;	
 	}
@@ -1762,19 +1808,6 @@ footer h3 {
 	}
 	.explicacion_articulo {
 		margin: 20px auto;
-	}
-	.tarifas {
-		margin: 35px 10px 25px;
-		width: 600px;
-		text-align: center;
-		display: inline-block;
-	}
-	.tarifas img {
-		height: 550px;
-	}
-	.calendario,.texto_descriptivo {
-		margin: 35px 60px 15px 0;
-		max-width: 700px;
 	}
 	.calendario iframe {
 		height: 650px;
@@ -1938,6 +1971,9 @@ footer h3 {
 
 /* Para resoluciones a partir de 1250px */
 @media only screen and (min-width: 1250px) {
+	.galeria {
+		width: 100%;
+	}
 	h1 {
 		margin-top: 60px;
 		font-size: 35px;
@@ -1959,18 +1995,6 @@ footer h3 {
 	}
 	.evento_principal img {
 		height: 650px;
-	}
-	.tarifas {
-		margin: 35px 35px 25px;
-		width: 700px;
-		text-align: center;
-		display: inline-block;
-	}
-	.tarifas img {
-		height: 600px;
-	}
-	.calendario,.texto_descriptivo {
-		max-width: 750px;
 	}
 	.contenedor_texto {
 		width: 70%;
@@ -2029,6 +2053,12 @@ footer h3 {
 
 /* Para resoluciones a partir de 1600px */
 @media only screen and (min-width: 1600px) {
+	.galeria .hijo-flex {
+		width: 25%;
+	}
+	.galeria .hijo-flex img {
+		max-width: 700px;
+	}
 	.contenedor_circulos {
 		max-width: 2000px;
 	}

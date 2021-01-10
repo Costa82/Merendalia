@@ -205,7 +205,7 @@ class Productos extends AbstractBBDD {
 	 */
 	public function saveListado($titulo_producto, $linea, $es_titulo, $orden) {
 
-		$id_producto = Productos::getCampoBy("id_producto", "titulo_producto", $this->titulo_producto);
+		$id_producto = Productos::getCampoByMoreValues("id_producto", "titulo_producto", $this->titulo_producto, "tipo_producto", $this->tipo_producto);
 
 		$query = "INSERT INTO listado_producto (id_producto, linea, es_titulo, orden, estado)
                 VALUES('".$id_producto."',
@@ -469,59 +469,60 @@ class Productos extends AbstractBBDD {
 					echo "<li class='" . $tipo_producto_normalizado . "'>";
 
 					// Pintamos los productos
-					if ($listado == "NO") {
+					//if ($listado == "NO") {
 
-						echo "<div class='texto_producto_comida'>
-									<p>" . $titulo_producto . "</p>
-							</div>";
+						//echo "<div class='texto_producto_comida'>
+									//<p>" . $titulo_producto . "</p>
+							//</div>";
 
-						echo "<div class='precio_producto_comida'>
-									<p><strong>" . $precio . "</strong></p>
-							</div>";
+						//echo "<div class='precio_producto_comida'>
+									//<p><strong>" . $precio . "</strong></p>
+							//</div>";
 
 						//if ($imagen != null && $title != null && $alt != null) {
 
 						//echo "<div class='icono_imagen'>
-						//<a class='fancybox' rel='group'
-						//href='./views/default/img/" . $imagen . "'
-						//title='" . $title . "'> <i
-						//class='fa fa-eye' title='imagen del producto'></i> </a> <img
-						//src='./views/default/img/" . $imagen . "' class='foto img_catering'
-						//title='" . $title . "'
-						//alt='" . $alt . "' />
-						//</div>";
+							//<a class='fancybox' rel='group'
+							//href='./views/default/img/catering/" . $imagen . "'
+							//title='" . $title . "'> <i
+							//class='fa fa-eye' title='imagen del producto'></i> </a> <img
+							//src='./views/default/img/catering/" . $imagen . "' class='foto img_catering'
+							//title='" . $title . "'
+							//alt='" . $alt . "' />
+							//</div>";
 						//} else {
-
-						//echo "<div class='icono_imagen'>
-						//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-						//</div>";
+	
+							//echo "<div class='icono_imagen'>
+							//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
+							//</div>";
 						//}
 
-					}
+					//}
 					// Productos con listados
-					else {
+					//else {
 
 						echo "<div class='menus_opciones'>
-									<p><strong>" . $titulo_producto . "</strong></p></br>";
+									<p><strong class='letra_verde'>" . $titulo_producto . "</strong></p></br>";
 
 						echo "<p class='precio'><strong>" . $precio . "</strong></p>";
 
-						//if ($imagen != null && $title != null && $alt != null) {
+						if ($imagen != null && $title != null && $alt != null) {
 
-						//echo "<div class='icono_imagen bandeja'>
-						//<a class='fancybox' rel='group'
-						//href='./views/default/img/" . $imagen . "'
-						//title='" . $title . "'> <i
-						//class='fa fa-eye' title='imagen del producto'></i> </a> <img
-						//src='./views/default/img/" . $imagen . "' class='foto img_catering'
-						//title='" . $title . "'
-						//alt='" . $alt . "' />
-						//</div>";
-						//} else {
+							echo "<a class='fancybox' rel='group'
+			    				href='./views/default/img/catering/" . $imagen . "' title='" . $title . "'><img
+			    				src='./views/default/img/catering/" . $imagen . "' class='foto img_ordenador'
+			    				title='" . $title . "' alt='" . $alt . "' /></a>
+			    				<img
+			    				src='./views/default/img/catering/" . $imagen . "' class='foto img_movil'
+			    				title='" . $title . "' alt='" . $alt . "' />";
+							
+						} 
+						
+						//else {
 
-						//echo "<div class='icono_imagen bandeja'>
-						//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-						//</div>";
+							//echo "<div class='icono_imagen bandeja'>
+							//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
+							//</div>";
 						//}
 
 						// Obtenemos el listado del producto
@@ -549,7 +550,7 @@ class Productos extends AbstractBBDD {
 								echo "<p><i>" . $linea . "</i></p></br>";
 							}
 						}
-					}
+					//}
 					echo "</li>";
 				}
 			}
@@ -598,11 +599,11 @@ class Productos extends AbstractBBDD {
 	 * @param String $titulo_producto
 	 * @return boolean
 	 */
-	public function existeTitulo($titulo_producto)
+	public function existeTitulo($titulo_producto, $tipo_producto)
 	{
 		$existe = true;
 
-		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(titulo_producto) = UPPER('$titulo_producto') AND estado = 'ACTV'";
+		$consulta = "SELECT * FROM " . $this->tabla . " WHERE UPPER(titulo_producto) = UPPER('$titulo_producto') AND estado = 'ACTV' AND UPPER(tipo_producto) = UPPER('$tipo_producto')";
 		$resultados = Productos::ejecutarQuery($consulta);
 
 		if ($resultados == 0 || $resultados['numero'] == 0) {

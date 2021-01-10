@@ -2,9 +2,11 @@
 
 <div class='explicacion productos'>
 
-	<p>Si no tienes tiempo para preparar las cosas, puedes solicitar
-		productos de nuestro cátering y ¡ser el anfitrión que quieres ser sin
-		necesidad de mover un dedo!</p>
+	<p>Todo lo que hacemos es casero y hecho en el día, si quieres algo
+		especial y diferente, éste es tu catering. Consulta la opción SIN
+		GLUTEN (enlazar a SIN GLUTEN al final de la página). Encárgalo para
+		tus celebraciones y ven a recogerlo. Haz tu pedido con al menos 24 h
+		de antelación.</p>
 
 </div>
 
@@ -12,7 +14,7 @@
 
 <?php
 // SELECT PRODUCTOS
-$productos->mostrarMenuProductos();
+// $productos->mostrarMenuProductos();
 
 // PRODUCTOS
 $productos->mostrarProductos();
