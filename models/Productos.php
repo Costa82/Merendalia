@@ -416,15 +416,15 @@ class Productos extends AbstractBBDD {
 			}
 
 			// Listado de los productos
-			echo "<ul class='lista_productos_comida'>";
+			echo "<div class='lista_productos_comida'>";
 
 			if ($tipo_producto != $tipo_producto_generico) {
 
-				echo "<li class='" . $tipo_producto_normalizado . "'>
+				echo "<div class='" . $tipo_producto_normalizado . "'>
 							<div class='texto_producto_comida'>
 								<p><u><strong>" . $tipo_producto . "</strong> </u></p>
 							</div>
-					</li>";
+					</div>";
 			}
 
 			$resultados = Productos::getPorTipoProducto($tipo_producto);
@@ -432,6 +432,8 @@ class Productos extends AbstractBBDD {
 			if ($resultados == 0 || $resultados['numero'] == 0) {
 				// No hay datos para mostrar
 			} else {
+				
+				echo "<div class='contenedor_flex_catering'>";
 
 				// Mostramos todos los productos por cada tipo de producto
 				for ($j = 0; $j < count($resultados['filas_consulta']); $j ++) {
@@ -458,103 +460,55 @@ class Productos extends AbstractBBDD {
 							case "alt":
 								$alt = $value;
 								break;
-							case "listado":
-								$listado = $value;
+							case "descripcion":
+								$descripcion = $value;
 								break;
 							default:
 								break;
 						}
 					}
 
-					echo "<li class='" . $tipo_producto_normalizado . "'>";
+					echo "<div class='" . $tipo_producto_normalizado . " contenedor_flex_catering_hijos'>";
+					
+					echo "<div class='menus_opciones'>
+								<div class='titulo_catering'>
+									<p><strong>" . $titulo_producto . "</strong></p>
+								</div>";
 
-					// Pintamos los productos
-					//if ($listado == "NO") {
-
-						//echo "<div class='texto_producto_comida'>
-									//<p>" . $titulo_producto . "</p>
-							//</div>";
-
-						//echo "<div class='precio_producto_comida'>
-									//<p><strong>" . $precio . "</strong></p>
-							//</div>";
-
-						//if ($imagen != null && $title != null && $alt != null) {
-
-						//echo "<div class='icono_imagen'>
-							//<a class='fancybox' rel='group'
-							//href='./views/default/img/catering/" . $imagen . "'
-							//title='" . $title . "'> <i
-							//class='fa fa-eye' title='imagen del producto'></i> </a> <img
-							//src='./views/default/img/catering/" . $imagen . "' class='foto img_catering'
-							//title='" . $title . "'
-							//alt='" . $alt . "' />
-							//</div>";
-						//} else {
-	
-							//echo "<div class='icono_imagen'>
-							//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-							//</div>";
-						//}
-
-					//}
-					// Productos con listados
-					//else {
-
-						echo "<div class='menus_opciones'>
-									<p><strong class='letra_verde'>" . $titulo_producto . "</strong></p></br>";
-
-						echo "<p class='precio'><strong>" . $precio . "</strong></p>";
-
-						if ($imagen != null && $title != null && $alt != null) {
-
-							echo "<a class='fancybox' rel='group'
-			    				href='./views/default/img/catering/" . $imagen . "' title='" . $title . "'><img
-			    				src='./views/default/img/catering/" . $imagen . "' class='foto img_ordenador'
-			    				title='" . $title . "' alt='" . $alt . "' /></a>
-			    				<img
-			    				src='./views/default/img/catering/" . $imagen . "' class='foto img_movil'
-			    				title='" . $title . "' alt='" . $alt . "' />";
-							
-						} 
+					if ($imagen != null && $title != null && $alt != null) {
 						
-						//else {
+						$lista_fotos = explode(",", $imagen);
 
-							//echo "<div class='icono_imagen bandeja'>
-							//<i class='fa fa-eye-slash' title='sin imagen del producto'></i>
-							//</div>";
-						//}
-
-						// Obtenemos el listado del producto
-						$listadoProducto = Productos::getListadoProducto($id_producto);
-
-						// Recorremos la lista y mostramos los productos por tipo de producto
-						for ($k = 0; $k < count($listadoProducto['filas_consulta']); $k ++) {
-
-							foreach ($listadoProducto['filas_consulta'][$k] as $key => $value) {
-
-								// Id_producto
-								if ($key == "linea") {
-									$linea = $value;
+						echo "<section>            
+								<div class='flexslider'>
+									<ul class='slides'>";
+									
+								for ($k = 0; $k < count($lista_fotos); $k++) {
+									
+									echo "<li>
+											  <img
+							    				src='./views/default/img/catering/" . $lista_fotos[$k] . "' class='foto'
+							    				title='" . $title . "' alt='" . $alt . "' />
+										 </li>";
 								}
-
-								// Título
-								if ($key == "es_titulo") {
-									$es_titulo = $value;
-								}
-							}
-
-							if ($es_titulo == "NO") {
-								echo "<p>" . $linea . "</p></br>";
-							} else {
-								echo "<p><i>" . $linea . "</i></p></br>";
-							}
+										
+								echo "</ul>
+									</div>							 
+						       </section>";
 						}
-					//}
-					echo "</li>";
+
+						echo "<p>" . $descripcion . "</p>";
+						
+						echo "<div class='precio_catering'>
+								<p class='precio'><strong>" . $precio . "</strong></p>
+							  </div></div>";
+						
+					echo "</div>";
 				}
+				echo "</div>";
 			}
-			echo "</ul></div>";
+			echo "</div></div>";
+			echo "<p id='" . $tipo_producto . "'class='centrado'>____________ . ____________</p>";
 		}
 	}
 

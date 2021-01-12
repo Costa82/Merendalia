@@ -63,7 +63,7 @@ class ControladorProductos
 						$producto->setAlt($_REQUEST["alt"]);
 					}
 
-					$carpetaDestino = './views/default/img/';
+					$carpetaDestino = './views/default/img/catering/';
 					$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 				}
 			}
@@ -302,7 +302,7 @@ class ControladorProductos
 						$producto->setAlt($_REQUEST["alt"]);
 					}
 
-					$carpetaDestino = './views/default/img/';
+					$carpetaDestino = './views/default/img/catering/';
 					$guardado = UtilsProductos::guardarImagen($carpetaDestino, $archivo);
 				}
 			}

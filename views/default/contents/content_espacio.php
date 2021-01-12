@@ -110,6 +110,196 @@
 	
 		</div>
 	</div>
+	
+	<div class="bloque_texto galeria">
+		<h3>
+			<strong>RESTO DE INSTALACIONES</strong>
+		</h3>
+	
+		<div class="contenedor-flex">
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/1. Interior_puertas.png" title="Interior puertas"><img
+	    				src="./views/default/img/tuSitio/1. Interior_puertas.png" class="foto img_ordenador"
+	    				title="Interior puertas" alt="Interior puertas" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/1. Interior_puertas.png" class="foto img_movil"
+	    				title="Interior puertas" alt="Interior puertas" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/2. Parque_de_bolas_infantil_niños_1.png" title="Parque de bolas infantil niños 1"><img
+	    				src="./views/default/img/tuSitio/2. Parque_de_bolas_infantil_niños_1.png" class="foto img_ordenador"
+	    				title="Parque de bolas infantil niños 1" alt="Parque de bolas infantil niños 1" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/2. Parque_de_bolas_infantil_niños_1.png" class="foto img_movil"
+	    				title="Parque de bolas infantil niños 1" alt="Parque de bolas infantil niños 1" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/3. Parque_de_bolas_infantil_niños_2.png" title="Parque de bolas infantil niños 2"><img
+	    				src="./views/default/img/tuSitio/3. Parque_de_bolas_infantil_niños_2.png" class="foto img_ordenador"
+	    				title="Parque de bolas infantil niños 2" alt="Parque de bolas infantil niños 2" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/3. Parque_de_bolas_infantil_niños_2.png" class="foto img_movil"
+	    				title="Parque de bolas infantil niños 2" alt="Parque de bolas infantil niños 2" />
+			</div>
+			
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/4. Parque_de_bolas_infantil_niños_3.png" title="Parque de bolas infantil niños 3"><img
+	    				src="./views/default/img/tuSitio/4. Parque_de_bolas_infantil_niños_3.png" class="foto img_ordenador"
+	    				title="Parque de bolas infantil niños 3" alt="Parque de bolas infantil niños 3" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/4. Parque_de_bolas_infantil_niños_3.png" class="foto img_movil"
+	    				title="Parque de bolas infantil niños 3" alt="Parque de bolas infantil niños 3" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/5. Parque_de_bolas_infantil_niños_4.png" title="Parque de bolas infantil niños 4"><img
+	    				src="./views/default/img/tuSitio/5. Parque_de_bolas_infantil_niños_4.png" class="foto img_ordenador"
+	    				title="Parque de bolas infantil niños 4" alt="Parque de bolas infantil niños 4" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/5. Parque_de_bolas_infantil_niños_4.png" class="foto img_movil"
+	    				title="Parque de bolas infantil niños 4" alt="Parque de bolas infantil niños 4" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/6. Parque_de_bolas_infantil_niños_5.png" title="Parque de bolas infantil niños 5"><img
+	    				src="./views/default/img/tuSitio/6. Parque_de_bolas_infantil_niños_5.png" class="foto img_ordenador"
+	    				title="Parque de bolas infantil niños 5" alt="Parque de bolas infantil niños 5" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/6. Parque_de_bolas_infantil_niños_5.png" class="foto img_movil"
+	    				title="Parque de bolas infantil niños 5" alt="Parque de bolas infantil niños 5" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/7. Cocina_1_neveras_cafetera_grifo_industrial.png" title="Cocina 1 neveras cafetera grifo industrial"><img
+	    				src="./views/default/img/tuSitio/7. Cocina_1_neveras_cafetera_grifo_industrial.png" class="foto img_ordenador"
+	    				title="Cocina 1 neveras cafetera grifo industrial" alt="Cocina 1 neveras cafetera grifo industrial" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/7. Cocina_1_neveras_cafetera_grifo_industrial.png" class="foto img_movil"
+	    				title="Cocina 1 neveras cafetera grifo industrial" alt="Cocina 1 neveras cafetera grifo industrial" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/8. Cocina_2_horno_grande_campana_induccion.png" title="Cocina 2 horno grande campana inducción"><img
+	    				src="./views/default/img/tuSitio/8. Cocina_2_horno_grande_campana_induccion.png" class="foto img_ordenador"
+	    				title="Cocina 2 horno grande campana inducción" alt="Cocina 2 horno grande campana inducción" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/8. Cocina_2_horno_grande_campana_induccion.png" class="foto img_movil"
+	    				title="Cocina 2 horno grande campana inducción" alt="Cocina 2 horno grande campana inducción" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/9. Cocina_3_grifo_industrial.png" title="Cocina 3 grifo industrial"><img
+	    				src="./views/default/img/tuSitio/9. Cocina_3_grifo_industrial.png" class="foto img_ordenador"
+	    				title="Cocina 3 grifo industrial" alt="Cocina 3 grifo industrial" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/9. Cocina_3_grifo_industrial.png" class="foto img_movil"
+	    				title="Cocina 3 grifo industrial" alt="Cocina 3 grifo industrial" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/11. Baño_1_adaptado_personas_movilidad_reducida.png" title="Baño 1 adaptado personas movilidad reducida"><img
+	    				src="./views/default/img/tuSitio/11. Baño_1_adaptado_personas_movilidad_reducida.png" class="foto img_ordenador"
+	    				title="Baño 1 adaptado personas movilidad reducida" alt="Baño 1 adaptado personas movilidad reducida" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/11. Baño_1_adaptado_personas_movilidad_reducida.png" class="foto img_movil"
+	    				title="Baño 1 adaptado personas movilidad reducida" alt="Baño 1 adaptado personas movilidad reducida" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/13. Baño_3_cambiador_bebes.png" title="Baño 3 cambiador bebés"><img
+	    				src="./views/default/img/tuSitio/13. Baño_3_cambiador_bebes.png" class="foto img_ordenador"
+	    				title="Baño 3 cambiador bebés" alt="Baño 3 cambiador bebés" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/13. Baño_3_cambiador_bebes.png" class="foto img_movil"
+	    				title="Baño 3 cambiador bebés" alt="Baño 3 cambiador bebés" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/14. Baño_4_chicos_lavabo.png" title="Baño 4 chicos lavabo"><img
+	    				src="./views/default/img/tuSitio/14. Baño_4_chicos_lavabo.png" class="foto img_ordenador"
+	    				title="Baño 4 chicos lavabo" alt="Baño 4 chicos lavabo" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/14. Baño_4_chicos_lavabo.png" class="foto img_movil"
+	    				title="Baño 4 chicos lavabo" alt="Baño 4 chicos lavabo" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/15. Baño_5_lavabo.png" title="Baño 5 lavabo"><img
+	    				src="./views/default/img/tuSitio/15. Baño_5_lavabo.png" class="foto img_ordenador"
+	    				title="Baño 5 lavabo" alt="Baño 5 lavabo" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/15. Baño_5_lavabo.png" class="foto img_movil"
+	    				title="Baño 5 lavabo" alt="Baño 5 lavabo" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/16. Perchero_1.png" title="Perchero 1"><img
+	    				src="./views/default/img/tuSitio/16. Perchero_1.png" class="foto img_ordenador"
+	    				title="Perchero 1" alt="Perchero 1" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/16. Perchero_1.png" class="foto img_movil"
+	    				title="Perchero 1" alt="Perchero 1" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/17. Exterior_5_detalle_guirnalda_terraza.png" title="Exterior 5 detalle guirnalda terraza"><img
+	    				src="./views/default/img/tuSitio/17. Exterior_5_detalle_guirnalda_terraza.png" class="foto img_ordenador"
+	    				title="Exterior 5 detalle guirnalda terraza" alt="Exterior 5 detalle guirnalda terraza" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/17. Exterior_5_detalle_guirnalda_terraza.png" class="foto img_movil"
+	    				title="Exterior 5 detalle guirnalda terraza" alt="Exterior 5 detalle guirnalda terraza" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/18. Exterior_3_terraza_cubierta_pasaje.png" title="Exterior 3 terraza cubierta pasaje"><img
+	    				src="./views/default/img/tuSitio/18. Exterior_3_terraza_cubierta_pasaje.png" class="foto img_ordenador"
+	    				title="Exterior 3 terraza cubierta pasaje" alt="Exterior 3 terraza cubierta pasaje" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/18. Exterior_3_terraza_cubierta_pasaje.png" class="foto img_movil"
+	    				title="Exterior 3 terraza cubierta pasaje" alt="Exterior 3 terraza cubierta pasaje" />
+			</div>
+			
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/19. Exterior_1_terraza_cubierta.png" title="Exterior 1 terraza cubierta"><img
+	    				src="./views/default/img/tuSitio/19. Exterior_1_terraza_cubierta.png" class="foto img_ordenador"
+	    				title="Exterior 1 terraza cubierta" alt="Exterior 1 terraza cubierta" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/19. Exterior_1_terraza_cubierta.png" class="foto img_movil"
+	    				title="Exterior 1 terraza cubierta" alt="Exterior 1 terraza cubierta" />
+			</div>
+	
+			<div class="hijo-flex">
+				<a class="fancybox" rel="group"
+	    				href="./views/default/img/tuSitio/20. Exterior_2_terraza_cubierta_pasaje.png" title="Exterior 2 terraza cubierta pasaje"><img
+	    				src="./views/default/img/tuSitio/20. Exterior_2_terraza_cubierta_pasaje.png" class="foto img_ordenador"
+	    				title="Exterior 2 terraza cubierta pasaje" alt="Exterior 2 terraza cubierta pasaje" /></a>
+	    				<img
+	    				src="./views/default/img/tuSitio/20. Exterior_2_terraza_cubierta_pasaje.png" class="foto img_movil"
+	    				title="Exterior 2 terraza cubierta pasaje" alt="Exterior 2 terraza cubierta pasaje" />
+			</div>
+	
+		</div>
+	</div>
 
 	<!-- ?php
 	$tabla->mostrarTablaTarifas();
