@@ -127,6 +127,10 @@ a.enlace_legal:hover {
 	text-align: center;
 }
 
+a:-webkit-any-link:focus {
+    outline-offset: 0px;
+}
+
 /* HEADER
    ========================================================================= */
 
