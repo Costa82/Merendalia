@@ -105,7 +105,9 @@
 		type="text/javascript" async></script -->
 
 	<!-- Contenido -->
-		<?php echo $contenido; ?>
+	<?php echo $contenido; ?>
+	
+	<?php include_once("template_aviso.php");?>
 
 	<footer>
 	<?php include_once("template_footer.php");?>
