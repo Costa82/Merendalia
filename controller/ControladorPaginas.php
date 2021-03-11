@@ -261,6 +261,20 @@ class ControladorPaginas
 		}
 		require './views/declaracion_cookies.php';
 	}
+	
+	/**
+	 * Método para cargar la pagina de carta del bar
+	 */
+	public function carta_bar()
+	{
+		if(isset($_SESSION['error']) && $_SESSION['error'] != 0) {
+			$params['error'] = $_SESSION['error'];
+			$_SESSION['error'] = 0;
+		} else {
+			$params['error'] = 0;
+		}
+		require './views/carta_bar.php';
+	}
 
 }
 ?>

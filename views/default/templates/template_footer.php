@@ -25,6 +25,7 @@
               <li id="eventos"><a href="eventos" title="Eventos">Eventos</a></li -->
               <li id="espacio"><a href="espacio" title="Tu Sitio">Tu Sitio</a></li>
               <li id="menus"><a href="catering" title="Tu Catering">Tu Catering</a></li>
+              <li id="carta"><a href="carta-bar" title="Carta Bar">Carta Bar</a></li>
               <li id="blogMerendalia"><a href="blog-merendalia" title="Blog Merendalia">Blog</a></li>
               <li id="contacto"><a href="contacto" title="Contacto">Contacto</a></li>
               <li id="declaracionCookies"><a href="declaracion-cookies" title="Declaración de Cookies">Declaración de Cookies</a></li>

@@ -173,12 +173,12 @@ nav>#lista_principal_index {
 	font-size: 11px;
 }
 
-#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
+#galeria,#eventos,#espacio,#menus,#carta,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
 	{
 	display: none;
 }
 
-#galeria2 a:hover,#eventos2 a:hover,#espacio2 a:hover,#menus2 a:hover,#bocaditos2 a:hover,#productos2 a:hover,#contacto2 a:hover,#avisoLegal2 a:hover,#blogMerendalia2 a:hover
+#galeria2 a:hover,#eventos2 a:hover,#espacio2 a:hover,#carta2 a:hover,#menus2 a:hover,#bocaditos2 a:hover,#productos2 a:hover,#contacto2 a:hover,#avisoLegal2 a:hover,#blogMerendalia2 a:hover
 	{
 	color: #9bd155;
 }
@@ -575,6 +575,19 @@ p.estrella i.fa {
 	width: 200px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+/* CARTA BAR
+   ========================================================================= */
+.carta_bar {
+	width: 100%;
+	text-align: center;
+}
+
+.carta_bar img {
+	margin-top: 80px;
+	width: 90%;
+	max-width: 900px;
 }
 
 /* RESERVAS Y TARIFAS
@@ -1992,7 +2005,7 @@ footer h3 {
 	nav>ul>li#menu_moviles {
 		display: none;
 	}
-	#galeria,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
+	#galeria,#carta,#eventos,#espacio,#menus,#bocaditos,#productos,#contacto,#legal,#blogMerendalia,#proteccionDatos,#declaracionCookies
 		{
 		display: block;
 	}

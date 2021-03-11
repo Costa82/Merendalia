@@ -885,7 +885,7 @@ $productos->mostrarProductos();
 						<p>Tortilla de patata. De las de casa.</p>
 						<div class="precio_catering">
 							<p class="precio">
-								<strong>12 €</strong>
+								<strong>11 €</strong>
 							</p>
 						</div>
 					</div>
