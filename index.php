@@ -58,16 +58,16 @@ $map = array(
         'action' => 'inicio',
         'privada' => false
     ),
-    'galeria' => array(
-        'controller' => 'ControladorPaginas',
-        'action' => 'galeria',
-        'privada' => false
-    ),
-    'eventos' => array(
-        'controller' => 'ControladorPaginas',
-        'action' => 'eventos',
-        'privada' => false
-    ),
+    //'galeria' => array(
+        //'controller' => 'ControladorPaginas',
+        //'action' => 'galeria',
+        //'privada' => false
+    //),
+    //'eventos' => array(
+        //'controller' => 'ControladorPaginas',
+        //'action' => 'eventos',
+        //'privada' => false
+    //),
     'espacio' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'espacio',

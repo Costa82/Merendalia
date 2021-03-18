@@ -7,11 +7,13 @@
 	<center>
 		<img src="./views/default/img/catering/logo_glovo.jpg" class='foto'
 			title="Glovo" alt="Glovo" />
+		<img src="./views/default/img/catering/justEat.png" class='foto'
+			title="Glovo" alt="Glovo" />
 	</center>
-	<p>Ahora en merendalia con Glovo te lo enviamos a casa. O si prefieres,
+	<p>Ahora en merendalia con Glovo y Just Eat te lo enviamos a casa. O si prefieres,
 		puedes llamarnos y venir a recogerlo, así obtendrás un 15% en todo el
 		pedido.</p>
-	<p>Recuerda que estamos en la Calle Paraíso N2 (dentro del Pasaje
+	<p>Recuerda que estamos en la Calle Paraíso Nº2 (dentro del Pasaje
 		Alarcón)</p>
 	<!-- p>
 		Todo lo que hacemos es casero y hecho en el día, si quieres algo

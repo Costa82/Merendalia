@@ -937,7 +937,9 @@ h3.eventos_pasados {
 
 .foto {
 	background-size: cover;
-	width: 300px;
+	width: 45%;
+	max-width: 400px;
+	margin-bottom: 15px;
 }
 
 .mostrar_blog {
@@ -1541,9 +1543,6 @@ footer h3 {
 	}
 	.contenedor_circulos {
 		max-width: 700px;
-	}
-	.foto {
-		width: 400px;
 	}
 	.evento_principal img {
 		height: 300px;
