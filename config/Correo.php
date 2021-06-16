@@ -12,7 +12,7 @@ class Correo
 
     public function __construct()
     {
-        $this->contrasena = "2KKL0X9S5O2u";
+        $this->contrasena = "Sandia82";
         $this->correoAdministrador = "info@merendalia.es";
         $this->correoBea = "blozares@gmail.com";
     }

@@ -4,12 +4,12 @@
 
 	<h3>REPARTO A DOMICILIO</h3>
 
-	<center>
+	<!-- center>
 		<img src="./views/default/img/catering/logo_glovo.jpg" class='foto'
 			title="Glovo" alt="Glovo" />
 		<img src="./views/default/img/catering/justEat.png" class='foto'
 			title="Glovo" alt="Glovo" />
-	</center>
+	</center -->
 	<p>Ahora en merendalia con Glovo y Just Eat te lo enviamos a casa. O si prefieres,
 		puedes llamarnos y venir a recogerlo, así obtendrás un 15% en todo el
 		pedido.</p>
