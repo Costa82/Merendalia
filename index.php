@@ -73,16 +73,16 @@ $map = array(
         'action' => 'espacio',
         'privada' => false
     ),
-    'catering' => array(
-        'controller' => 'ControladorPaginas',
-        'action' => 'catering',
-        'privada' => false
-    ),
-    'blog_merendalia' => array(
-        'controller' => 'ControladorPaginas',
-        'action' => 'blog_merendalia',
-        'privada' => false
-    ),
+    //'catering' => array(
+        //'controller' => 'ControladorPaginas',
+        //'action' => 'catering',
+        //'privada' => false
+    //),
+    //'blog_merendalia' => array(
+        //'controller' => 'ControladorPaginas',
+        //'action' => 'blog_merendalia',
+        //'privada' => false
+    //),
     'cortometraje_restaurante_video' => array(
         'controller' => 'ControladorPaginas',
         'action' => 'corto_hummus',

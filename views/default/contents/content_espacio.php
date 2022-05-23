@@ -9,10 +9,10 @@
 		<h3>TARIFAS</h3>
 
 		<img
-			src='./views/default/img/tuSitio/tabla precios blanco 1.png'
+			src='./views/default/img/tuSitio/tabla precios blanco 1_nuevo.png'
 			class='img_tarifas' title='Tabla Tarifas' alt='Tabla Tarifas' />
 		<img
-			src='./views/default/img/tuSitio/tabla precios blanco 2.png'
+			src='./views/default/img/tuSitio/tabla precios blanco 2_nuevo.png'
 			class='img_tarifas' title='Tabla Tarifas' alt='Tabla Tarifas' />
 
 	</div>
@@ -26,8 +26,7 @@
 			taburetes, TV, WiFI, parque de bolas, cocina equipada, zona
 			exterior... Sin lugar a dudas el mejor lugar de Valladolid para todas
 			tus celebraciones privadas y ubicado en pleno centro, junto a la
-			iglesia de "La Antigua". Disponemos de catering propio casero y hecho
-			en el día. Organizamos el espacio, a tu gusto.</p>
+			iglesia de "La Antigua". Organizamos el espacio, a tu gusto.</p>
 			
 	</div>
 

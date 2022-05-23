@@ -9,10 +9,10 @@
 			title="Glovo" alt="Glovo" />
 		<img src="./views/default/img/catering/justEat.png" class='foto'
 			title="Glovo" alt="Glovo" />
-	</center -->
+	</center>
 	<p>Ahora en merendalia con Glovo y Just Eat te lo enviamos a casa. O si prefieres,
 		puedes llamarnos y venir a recogerlo, así obtendrás un 15% en todo el
-		pedido.</p>
+		pedido.</p -->
 	<p>Recuerda que estamos en la Calle Paraíso Nº2 (dentro del Pasaje
 		Alarcón)</p>
 	<!-- p>

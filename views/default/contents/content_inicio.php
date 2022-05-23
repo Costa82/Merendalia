@@ -3,18 +3,18 @@
 <div class='presentacion'>
 	<h1>Tus celebraciones en Merendalia</h1>
 	<p>Organiza tu fiesta en el local con o sin catering.</p>
-	<p>Contrata nuestro catering para recoger.</p>
+	<!-- p>Contrata nuestro catering para recoger.</p -->
 	</br>
 </div>
 
 <div class='contenedor_circulos'>
 	<!-- a class='circulo amarillo' href='eventos' title='Eventos'>
-		<h2>Eventos</h2> </a  -->
+		<h2>Eventos</h2> </a -->
 	<a class='circulo rojo' href='espacio' title='Tu Sitio'>
 		<h2>Tu Sitio</h2> </a> 
-	<a class='circulo verde' href='catering'
+	<!-- a class='circulo verde' href='catering'
 		title='Tu Catering'>
-		<h2>Tu Catering</h2> </a>
+		<h2>Tu Catering</h2> </a -->
 </div>
 
 

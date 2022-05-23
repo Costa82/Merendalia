@@ -1,17 +1,14 @@
 <?php
 class Connection {
-	
-	// Conexión Producción
-	//private $host = "qach704.merendalia";
-	//private $username = "qach704";
-	//private $password = "Sandia82";
-	//private $base = "qach704";
+	private $host = "qach704.merendalia.es";
+	private $username = "qach704";
+	private $password = "Sandia82";
+	private $base = "qach704";
 
-	// Conexión Local
-	private $host = "localhost";
-	private $username = "root";
-	private $password = "";
-	private $base="bd_merendalia";
+	// private $host = "localhost";
+	// private $username = "root";
+	// private $password = "";
+	// private $base="bd_merendalia";
 
 	private $conex;
 	private static $instancia;

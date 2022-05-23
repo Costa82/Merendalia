@@ -25,7 +25,7 @@
         echo "<li id='espacio'><a href='espacio' title='Tu Sitio'>Tu Sitio</a></li>";
     }
     
-    if (strpos($_SERVER['REQUEST_URI'], "catering") !== false) {
+    /*if (strpos($_SERVER['REQUEST_URI'], "catering") !== false) {
         // menus.php found
         echo "<li id='menus'><a href='catering' title='Tu Catering' class='seleccionado'>Tu Catering</a></li>";
     } else {
@@ -34,9 +34,9 @@
     
     if (strpos($_SERVER['REQUEST_URI'], "carta") !== false) {
         // menus.php found
-        echo "<!-- li id='carta'><a href='carta-bar' title='Carta Bar' class='seleccionado'>Carta Bar</a></li -->";
+        echo "<li id='carta'><a href='carta-bar' title='Carta Bar' class='seleccionado'>Carta Bar</a></li>";
     } else {
-        echo "<!-- li id='carta'><a href='carta-bar' title='Carta Bar'>Carta Bar</a></li -->";
+        echo "<li id='carta'><a href='carta-bar' title='Carta Bar'>Carta Bar</a></li>";
     }
     
     if (strpos($_SERVER['REQUEST_URI'], "blog") !== false) {
@@ -44,7 +44,7 @@
         echo "<li id='blogMerendalia'><a href='blog-merendalia' title='Blog Merendalia' class='seleccionado'>Blog</a></li>";
     } else {
         echo "<li id='blogMerendalia'><a href='blog-merendalia' title='Blog Merendalia'>Blog</a></li>";
-    }
+    }*/
     
     if (strpos($_SERVER['REQUEST_URI'], "contacto") !== false) {
         // contacto.php found
@@ -58,9 +58,9 @@
                         <!-- li id='galeria2'><a href='galeria' title='Galería'>Galería</a></li>
                         <li id='eventos2'><a href='eventos' title='Eventos'>Eventos</a></li -->
                         <li id='espacio2'><a href='espacio' title='Tu Sitio'>Tu Sitio</a></li>
-                        <li id='menus2'><a href='catering' title='Tu Catering'>Tu Catering</a></li>
+                        <!-- li id='menus2'><a href='catering' title='Tu Catering'>Tu Catering</a></li -->
                         <!-- li id='carta2'><a href='carta-bar' title='Carta Bar'>Carta Bar</a></li -->
-                        <li id='blogMerendalia2'><a href='blog-merendalia' title='Blog Merendalia'>Blog</a></li>
+                        <!-- li id='blogMerendalia2'><a href='blog-merendalia' title='Blog Merendalia'>Blog</a></li -->
                         <li id='contacto2'><a href='contacto' title='Contacto'>Contacto</a></li>
                     </ul>
                 </li>
