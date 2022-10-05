@@ -21,7 +21,7 @@
 
 		<h3>EL SITIO, TU LUGAR</h3>
 
-		<p>Salón de banquetes con capacidad para 37 personas y adaptado a
+		<p>Salón de banquetes con capacidad para 36 personas y adaptado a
 			personas de movilidad reducida (PMR). Mesas altas, bajas, sillas,
 			taburetes, TV, WiFI, parque de bolas, cocina equipada, zona
 			exterior... Sin lugar a dudas el mejor lugar de Valladolid para todas
